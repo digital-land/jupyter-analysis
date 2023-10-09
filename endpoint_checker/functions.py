@@ -116,7 +116,7 @@ def get_workflow_data(data_dir,collection,dataset):
     pipeline_csvs = [
         'column.csv',
         'concat.csv',
-        'covnert.csv',
+        'convert.csv',
         'default.csv',
         'filter.csv',
         'lookup.csv',
