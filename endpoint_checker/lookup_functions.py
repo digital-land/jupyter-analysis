@@ -225,8 +225,12 @@ def add_unnassigned_to_lookups(unassigned_entries,lookups_path,):
     
     fieldnames = []
     dataset_max_entity_ref = {}
+    dataset_max_entity_ref ["conservation-area-document"] = 6299999 # This to seed the entity nuimbers for conservation-area-document wwhich is new
+
     # get fieldnames from lookup.csv
     # get maximum entity numbers by dataset
+    print (F"Reading lookups from {lookups_path}")
+
     with open(lookups_path) as f:
         dictreader = csv.DictReader(f)
         fieldnames = dictreader.fieldnames
@@ -236,6 +240,8 @@ def add_unnassigned_to_lookups(unassigned_entries,lookups_path,):
                     dataset_max_entity_ref[row['prefix']] = int(row['entity'])
             else:
                 dataset_max_entity_ref[row['prefix']] = int(row['entity'])
+
+    print (F"Found {dataset_max_entity_ref}")
     
     # assign the entity
     # TO DO expand this so that if there are unnassigned entries with datasets not already in the list then it doesn't error
