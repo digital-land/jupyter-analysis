@@ -97,3 +97,16 @@ def get_issues_for_resource(resource, dataset):
     url = f"{datasette_url}{dataset}.csv?{params}"
     df = pd.read_csv(url)
     return df
+
+def produce_output_csv(all_orgs_recent_endpoints, organisation_dataset_property_dict, property_name, ignore_property_value, output_columns):
+    rows_list = []
+    for organisation, dataset_property in organisation_dataset_property_dict.items():
+        for dataset, property in dataset_property.items():
+            if property != ignore_property_value:
+                row = all_orgs_recent_endpoints[organisation][all_orgs_recent_endpoints[organisation]['pipelines'] == dataset]
+                row = row[output_columns]
+                row.insert(2, property_name, property)
+                rows_list.append(row)
+    output_df = pd.concat(rows_list)
+    output_df.reset_index(drop=True, inplace=True)
+    return output_df
