@@ -14,6 +14,7 @@ def get_endpoints(organisation):
         select
           e.endpoint_url,
           l.status,
+          l.exception,
           s.collection,
           group_concat(DISTINCT sp.pipeline) as pipelines,
           s.organisation,
