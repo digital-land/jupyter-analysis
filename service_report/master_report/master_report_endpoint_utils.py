@@ -44,8 +44,8 @@ def get_endpoints(organisation):
     })
     
     url = f"{datasette_url}digital-land.csv?{params}"
-    df = pd.read_csv(url)
-    return df
+    endpoints_df = pd.read_csv(url)
+    return endpoints_df
 
 def get_latest_endpoints(organisation):
     all_endpoints=get_endpoints(organisation)
@@ -74,7 +74,7 @@ def get_latest_endpoints(organisation):
     latest_endpoints = new_df.sort_values('entrydate').drop_duplicates(subset='pipelines', keep='last')
     return latest_endpoints
 
-def get_issues_with_severity_info():
+def get_issue_types_with_severity_info():
     params = urllib.parse.urlencode({
     "sql": f"""
     select issue_type, severity
@@ -99,8 +99,8 @@ def get_issues_for_resource(resource, dataset):
         "_size": "max"
     })
     url = f"{datasette_url}{dataset}.csv?{params}"
-    df = pd.read_csv(url)
-    return df
+    issues_df = pd.read_csv(url)
+    return issues_df
 
 def produce_output_csv(all_orgs_recent_endpoints, organisation_dataset_property_dict, property_name, ignore_property_value, output_columns):
     rows_list = []
