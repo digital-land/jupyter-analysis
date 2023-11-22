@@ -14,6 +14,7 @@ def get_endpoints(organisation):
         select
           e.endpoint_url,
           l.status,
+          l.exception,
           s.collection,
           group_concat(DISTINCT sp.pipeline) as pipelines,
           s.organisation,
@@ -50,6 +51,7 @@ def get_latest_endpoints(organisation):
     all_endpoints=get_endpoints(organisation)
     new_df=all_endpoints.copy()
     new_df['maxentrydate'] = pd.to_datetime(new_df['maxentrydate'])
+    new_df['entrydate'] = pd.to_datetime(new_df['entrydate'])
     new_df['last_status'] = None
     new_df['last_updated_date'] = None
     new_df['date_last_status_200'] = None
@@ -67,8 +69,10 @@ def get_latest_endpoints(organisation):
             if row['last_status'] != 200  or row['last_status'] is None:
                 filtered_df = all_endpoints[(all_endpoints['endpoint_url'] == row['endpoint_url'] ) & (all_endpoints['status'] == 200)]
                 if not filtered_df.empty:
-                    new_df.at[index, 'date_last_status_200'] = filtered_df['maxentrydate'].values[0][:19] 
-    return new_df
+                    new_df.at[index, 'date_last_status_200'] = filtered_df['maxentrydate'].values[0][:19]
+
+    latest_endpoints = new_df.sort_values('entrydate').drop_duplicates(subset='pipelines', keep='last')
+    return latest_endpoints
 
 def get_issues_with_severity_info():
     params = urllib.parse.urlencode({
@@ -110,3 +114,10 @@ def produce_output_csv(all_orgs_recent_endpoints, organisation_dataset_property_
     output_df = pd.concat(rows_list)
     output_df.reset_index(drop=True, inplace=True)
     return output_df
+
+def handle_skip_dataset(same_datasets_endpoints_df, dataset, row):
+    skip_dataset = False
+    for index, same_dataset_row in same_datasets_endpoints_df.iterrows():
+        if row["entrydate"] < same_dataset_row["entrydate"]:
+            skip_dataset = True
+    return skip_dataset
