@@ -107,9 +107,11 @@ def produce_output_csv(all_orgs_recent_endpoints, organisation_dataset_property_
     for organisation, dataset_property in organisation_dataset_property_dict.items():
         for dataset, property in dataset_property.items():
             if property != ignore_property_value:
-                row = all_orgs_recent_endpoints[organisation][all_orgs_recent_endpoints[organisation]['pipelines'] == dataset]
+                row = all_orgs_recent_endpoints[organisation][all_orgs_recent_endpoints[organisation]['pipelines'].str.contains(dataset)]
                 row = row[output_columns]
+                row['pipelines']=dataset
                 row.insert(2, property_name, property)
+                row=row.drop_duplicates(subset='pipelines')
                 rows_list.append(row)
     output_df = pd.concat(rows_list)
     output_df.reset_index(drop=True, inplace=True)
