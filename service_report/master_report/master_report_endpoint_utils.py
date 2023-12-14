@@ -19,14 +19,14 @@ def get_endpoints(organisation):
           group_concat(DISTINCT sp.pipeline) as pipelines,
           s.organisation,
           o.name,
-          ro.resource,
+          re.resource,
           max(l.entry_date) maxentrydate,
           max(e.entry_date) entrydate,
           e.end_date
         from
           log l
           inner join source s on l.endpoint = s.endpoint
-          inner join resource_endpoint ro on l.endpoint = ro.endpoint
+          inner join resource_endpoint re on l.endpoint = re.endpoint
           inner join organisation o on s.organisation=o.organisation
           inner join endpoint e on l.endpoint = e.endpoint
           inner join source_pipeline sp on s.source = sp.source
@@ -46,6 +46,29 @@ def get_endpoints(organisation):
     url = f"{datasette_url}digital-land.csv?{params}"
     endpoints_df = pd.read_csv(url)
     return endpoints_df
+
+def get_latest_resource_for_endpoint(endpoint_url):
+    print(endpoint_url)
+    params = urllib.parse.urlencode({
+        "sql": f"""
+        select
+          r.resource
+        from
+          endpoint e
+          inner join resource_endpoint re on e.endpoint = re.endpoint
+          inner join resource r on re.resource = r.resource
+        where
+          e.endpoint_url='{endpoint_url}'
+        order by
+          r.entry_date desc
+        limit 1
+        """,
+        "_size": "max"
+    })
+    
+    url = f"{datasette_url}digital-land.csv?{params}"
+    resource_df = pd.read_csv(url)
+    return resource_df
 
 def get_latest_endpoints(organisation):
     all_endpoints=get_endpoints(organisation)
@@ -72,6 +95,12 @@ def get_latest_endpoints(organisation):
                     new_df.at[index, 'date_last_status_200'] = filtered_df['maxentrydate'].values[0][:19]
 
     latest_endpoints = new_df.sort_values('entrydate').drop_duplicates(subset='pipelines', keep='last')
+    for index, row in latest_endpoints.iterrows():
+        resource = get_latest_resource_for_endpoint(row['endpoint_url'])
+        if not resource.empty:
+            latest_endpoints.at[index, 'resource'] = resource['resource'].values[0]
+        else:
+            latest_endpoints.at[index, 'resource'] = ""
     return latest_endpoints
 
 def get_issue_types_with_severity_info():
