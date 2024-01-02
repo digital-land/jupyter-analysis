@@ -48,7 +48,7 @@ def get_endpoints(organisation):
     return endpoints_df
 
 def get_latest_resource_for_endpoint(endpoint_url):
-    print(endpoint_url)
+  
     params = urllib.parse.urlencode({
         "sql": f"""
         select
