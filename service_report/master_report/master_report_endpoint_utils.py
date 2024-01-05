@@ -18,7 +18,6 @@ def get_endpoints(organisation):
           s.collection,
           group_concat(DISTINCT sp.pipeline) as pipelines,
           s.organisation,
-          o.name,
           re.resource,
           max(l.entry_date) maxentrydate,
           max(e.entry_date) entrydate,
@@ -27,7 +26,6 @@ def get_endpoints(organisation):
           log l
           inner join source s on l.endpoint = s.endpoint
           inner join resource_endpoint re on l.endpoint = re.endpoint
-          inner join organisation o on s.organisation=o.organisation
           inner join endpoint e on l.endpoint = e.endpoint
           inner join source_pipeline sp on s.source = sp.source
         where
@@ -131,7 +129,7 @@ def get_issues_for_resource(resource, dataset):
     issues_df = pd.read_csv(url)
     return issues_df
 
-def produce_output_csv(all_orgs_recent_endpoints, organisation_dataset_property_dict, property_name, ignore_property_value, output_columns):
+def produce_output_csv(all_orgs_recent_endpoints, organisation_dataset_property_dict, property_name, ignore_property_value, output_columns, organisation_name_dict):
     rows_list = []
     for organisation, dataset_property in organisation_dataset_property_dict.items():
         for dataset, property in dataset_property.items():
@@ -139,6 +137,7 @@ def produce_output_csv(all_orgs_recent_endpoints, organisation_dataset_property_
                 row = all_orgs_recent_endpoints[organisation][all_orgs_recent_endpoints[organisation]['pipelines'].str.contains(dataset)]
                 row = row[output_columns]
                 row['pipelines']=dataset
+                row.insert(0, 'name', organisation_name_dict[organisation])
                 row.insert(2, property_name, property)
                 row=row.drop_duplicates(subset='pipelines')
                 rows_list.append(row)
