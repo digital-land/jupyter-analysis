@@ -92,7 +92,7 @@ def get_latest_endpoints(organisation):
             if row['last_status'] != 200  or row['last_status'] is None:
                 filtered_df = all_endpoints[(all_endpoints['endpoint_url'] == row['endpoint_url'] ) & (all_endpoints['status'] == 200)]
                 if not filtered_df.empty:
-                    new_df.at[index, 'date_last_status_200'] = filtered_df['maxentrydate'].values[0][:19]
+                    new_df.at[index, 'date_last_status_200'] = filtered_df['maxentrydate'].values[0]
 
     latest_endpoints = new_df.sort_values('entrydate').drop_duplicates(subset='pipelines', keep='last')
     for index, row in latest_endpoints.iterrows():
