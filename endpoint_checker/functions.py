@@ -262,10 +262,11 @@ def new_dataset_create(
 def run_endpoint_workflow(collection_name,dataset,organisation,endpoint_url,plugin,data_dir,additional_col_mappings,additional_concats):
     # create the relevant structure and download the files
     get_workflow_data(data_dir,collection_name,dataset)
+    print("Hello")
     collection_dir = os.path.join(data_dir,"collection")
     # create source.csv & endpoint.csv for provided endpoints using the standard command, not sure why this has one entry?
     add_source_and_endpoint(collection_name,dataset,organisation,endpoint_url,plugin,collection_dir,'testing123')
-    
+    print("Hello again")
     # run collector
     collector = Collector(dataset, collection_dir=Path(collection_dir))
     collector.collect(os.path.join(collection_dir,'endpoint.csv'))
@@ -342,6 +343,19 @@ def run_endpoint_workflow(collection_name,dataset,organisation,endpoint_url,plug
         specification_dir=specification_dir,
         issue_dir=os.path.join(data_dir,"issue")
     )
+def missing_columns(results, dataset, expected_columns):
+    mapped_columns = set(results['field'])
+    expected_columns_for_dataset = expected_columns.get(dataset, [])
+    
+    # Find the difference between the expected columns and the actual columns
+    missing_columns = set(expected_columns_for_dataset) - set(mapped_columns)
+    
+    # Print the results
+    if missing_columns:
+        return print(f"Missing columns for dataset '{dataset}': {', '.join(missing_columns)}.\n")
+    else:
+        return print(f"All expected columns for dataset '{dataset}' are present.")
+
 
     def get_endpoint_health(endpoint,dataset,data_dir):
         """
