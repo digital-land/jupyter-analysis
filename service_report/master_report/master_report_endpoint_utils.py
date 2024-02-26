@@ -27,7 +27,7 @@ def get_endpoints(organisation):
           log l
           inner join source s on l.endpoint = s.endpoint
           inner join resource_endpoint re on l.endpoint = re.endpoint
-          inner join organisation o on s.organisation=o.organisation
+          inner join organisation o on o.organisation = replace(s.organisation, '-eng', '')
           inner join endpoint e on l.endpoint = e.endpoint
           inner join source_pipeline sp on s.source = sp.source
         where
