@@ -23,6 +23,7 @@ def get_provisions():
             "RIPA-BOPS"
           )
           AND provision_reason = "expected"
+          AND p.project == "open-digital-planning"
         GROUP BY
           organisation
         ORDER BY
