@@ -3,6 +3,37 @@ import pandas as pd
 
 datasette_url = "https://datasette.planning.data.gov.uk/"
 
+def get_provisions():
+    global provisions_df  
+    params = urllib.parse.urlencode({
+        "sql": f"""
+        SELECT
+          cohort,
+          notes,
+          organisation,
+          project,
+          provision_reason
+        FROM
+          provision
+        WHERE
+          cohort IN (
+            "ODP-Track1",
+            "ODP-Track3",
+            "ODP-Track2",
+            "RIPA-BOPS"
+          )
+          AND provision_reason = "expected"
+          AND p.project == "open-digital-planning"
+        GROUP BY
+          organisation
+        ORDER BY
+          cohort
+        """,
+        "_size": "max"
+    })
+    url = f"{datasette_url}digital-land.csv?{params}"
+    provisions_df = pd.read_csv(url)
+    return provisions_df
 
 def get_endpoints(organisation):
     if organisation:
