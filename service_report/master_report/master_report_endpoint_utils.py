@@ -14,7 +14,7 @@ def get_provisions():
           project,
           provision_reason
         FROM
-          provision
+          provision p
         WHERE
           cohort IN (
             "ODP-Track1",
