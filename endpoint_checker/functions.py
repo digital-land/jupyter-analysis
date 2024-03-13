@@ -139,7 +139,8 @@ def get_workflow_data(data_dir,collection,dataset):
                 os.path.join(pipeline_dir, pipeline_csv),
             )
             except HTTPError as err:
-                print(err)
+                print(f"Decentralised Collection Error: +{e}")
+                print(f"Centralised (Config) Repository Error: +{err}")
 
     # add transformedd, dataset and issue directories
     dataset_dir = os.path.join(data_dir,"dataset")
