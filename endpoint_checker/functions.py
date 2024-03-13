@@ -132,9 +132,15 @@ def get_workflow_data(data_dir,collection,dataset):
                 os.path.join(pipeline_dir, pipeline_csv),
             )
         except HTTPError as e:
-            print(e)
-    
-    
+            collection_affix = collection.replace("-collection", "")
+            try:
+                urllib.request.urlretrieve(
+                f"{source_url}/config/main/pipeline/{collection_affix}/{pipeline_csv}",
+                os.path.join(pipeline_dir, pipeline_csv),
+            )
+            except HTTPError as err:
+                print(err)
+
     # add transformedd, dataset and issue directories
     dataset_dir = os.path.join(data_dir,"dataset")
     os.makedirs(dataset_dir,exist_ok=True)
