@@ -134,7 +134,7 @@ def get_latest_endpoints(organisation):
             latest_endpoints.at[index, 'resource'] = ""
     return latest_endpoints
 
-def get_issue_types_with_severity_info():
+def get_issue_types_by_severity(severity_list):
     params = urllib.parse.urlencode({
     "sql": f"""
     select issue_type, severity
@@ -144,10 +144,9 @@ def get_issue_types_with_severity_info():
     })
 
     url = f"{datasette_url}digital-land.csv?{params}"
-    df = pd.read_csv(url)
-    info_issues_df = df[df['severity'] == 'info']
-    info_issues = info_issues_df['issue_type'].tolist()
-    return info_issues
+    all_issue_types = pd.read_csv(url)
+    df = all_issue_types.loc[all_issue_types["severity"].isin(severity_list)]
+    return df
 
 
 def get_issues_for_resource(resource, dataset):
