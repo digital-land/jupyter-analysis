@@ -137,7 +137,7 @@ def get_latest_endpoints(organisation):
 def get_issue_types_by_severity(severity_list):
     params = urllib.parse.urlencode({
     "sql": f"""
-    select issue_type, field, severity, responsibility
+    select issue_type, severity, responsibility
     from issue_type
     """,
     "_size": "max"
