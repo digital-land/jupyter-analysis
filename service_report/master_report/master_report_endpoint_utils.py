@@ -12,7 +12,8 @@ def get_provisions():
           notes,
           organisation,
           project,
-          provision_reason
+          provision_reason,
+          start_date
         FROM
           provision p
         WHERE
