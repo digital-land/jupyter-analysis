@@ -4,3 +4,4 @@ geopandas
 matplotlib
 folium
 mapclassify
+json-stream
