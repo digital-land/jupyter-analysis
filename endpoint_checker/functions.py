@@ -163,7 +163,7 @@ def get_workflow_data(data_dir,collection,dataset):
     cache_dir = os.path.join(var_dir,'cache')
     os.makedirs(cache_dir,exist_ok=True)
     urllib.request.urlretrieve(
-        'https://raw.githubusercontent.com/digital-land/organisation-dataset/main/collection/organisation.csv',
+        'https://files.planning.data.gov.uk/organisation-collection/dataset/organisation.csv',
         os.path.join(cache_dir,'organisation.csv')
     )
         
