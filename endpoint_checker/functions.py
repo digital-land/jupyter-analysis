@@ -326,9 +326,11 @@ def run_endpoint_workflow(collection_name,dataset,organisation,endpoint_url,plug
             specification=specification, # isthis a directory
             input_path=os.path.join(data_dir,'collection','resource',resource['resource']),
             output_path=os.path.join(data_dir,'transformed',dataset,f'{resource["resource"]}.csv'),
+            collection_dir=os.path.join(data_dir,'collection'),
             issue_dir=os.path.join(data_dir,'issue',dataset),
             column_field_dir=os.path.join(data_dir,'var','column-field',dataset),
             dataset_resource_dir=os.path.join(data_dir,'var','dataset-resource',dataset),
+            converted_resource_dir=os.path.join(data_dir,'collection','resource'),
             organisation_path=os.path.join(data_dir,'var','cache','organisation.csv'),
             save_harmonised=False,
             endpoints=[resource['endpoints']],
