@@ -165,7 +165,7 @@ def save_resource_unidentified_lookups(input_path,dataset,organisations, pipelin
                 patches=patches,
             ),
             HarmonisePhase(
-                specification=specification,
+                field_datatype_map=specification.get_field_datatype_map(),
                 issues=issue_log,
             ),
             DefaultPhase(
