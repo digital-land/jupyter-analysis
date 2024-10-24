@@ -180,7 +180,7 @@ def save_resource_unidentified_lookups(input_path,dataset,organisations, pipelin
                 fields=specification.schema_field[schema],
                 migrations=pipeline.migrations(),
             ),
-            OrganisationPhase(organisation=organisation),
+            OrganisationPhase(organisation=organisation, issues=issue_log),
             FieldPrunePhase(fields=specification.current_fieldnames(schema)),
             EntityReferencePhase(
                 dataset=dataset,
