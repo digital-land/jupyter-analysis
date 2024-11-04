@@ -1,0 +1,4 @@
+Dataset 1,Organisation 1,Entity Min 1,Entity Max 1,Dataset 2,Organisation 2,Entity Min 2,Entity Max 2
+conservation-area,development-corporation:Q6670544,44006543,44006543,conservation-area,local-authority:TWH,44006543,44006545
+conservation-area,local-authority:BUC,44006432,44006432,conservation-area,local-authority:CON,44006432,44006432
+conservation-area,local-authority:HMF,44008347,44008380,conservation-area,local-authority:KEC,44008380,44008380
