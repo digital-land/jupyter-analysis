@@ -1,6 +1,5 @@
 dataset,organisation,entity-minimum,entity-maximum
 conservation-area,development-corporation:Q6670544,44003422,44003423
-conservation-area,development-corporation:Q6670544,44006543,44006543
 conservation-area,development-corporation:Q6670544,44009061,44009061
 conservation-area,local-authority:BAB,44005968,44005997
 conservation-area,local-authority:BAB,44008683,44008684
@@ -60,7 +59,6 @@ conservation-area,local-authority:BRY,44009016,44009042
 conservation-area,local-authority:BRY,44009096,44009096
 conservation-area,local-authority:BRY,44009101,44009101
 conservation-area,local-authority:BST,44010589,44010622
-conservation-area,local-authority:BUC,44006432,44006432
 conservation-area,local-authority:BUC,44007468,44007669
 conservation-area,local-authority:BUC,44009392,44009593
 conservation-area,local-authority:BUC,44009598,44009613
@@ -253,7 +251,6 @@ conservation-area,local-authority:ISL,44008956,44008958
 conservation-area,local-authority:ISL,44008968,44008980
 conservation-area,local-authority:ISL,44008983,44008996
 conservation-area,local-authority:ISL,44008998,44009007
-conservation-area,local-authority:KEC,44008380,44008380
 conservation-area,local-authority:KEC,44008857,44008857
 conservation-area,local-authority:KEC,44008882,44008882
 conservation-area,local-authority:KEC,44008926,44008955
