@@ -34,3 +34,18 @@ def get_endpoint_res_issues(db_path):
     df = query_sqlite(db_path, q)
 
     return df
+
+def get_organisation_lookup():
+
+    q = """
+        select entity as organisation_entity, name as organisation_name, organisation, dataset as org_type, end_date, 
+        local_planning_authority as LPACD, local_authority_district,
+        case when local_planning_authority != "" or organisation in ("local-authority:NDO", "local-authority:PUR") then 1 else 0 end as lpa_flag
+        from organisation
+        where name != "Waveney District Council"
+        """
+
+    df = datasette_query("digital-land", q)
+
+    return df
+

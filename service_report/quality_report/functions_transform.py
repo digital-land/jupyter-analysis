@@ -1,5 +1,6 @@
 
 import pandas as pd
+import geopandas as gpd
 import numpy as np
 
 def make_freshness_input_table(base_table, age_days = 365):
@@ -22,15 +23,42 @@ def make_issues_input_table(base_table, issues_lookup):
         issues_lookup[["issue_type", "quality_category", "quality_level"]],
         how = "left",
         on = "issue_type"
-    )[["collection", "pipeline", "organisation", "organisation_name", "issue_type", "quality_category", "quality_level"]]
+    )[["LPACD", "collection", "pipeline", "organisation", "organisation_name", "issue_type", "quality_category", "quality_level"]]
 
     return df
+
+
+def make_ca_provenance_issues_table(ca_gdf, lpa_gdf):
+
+    # spatial join
+    lpa_ca_join = gpd.sjoin(
+        lpa_gdf[["LPACD", "organisation", "organisation_name", "geometry"]],
+        ca_gdf[["entity", "organisation_entity", "lpa_flag", "point"]],
+        how = "inner",
+        predicate = "intersects"
+    )
+
+    # take max of ca LPA flag for each LPA
+    lpa_prov = lpa_ca_join.groupby(["LPACD", "organisation", "organisation_name"], as_index=False).agg(
+        prov_rank_max = ("lpa_flag", "max")
+    )
+
+    # only LPAs with CA data not from an LPA
+    lpa_non_auth = lpa_prov[lpa_prov["prov_rank_max"] == 0].copy()
+
+    # add in extra fields for output
+    lpa_non_auth[["collection", "pipeline"]] = "conservation-area"
+    lpa_non_auth["issue_type"] = "non_auth"
+    lpa_non_auth["quality_category"] = "1 - authoritative data from the LPA"
+    lpa_non_auth["quality_level"] = 1
+
+    return lpa_non_auth[["LPACD", "collection", "pipeline", "organisation", "organisation_name", "issue_type", "quality_category", "quality_level"]]
 
 
 def make_score_summary_table(quality_input_df, level_map):
 
     df = quality_input_df.groupby([
-        "collection", "pipeline", "organisation", "organisation_name"
+        "LPACD", "collection", "pipeline", "organisation", "organisation_name"
     ],
         as_index=False,
         dropna=False
@@ -38,7 +66,7 @@ def make_score_summary_table(quality_input_df, level_map):
         quality_level = ("quality_level", "min")
     )
 
-    df.replace(np.nan, 4, inplace=True)
+    df["quality_level"].replace(np.nan, 4, inplace=True)
 
     if (all(level in level_map for level in df["quality_level"].unique())):
 
