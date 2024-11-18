@@ -1,15 +1,15 @@
 from functions_core import *
 
-def get_provision_lookup(db_path):
+def get_odp_provision_lookup():
     
     q = f"""
-    SELECT 
-        distinct organisation, pipeline, cohort
-    FROM endpoint_dataset_resource_summary
+    SELECT *
+    FROM provision
+    WHERE project = "open-digital-planning"
     """
 
     # get organisation, pipeline and cohort flag from performance table
-    df = query_sqlite(db_path, q)
+    df = datasette_query("digital-land", q)
 
     return df
 
