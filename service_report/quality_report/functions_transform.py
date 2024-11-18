@@ -28,7 +28,7 @@ def make_issues_input_table(base_table, issues_lookup):
     return df
 
 
-def make_ca_provenance_issues_table(ca_gdf, lpa_gdf):
+def make_ca_provenance_issues_table(lpa_gdf, ca_gdf):
 
     # spatial join
     lpa_ca_join = gpd.sjoin(
@@ -53,6 +53,35 @@ def make_ca_provenance_issues_table(ca_gdf, lpa_gdf):
     lpa_non_auth["quality_level"] = 1
 
     return lpa_non_auth[["LPACD", "collection", "pipeline", "organisation", "organisation_name", "issue_type", "quality_category", "quality_level"]]
+
+
+def make_ca_count_match_issues_table(lpa_gdf, ca_gdf, manual_count_df):
+
+    # spatial join LPA boundaries & CA entities, count entities per LPA and compare to manual count
+
+    lpa_ca_join = gpd.sjoin(
+        lpa_gdf[["LPACD", "organisation_entity", "organisation", "organisation_name", "geometry"]],
+        ca_gdf[["entity", "point"]],
+        how = "inner",
+        predicate = "intersects"
+    ).groupby(
+        ["LPACD", "organisation_entity", "organisation", "organisation_name"], as_index = False
+    ).agg(
+        count_platform = ("entity", "count")
+    ).merge(
+        manual_count_df[["organisation_entity", "conservation_area_count"]],
+        how = "left",
+        on = "organisation_entity"
+    )
+
+    lpa_no_match = lpa_ca_join[lpa_ca_join["count_platform"] != lpa_ca_join["conservation_area_count"]].copy()
+
+    lpa_no_match[["collection", "pipeline"]] = "conservation-area"
+    lpa_no_match["issue_type"] = "count_match"
+    lpa_no_match["quality_category"] = "3 - entity count matches LPA"
+    lpa_no_match["quality_level"] = 3
+
+    return lpa_no_match[["LPACD", "collection", "pipeline", "organisation", "organisation_name", "issue_type", "quality_category", "quality_level"]]
 
 
 def make_score_summary_table(quality_input_df, level_map):
