@@ -95,7 +95,7 @@ def make_score_summary_table(quality_input_df, level_map):
         quality_level = ("quality_level", "min")
     )
 
-    df["quality_level"].replace(np.nan, 4, inplace=True)
+    df["quality_level"] = df["quality_level"].replace(np.nan, 4)
 
     if (all(level in level_map for level in df["quality_level"].unique())):
 
