@@ -50,5 +50,16 @@ Wherever possible give your report or tool an action-orientated name which uses 
 
 This isn't so important for analysis notebooks, which can often have not so clear a purpose, but still try and be descriptive!
 
+### Notebook descriptions
+Each notebook should be headed with our boilerplate description in a markdown cell:
+
+```
+# [Report title]
+**Author**:  [Name]   
+**Date created**:  [Date] 
+**Dataset Scope**: [one/many/all datasets]  
+**Purpose**:  [description of what notebook does]
+```
+
 ## Dependencies
 We aim to set up the same environment as in the pipline, hence primarily installing digital-land-python but there may be additional tools for data manipulation or visualisation that can be added to the requirements. You can also change requirements files to download specific branches of digital-land-python to test new features before merging.
