@@ -243,7 +243,7 @@ def assign_entries(
         specification_dir=specification_dir,
     )
     unassigned_entries = []
-    with open("../data/endpoint_checker/var/cache/unassigned-entries.csv") as f:
+    with open("../../data/endpoint_checker/var/cache/unassigned-entries.csv") as f:
         dictreader = csv.DictReader(f)
         for row in dictreader:
             unassigned_entries.append(row)
