@@ -1,53 +1,101 @@
-import spatialite
 import pandas as pd
+import spatialite
 
-def get_duplicates_between_orgs(dataset_path,current_path):  
+def query_sqlite(db_path, query_string):
 
-    #get current endpoint entities
-    sql_db1 = f"""
-        SELECT entity,name,organisation_entity,reference,geometry
-        FROM entity
-        WHERE ST_IsValid(GeomFromText(geometry))
+    with spatialite.connect(db_path) as con:
+            
+        cursor = con.execute(query_string)
+        cols = [column[0] for column in cursor.description]
+        results_df = pd.DataFrame.from_records(data=cursor.fetchall(), columns=cols)
+
+    return results_df
+
+
+def count_valid_values(db_path, field_name):
+
+    df = query_sqlite(
+        db_path,
+        f"select {field_name} from entity where {field_name} != '' "
+    )
+    return len(df)
+
+
+def get_duplicates_between_orgs(dataset, live_path, new_path):  
+
+    #get new endpoint entities and write to temp table in live dataset sqlite db
+    results_temp = query_sqlite(
+        new_path, 
         """
+        SELECT entity, name, organisation_entity, reference, geometry, point
+        FROM entity
+        """)
     
-    with spatialite.connect(current_path) as con1:
-        cursor1 = con1.execute(sql_db1)
-        cols1 = [column[0] for column in cursor1.description]
-        results_temp = pd.DataFrame.from_records(data=cursor1.fetchall(), columns=cols1)
-        
-    temporary_table = "temp_table"
-    results_temp.to_sql(temporary_table, con1, index=False, if_exists='replace')
+    with spatialite.connect(live_path) as con:
+            results_temp.to_sql("entity_new", con, index=False, if_exists='replace')
 
-    #checks current entities with existing dataset
-    sql_db2 = f"""
-            SELECT a.entity AS primary_entity,
-                a.name AS primary_name,
-                a.reference AS primary_reference,
-                a.organisation_entity AS primary_organisation_entity,
-                a.geometry primary_geometry,
-                b.entity AS secondary_entity,
-                b.name AS secondary_name,
-                b.reference AS secondary_reference,
-                b.organisation_entity AS secondary_organisation_entity,
-                b.geometry AS secondary_geometry,
-                100 *(ST_Area(ST_Intersection(GeomFromText(a.geometry), GeomFromText(b.geometry)))/ MIN(ST_Area(GeomFromText(a.geometry)), ST_Area(GeomFromText(b.geometry)))) AS pct_overlap
+    # if dataset is tree with points instead of geometry (multipolygons), use points and st_equals join
+    if (dataset == "tree") & (count_valid_values(new_path, "point") > count_valid_values(new_path, "geometry")):
+
+        print("Dataset is tree with points instead of polygons, checking for geometry duplicates using points")
+
+        #checks current entities with existing dataset
+        sql_point = """
+            SELECT a.entity AS live_entity,
+                a.name AS live_name,
+                a.reference AS live_reference,
+                a.organisation_entity AS live_organisation_entity,
+                a.point live_geometry,
+                b.entity AS new_entity,
+                b.name AS new_name,
+                b.reference AS new_reference,
+                b.organisation_entity AS new_organisation_entity,
+                b.point AS new_geometry
             FROM
-                (SELECT entity,name,organisation_entity,reference,geometry
-                 FROM entity
-                 WHERE ST_IsValid(GeomFromText(geometry))
+                (SELECT entity, name, organisation_entity, reference, point
+                FROM entity
+                WHERE ST_IsValid(GeomFromText(point))
                 ) a
             JOIN
-                {temporary_table} b 
+                entity_new b 
             ON a.organisation_entity <> b.organisation_entity
-            AND ST_Intersects(GeomFromText(a.geometry), GeomFromText(b.geometry))
-            WHERE 100 *(ST_Area(ST_Intersection(GeomFromText(a.geometry), GeomFromText(b.geometry)))/ MIN(ST_Area(GeomFromText(a.geometry)), ST_Area(GeomFromText(b.geometry)))) > 95;    
+                AND ST_EQUALS(GeomFromText(a.point), GeomFromText(b.point)) 
+            WHERE ST_IsValid(GeomFromText(b.point))
             """
-    
-    with spatialite.connect(dataset_path) as con:
-        results_temp.to_sql(temporary_table, con, index=False, if_exists='replace')
-        cursor = con.execute(sql_db2)
-        cols = [column[0] for column in cursor.description]
-        results = pd.DataFrame.from_records(data=cursor.fetchall(), columns=cols)
+        
+        results = query_sqlite(live_path, sql_point)
+
+    else:
+         
+        print("checking for geometry duplicates using geometry field (multipolygon)")
+        sql_geom = """
+            SELECT a.entity AS live_entity,
+                a.name AS live_name,
+                a.reference AS live_reference,
+                a.organisation_entity AS live_organisation_entity,
+                a.geometry live_geometry,
+                b.entity AS new_entity,
+                b.name AS new_name,
+                b.reference AS new_reference,
+                b.organisation_entity AS new_organisation_entity,
+                b.geometry AS new_geometry,
+                100 *(ST_Area(ST_Intersection(GeomFromText(a.geometry), GeomFromText(b.geometry)))/ MIN(ST_Area(GeomFromText(a.geometry)), ST_Area(GeomFromText(b.geometry)))) AS pct_overlap
+            FROM
+                (SELECT entity, name, organisation_entity, reference, geometry
+                    FROM entity
+                    WHERE ST_IsValid(GeomFromText(geometry))
+                ) a
+            JOIN
+                entity_new b 
+            ON a.organisation_entity <> b.organisation_entity
+                AND ST_Intersects(GeomFromText(a.geometry), GeomFromText(b.geometry))
+            WHERE 100 *(ST_Area(ST_Intersection(GeomFromText(a.geometry), GeomFromText(b.geometry)))/ MIN(ST_Area(GeomFromText(a.geometry)), ST_Area(GeomFromText(b.geometry)))) > 95
+            AND ST_IsValid(GeomFromText(b.geometry)
+            """
+        
+        results = query_sqlite(live_path, sql_geom)
+
+    print(f"{len(results)} geographical matches found between new and existing entities")
 
     return results
     
