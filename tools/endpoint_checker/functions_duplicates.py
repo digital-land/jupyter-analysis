@@ -90,7 +90,7 @@ def get_duplicates_between_orgs(dataset, live_path, new_path):
             ON a.organisation_entity <> b.organisation_entity
                 AND ST_Intersects(GeomFromText(a.geometry), GeomFromText(b.geometry))
             WHERE 100 *(ST_Area(ST_Intersection(GeomFromText(a.geometry), GeomFromText(b.geometry)))/ MIN(ST_Area(GeomFromText(a.geometry)), ST_Area(GeomFromText(b.geometry)))) > 95
-            AND ST_IsValid(GeomFromText(b.geometry)
+            AND ST_IsValid(GeomFromText(b.geometry))
             """
         
         results = query_sqlite(live_path, sql_geom)
