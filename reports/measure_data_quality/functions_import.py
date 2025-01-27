@@ -14,6 +14,25 @@ def get_odp_provision_lookup():
     return df
 
 
+def get_issue_quality_lookup():
+
+    q = """
+    SELECT 
+        description,
+        issue_type,
+        name,
+        severity,
+        responsibility,
+        quality_criteria_level || " - " || quality_criteria as quality_criteria,
+        quality_criteria_level as quality_level
+    FROM issue_type
+    """
+
+    df = datasette_query("digital-land", q)
+
+    return df
+
+
 def get_endpoint_res_issues(db_path):
 
     # get table of active endpoints and resources, with issue summaries per resource joined on

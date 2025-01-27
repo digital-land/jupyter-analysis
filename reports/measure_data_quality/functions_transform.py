@@ -10,7 +10,7 @@ def make_freshness_input_table(base_table, age_days = 365):
 
     # add in extra fields
     df["issue_type"] = "not_fresh"
-    df["quality_category"] = "1 - endpoint updated in last year"
+    df["quality_criteria"] = "1 - endpoint updated in last year"
     df["quality_level"] = 1
 
     return df
@@ -20,10 +20,10 @@ def make_issues_input_table(base_table, issues_lookup):
 
     # join on quality key and restrict fields
     df = base_table.merge(
-        issues_lookup[["issue_type", "quality_category", "quality_level"]],
+        issues_lookup[["issue_type", "quality_criteria", "quality_level"]],
         how = "left",
         on = "issue_type"
-    )[["collection", "pipeline", "organisation", "organisation_name", "issue_type", "quality_category", "quality_level"]]
+    )[["collection", "pipeline", "organisation", "organisation_name", "issue_type", "quality_criteria", "quality_level"]]
 
     return df
 

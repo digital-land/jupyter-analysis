@@ -2,6 +2,7 @@
 import pandas as pd
 import geopandas as gpd
 import numpy as np
+from functions_core import *
 
 def make_freshness_input_table(base_table, age_days = 365):
 
@@ -10,7 +11,7 @@ def make_freshness_input_table(base_table, age_days = 365):
 
     # add in extra fields
     df["issue_type"] = "not_fresh"
-    df["quality_category"] = "1 - endpoint updated in last year"
+    df["quality_criteria"] = "1 - endpoint updated in last year"
     df["quality_level"] = 1
 
     return df
@@ -20,10 +21,10 @@ def make_issues_input_table(base_table, issues_lookup):
 
     # join on quality key and restrict fields
     df = base_table.merge(
-        issues_lookup[["issue_type", "quality_category", "quality_level"]],
+        issues_lookup[["issue_type", "quality_criteria", "quality_level"]],
         how = "left",
         on = "issue_type"
-    )[["LPACD", "collection", "pipeline", "organisation", "organisation_name", "issue_type", "quality_category", "quality_level"]]
+    )[["LPACD", "collection", "pipeline", "organisation", "organisation_name", "issue_type", "quality_criteria", "quality_level"]]
 
     return df
 
@@ -49,45 +50,67 @@ def make_ca_provenance_issues_table(lpa_gdf, ca_gdf):
     # add in extra fields for output
     lpa_non_auth[["collection", "pipeline"]] = "conservation-area"
     lpa_non_auth["issue_type"] = "non_auth"
-    lpa_non_auth["quality_category"] = "1 - authoritative data from the LPA"
+    lpa_non_auth["quality_criteria"] = "1 - authoritative data from the LPA"
     lpa_non_auth["quality_level"] = 1
 
-    return lpa_non_auth[["LPACD", "collection", "pipeline", "organisation", "organisation_name", "issue_type", "quality_category", "quality_level"]]
+    return lpa_non_auth[["LPACD", "collection", "pipeline", "organisation", "organisation_name", "issue_type", "quality_criteria", "quality_level"]]
 
 
-def make_ca_count_match_issues_table(lpa_gdf, ca_gdf, manual_count_df):
+def make_ca_count_match_issues_table(base_table):
 
-    # spatial join LPA boundaries & CA entities, count entities per LPA and compare to manual count
+    q = """
+    SELECT distinct organisation
+    FROM expectation
+    WHERE 1=1
+        AND name = 'Check number of conservation-area entities inside the local planning authority boundary matches the manual count' 
+        AND passed = 'False'
+    """
 
-    lpa_ca_join = gpd.sjoin(
-        lpa_gdf[["LPACD", "organisation_entity", "organisation", "organisation_name", "geometry"]],
-        ca_gdf[["entity", "point"]],
+    expectation_results = datasette_query("digital-land", q)
+
+    df = base_table.merge(
+        expectation_results,
         how = "inner",
-        predicate = "intersects"
-    ).groupby(
-        ["LPACD", "organisation_entity", "organisation", "organisation_name"], as_index = False
-    ).agg(
-        count_platform = ("entity", "count")
-    ).merge(
-        manual_count_df[["organisation_entity", "conservation_area_count"]],
-        how = "left",
-        on = "organisation_entity"
-    )
+        on = "organisation"
+    )[["LPACD", "organisation", "organisation_name"]]
 
-    lpa_no_match = lpa_ca_join[lpa_ca_join["count_platform"] != lpa_ca_join["conservation_area_count"]].copy()
+    df["collection"] = "conservation-area"
+    df["pipeline"] = "conservation-area"
+    df["quality_criteria"] = "3 - entity count matches LPA"
+    df["quality_level"] = 3
 
-    lpa_no_match[["collection", "pipeline"]] = "conservation-area"
-    lpa_no_match["issue_type"] = "count_match"
-    lpa_no_match["quality_category"] = "3 - entity count matches LPA"
-    lpa_no_match["quality_level"] = 3
+    return df
 
-    return lpa_no_match[["LPACD", "collection", "pipeline", "organisation", "organisation_name", "issue_type", "quality_category", "quality_level"]]
+
+def make_lpa_boundary_issues_table(base_table):
+
+    q = """
+    SELECT distinct organisation, dataset as pipeline
+    FROM expectation
+    WHERE 1=1
+        AND name like '%outside%' 
+        AND message not like '%error%'
+        AND passed = 'False'
+    """
+
+    bounds_results = datasette_query("digital-land", q)
+
+    df = base_table.merge(
+        bounds_results,
+        how = "inner",
+        on = "organisation"
+    )[["LPACD", "organisation", "organisation_name", "pipeline"]]
+
+    df["quality_criteria"] = "3 - entities within LPA boundary"
+    df["quality_level"] = 3
+
+    return df
 
 
 def make_score_summary_table(quality_input_df, level_map):
 
     df = quality_input_df.groupby([
-        "LPACD", "collection", "pipeline", "organisation", "organisation_name"
+        "LPACD", "pipeline", "organisation", "organisation_name"
     ],
         as_index=False,
         dropna=False
