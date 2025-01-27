@@ -10,7 +10,7 @@ def make_freshness_input_table(base_table, age_days = 365):
 
     # add in extra fields
     df["issue_type"] = "not_fresh"
-    df["quality_category"] = "1 - endpoint updated in last year"
+    df["quality_criteria"] = "1 - endpoint updated in last year"
     df["quality_level"] = 1
 
     return df
@@ -20,10 +20,10 @@ def make_issues_input_table(base_table, issues_lookup):
 
     # join on quality key and restrict fields
     df = base_table.merge(
-        issues_lookup[["issue_type", "quality_category", "quality_level"]],
+        issues_lookup[["issue_type", "quality_criteria", "quality_level"]],
         how = "left",
         on = "issue_type"
-    )[["LPACD", "collection", "pipeline", "organisation", "organisation_name", "issue_type", "quality_category", "quality_level"]]
+    )[["LPACD", "collection", "pipeline", "organisation", "organisation_name", "issue_type", "quality_criteria", "quality_level"]]
 
     return df
 
@@ -49,10 +49,10 @@ def make_ca_provenance_issues_table(lpa_gdf, ca_gdf):
     # add in extra fields for output
     lpa_non_auth[["collection", "pipeline"]] = "conservation-area"
     lpa_non_auth["issue_type"] = "non_auth"
-    lpa_non_auth["quality_category"] = "1 - authoritative data from the LPA"
+    lpa_non_auth["quality_criteria"] = "1 - authoritative data from the LPA"
     lpa_non_auth["quality_level"] = 1
 
-    return lpa_non_auth[["LPACD", "collection", "pipeline", "organisation", "organisation_name", "issue_type", "quality_category", "quality_level"]]
+    return lpa_non_auth[["LPACD", "collection", "pipeline", "organisation", "organisation_name", "issue_type", "quality_criteria", "quality_level"]]
 
 
 def make_ca_count_match_issues_table(lpa_gdf, ca_gdf, manual_count_df):
