@@ -1,5 +1,24 @@
 from functions_core import *
 
+def get_issue_quality_lookup():
+
+    q = """
+    SELECT 
+        description,
+        issue_type,
+        name,
+        severity,
+        responsibility,
+        quality_criteria_level || " - " || quality_criteria as quality_criteria,
+        quality_criteria_level as quality_level
+    FROM issue_type
+    """
+
+    df = datasette_query("digital-land", q)
+
+    return df
+
+
 def get_odp_provision_lookup():
     
     q = f"""
