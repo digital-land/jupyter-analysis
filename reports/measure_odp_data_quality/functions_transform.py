@@ -82,10 +82,35 @@ def make_ca_count_match_issues_table(base_table):
     return df
 
 
+def make_lpa_boundary_issues_table(base_table):
+
+    q = """
+    SELECT distinct organisation, dataset as pipeline
+    FROM expectation
+    WHERE 1=1
+        AND name like '%outside%' 
+        AND message not like '%error%'
+        AND passed = 'False'
+    """
+
+    bounds_results = datasette_query("digital-land", q)
+
+    df = base_table.merge(
+        bounds_results,
+        how = "inner",
+        on = "organisation"
+    )[["LPACD", "organisation", "organisation_name", "pipeline"]]
+
+    df["quality_criteria"] = "3 - entities within LPA boundary"
+    df["quality_level"] = 3
+
+    return df
+
+
 def make_score_summary_table(quality_input_df, level_map):
 
     df = quality_input_df.groupby([
-        "LPACD", "collection", "pipeline", "organisation", "organisation_name"
+        "LPACD", "pipeline", "organisation", "organisation_name"
     ],
         as_index=False,
         dropna=False
