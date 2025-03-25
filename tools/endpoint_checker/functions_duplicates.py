@@ -69,29 +69,36 @@ def get_duplicates_between_orgs(dataset, live_path, new_path):
          
         print("checking for geometry duplicates using geometry field (multipolygon)")
         sql_geom = """
-            SELECT a.entity AS live_entity,
-                a.name AS live_name,
-                a.reference AS live_reference,
-                a.organisation_entity AS live_organisation_entity,
-                a.geometry live_geometry,
-                b.entity AS new_entity,
-                b.name AS new_name,
-                b.reference AS new_reference,
-                b.organisation_entity AS new_organisation_entity,
-                b.geometry AS new_geometry,
-                100 *(ST_Area(ST_Intersection(GeomFromText(a.geometry), GeomFromText(b.geometry)))/ MIN(ST_Area(GeomFromText(a.geometry)), ST_Area(GeomFromText(b.geometry)))) AS pct_overlap
-            FROM
-                (SELECT entity, name, organisation_entity, reference, geometry
-                    FROM entity
-                    WHERE ST_IsValid(GeomFromText(geometry))
-                ) a
-            JOIN
-                entity_new b 
-            ON a.organisation_entity <> b.organisation_entity
-                AND ST_Intersects(GeomFromText(a.geometry), GeomFromText(b.geometry))
-            WHERE 100 *(ST_Area(ST_Intersection(GeomFromText(a.geometry), GeomFromText(b.geometry)))/ MIN(ST_Area(GeomFromText(a.geometry)), ST_Area(GeomFromText(b.geometry)))) > 95
+        WITH calc AS (
+        SELECT a.entity AS live_entity,
+            a.name AS live_name,
+            a.reference AS live_reference,
+            a.organisation_entity AS live_organisation_entity,
+            a.geometry live_geometry,
+            b.entity AS new_entity,
+            b.name AS new_name,
+            b.reference AS new_reference,
+            b.organisation_entity AS new_organisation_entity,
+            b.geometry AS new_geometry,
+            ST_Area(ST_Intersection(GeomFromText(a.geometry), GeomFromText(b.geometry))) as area_geom_intersection,
+            ST_Area(GeomFromText(a.geometry)) as area_geom_live,
+            ST_Area(GeomFromText(b.geometry)) as area_geom_new
+
+        FROM entity a
+        JOIN entity_new b 
+        ON a.organisation_entity <> b.organisation_entity
+            AND ST_Intersects(GeomFromText(a.geometry), GeomFromText(b.geometry))
+        WHERE ST_IsValid(GeomFromText(a.geometry))
             AND ST_IsValid(GeomFromText(b.geometry))
-            """
+        )
+
+        SELECT 
+            *,
+            100 * area_geom_intersection / (area_geom_live + area_geom_new - area_geom_intersection) as pct_overlap
+
+        FROM CALC
+        WHERE 100 * area_geom_intersection / (area_geom_live + area_geom_new - area_geom_intersection) > 95
+        """
         
         results = query_sqlite(live_path, sql_geom)
 
