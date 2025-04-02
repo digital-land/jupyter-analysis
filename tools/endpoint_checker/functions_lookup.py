@@ -108,7 +108,6 @@ def save_resource_unidentified_lookups(input_path,dataset,organisations, pipelin
     # convert phase inputs
     resource = resource_from_path(input_path)
     dataset_resource_log = DatasetResourceLog(dataset=dataset, resource=resource)
-    custom_temp_dir='./var'
 
     # normalise phase inputs
     skip_patterns = pipeline.skip_patterns(resource)
@@ -149,7 +148,6 @@ def save_resource_unidentified_lookups(input_path,dataset,organisations, pipelin
             ConvertPhase(
                 path=input_path,
                 dataset_resource_log=dataset_resource_log,
-                custom_temp_dir=custom_temp_dir,
             ),
             NormalisePhase(skip_patterns=skip_patterns, null_path=null_path),
             ParsePhase(),
