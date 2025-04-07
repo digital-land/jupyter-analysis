@@ -8,4 +8,4 @@ json-stream
 beautifulsoup4 
 lxml 
 requests
-libspatialite
+spatialite
