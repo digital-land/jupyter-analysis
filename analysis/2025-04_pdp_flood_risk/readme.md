@@ -27,7 +27,7 @@ Because of the large size, we're testing with a sample taken by extracting recor
 Bath test area: `POLYGON ((-2.367897 51.363421, -2.282753 51.363421, -2.282753 51.40124, -2.367897 51.40124, -2.367897 51.363421))`  
 [[see area on wktmap.com](https://wktmap.com/?53a2c5f0)]
 
-2023 records, polygon area stats:
+2023 records, summary statistics of polygon area (calculated in Km^2):
 ```
 count    41.000000
 mean      0.317394
@@ -39,7 +39,7 @@ min       0.000000
 max       9.539646
 ```
 
-2025 records, polygon area stats:
+2025 records, summary statistics of polygon area (calculated in Km^2):
 ```
 count    1228.000000
 mean        0.000633
