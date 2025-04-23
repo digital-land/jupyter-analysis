@@ -82,7 +82,8 @@ def get_duplicates_between_orgs(dataset, live_path, new_path):
             b.geometry AS new_geometry,
             ST_Area(ST_Intersection(GeomFromText(a.geometry), GeomFromText(b.geometry))) as area_geom_intersection,
             ST_Area(GeomFromText(a.geometry)) as area_geom_live,
-            ST_Area(GeomFromText(b.geometry)) as area_geom_new
+            ST_Area(GeomFromText(b.geometry)) as area_geom_new,
+            ST_Area(ST_Intersection(GeomFromText(a.geometry), GeomFromText(b.geometry))) / ST_Area(ST_Union(GeomFromText(a.geometry), GeomFromText(a.geometry))) as pct_overlap
 
         FROM entity a
         JOIN entity_new b 
@@ -92,12 +93,9 @@ def get_duplicates_between_orgs(dataset, live_path, new_path):
             AND ST_IsValid(GeomFromText(b.geometry))
         )
 
-        SELECT 
-            *,
-            100 * area_geom_intersection / (area_geom_live + area_geom_new - area_geom_intersection) as pct_overlap
-
+        SELECT *
         FROM CALC
-        WHERE 100 * area_geom_intersection / (area_geom_live + area_geom_new - area_geom_intersection) > 95
+        WHERE pct_overlap > 0.95
         """
         
         results = query_sqlite(live_path, sql_geom)
