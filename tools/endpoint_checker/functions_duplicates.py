@@ -83,7 +83,7 @@ def get_duplicates_between_orgs(dataset, live_path, new_path):
             ST_Area(ST_Intersection(GeomFromText(a.geometry), GeomFromText(b.geometry))) as area_geom_intersection,
             ST_Area(GeomFromText(a.geometry)) as area_geom_live,
             ST_Area(GeomFromText(b.geometry)) as area_geom_new,
-            ST_Area(ST_Intersection(GeomFromText(a.geometry), GeomFromText(b.geometry))) / ST_Area(ST_Union(GeomFromText(a.geometry), GeomFromText(a.geometry))) as pct_overlap
+            ST_Area(ST_Intersection(GeomFromText(a.geometry), GeomFromText(b.geometry))) / ST_Area(ST_Union(GeomFromText(a.geometry), GeomFromText(b.geometry))) as pct_overlap
 
         FROM entity a
         JOIN entity_new b 
