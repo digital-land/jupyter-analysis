@@ -1,0 +1,63 @@
+[2025-06-03 11:32:49] Starting workflow...
+[2025-06-03 11:32:49] Running: endpoints_missing_doc_urls.py
+[2025-06-03 11:32:50] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\endpoints_missing_doc_urls.py
+[2025-06-03 11:32:50] Running: full_datasette_tables.py
+[2025-06-03 11:32:51] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\full_datasette_tables.py
+[2025-06-03 11:32:51] Running: generate_odp_conformance_csv.py
+[2025-06-03 11:32:52] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\generate_odp_conformance_csv.py
+[2025-06-03 11:32:52] Running: generate_odp_issues_csv.py
+[2025-06-03 11:32:53] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\generate_odp_issues_csv.py
+[2025-06-03 11:32:53] Running: generate_odp_status_csv.py
+[2025-06-03 11:32:54] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\generate_odp_status_csv.py
+[2025-06-03 11:32:54] Running: sql_queried_datasette_tables.py
+[2025-06-03 11:32:55] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\sql_queried_datasette_tables.py
+[2025-06-03 11:32:55] Workflow complete.
+[2025-06-03 13:46:33] Starting workflow...
+[2025-06-03 13:46:33] Running: endpoints_missing_doc_urls.py
+[2025-06-03 13:46:39] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\endpoints_missing_doc_urls.py
+[2025-06-03 13:46:39] Running: full_datasette_tables.py
+[2025-06-03 13:46:40] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\full_datasette_tables.py
+[2025-06-03 13:46:40] Running: generate_odp_conformance_csv.py
+[2025-06-03 13:46:41] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\generate_odp_conformance_csv.py
+[2025-06-03 13:46:41] Running: generate_odp_issues_csv.py
+[2025-06-03 13:46:42] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\generate_odp_issues_csv.py
+[2025-06-03 13:46:42] Running: generate_odp_status_csv.py
+[2025-06-03 13:46:43] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\generate_odp_status_csv.py
+[2025-06-03 13:46:43] Running: sql_queried_datasette_tables.py
+[2025-06-03 13:46:44] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\sql_queried_datasette_tables.py
+[2025-06-03 13:46:44] Workflow complete.
+[2025-06-03 14:19:09] Starting workflow...
+[2025-06-03 14:19:09] Running: endpoints_missing_doc_urls.py
+[2025-06-03 14:19:12] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\endpoints_missing_doc_urls.py
+[2025-06-03 14:19:12] Running: full_datasette_tables.py
+[2025-06-03 14:19:13] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\full_datasette_tables.py
+[2025-06-03 14:19:13] Running: generate_odp_conformance_csv.py
+[2025-06-03 14:19:15] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\generate_odp_conformance_csv.py
+[2025-06-03 14:19:15] Running: generate_odp_issues_csv.py
+[2025-06-03 14:19:17] FAIL: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\generate_odp_issues_csv.py
+[2025-06-03 14:19:17] Error:
+Traceback (most recent call last):
+  File "C:\Users\DanielGodden\Documents\MCHLG\collecting_and_managing_data\scripts\generate_odp_issues_csv.py", line 178, in <module>
+    generate_issue_summary_csv(output_dir, dataset_type="all")
+  File "C:\Users\DanielGodden\Documents\MCHLG\collecting_and_managing_data\scripts\generate_odp_issues_csv.py", line 153, in generate_issue_summary_csv
+    df.to_csv(output_path, index=False)
+  File "C:\Users\DanielGodden\Documents\MCHLG\collecting_and_managing_data\.venv\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DanielGodden\Documents\MCHLG\collecting_and_managing_data\.venv\Lib\site-packages\pandas\core\generic.py", line 3967, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DanielGodden\Documents\MCHLG\collecting_and_managing_data\.venv\Lib\site-packages\pandas\io\formats\format.py", line 1014, in to_csv
+    csv_formatter.save()
+  File "C:\Users\DanielGodden\Documents\MCHLG\collecting_and_managing_data\.venv\Lib\site-packages\pandas\io\formats\csvs.py", line 251, in save
+    with get_handle(
+         ^^^^^^^^^^^
+  File "C:\Users\DanielGodden\Documents\MCHLG\collecting_and_managing_data\.venv\Lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/outputs\\odp-issue.csv'
+[2025-06-03 14:19:17] Running: generate_odp_status_csv.py
+[2025-06-03 14:19:19] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\generate_odp_status_csv.py
+[2025-06-03 14:19:19] Running: sql_queried_datasette_tables.py
+[2025-06-03 14:19:20] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\sql_queried_datasette_tables.py
+[2025-06-03 14:19:20] Workflow complete.
