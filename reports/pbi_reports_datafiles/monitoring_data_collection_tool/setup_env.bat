@@ -3,7 +3,7 @@ SETLOCAL
 
 :: Define paths
 SET VENV_DIR=.venv
-SET REQUIREMENTS_FILE=documentation\requirements.txt
+SET REQUIREMENTS_FILE=documentation\utils\requirements.txt
 
 :: Step 1: Create virtual environment
 echo Creating virtual environment...

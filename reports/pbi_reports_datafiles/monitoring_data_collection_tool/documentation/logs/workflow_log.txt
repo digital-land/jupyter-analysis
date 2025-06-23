@@ -1,0 +1,352 @@
+[2025-06-03 11:32:49] Starting workflow...
+[2025-06-03 11:32:49] Running: endpoints_missing_doc_urls.py
+[2025-06-03 11:32:50] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\endpoints_missing_doc_urls.py
+[2025-06-03 11:32:50] Running: full_datasette_tables.py
+[2025-06-03 11:32:51] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\full_datasette_tables.py
+[2025-06-03 11:32:51] Running: generate_odp_conformance_csv.py
+[2025-06-03 11:32:52] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\generate_odp_conformance_csv.py
+[2025-06-03 11:32:52] Running: generate_odp_issues_csv.py
+[2025-06-03 11:32:53] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\generate_odp_issues_csv.py
+[2025-06-03 11:32:53] Running: generate_odp_status_csv.py
+[2025-06-03 11:32:54] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\generate_odp_status_csv.py
+[2025-06-03 11:32:54] Running: sql_queried_datasette_tables.py
+[2025-06-03 11:32:55] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\sql_queried_datasette_tables.py
+[2025-06-03 11:32:55] Workflow complete.
+[2025-06-03 13:46:33] Starting workflow...
+[2025-06-03 13:46:33] Running: endpoints_missing_doc_urls.py
+[2025-06-03 13:46:39] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\endpoints_missing_doc_urls.py
+[2025-06-03 13:46:39] Running: full_datasette_tables.py
+[2025-06-03 13:46:40] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\full_datasette_tables.py
+[2025-06-03 13:46:40] Running: generate_odp_conformance_csv.py
+[2025-06-03 13:46:41] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\generate_odp_conformance_csv.py
+[2025-06-03 13:46:41] Running: generate_odp_issues_csv.py
+[2025-06-03 13:46:42] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\generate_odp_issues_csv.py
+[2025-06-03 13:46:42] Running: generate_odp_status_csv.py
+[2025-06-03 13:46:43] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\generate_odp_status_csv.py
+[2025-06-03 13:46:43] Running: sql_queried_datasette_tables.py
+[2025-06-03 13:46:44] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\sql_queried_datasette_tables.py
+[2025-06-03 13:46:44] Workflow complete.
+[2025-06-03 14:19:09] Starting workflow...
+[2025-06-03 14:19:09] Running: endpoints_missing_doc_urls.py
+[2025-06-03 14:19:12] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\endpoints_missing_doc_urls.py
+[2025-06-03 14:19:12] Running: full_datasette_tables.py
+[2025-06-03 14:19:13] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\full_datasette_tables.py
+[2025-06-03 14:19:13] Running: generate_odp_conformance_csv.py
+[2025-06-03 14:19:15] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\generate_odp_conformance_csv.py
+[2025-06-03 14:19:15] Running: generate_odp_issues_csv.py
+[2025-06-03 14:19:17] FAIL: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\generate_odp_issues_csv.py
+[2025-06-03 14:19:17] Error:
+Traceback (most recent call last):
+  File "C:\Users\DanielGodden\Documents\MCHLG\collecting_and_managing_data\scripts\generate_odp_issues_csv.py", line 178, in <module>
+    generate_issue_summary_csv(output_dir, dataset_type="all")
+  File "C:\Users\DanielGodden\Documents\MCHLG\collecting_and_managing_data\scripts\generate_odp_issues_csv.py", line 153, in generate_issue_summary_csv
+    df.to_csv(output_path, index=False)
+  File "C:\Users\DanielGodden\Documents\MCHLG\collecting_and_managing_data\.venv\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DanielGodden\Documents\MCHLG\collecting_and_managing_data\.venv\Lib\site-packages\pandas\core\generic.py", line 3967, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DanielGodden\Documents\MCHLG\collecting_and_managing_data\.venv\Lib\site-packages\pandas\io\formats\format.py", line 1014, in to_csv
+    csv_formatter.save()
+  File "C:\Users\DanielGodden\Documents\MCHLG\collecting_and_managing_data\.venv\Lib\site-packages\pandas\io\formats\csvs.py", line 251, in save
+    with get_handle(
+         ^^^^^^^^^^^
+  File "C:\Users\DanielGodden\Documents\MCHLG\collecting_and_managing_data\.venv\Lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/outputs\\odp-issue.csv'
+[2025-06-03 14:19:17] Running: generate_odp_status_csv.py
+[2025-06-03 14:19:19] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\generate_odp_status_csv.py
+[2025-06-03 14:19:19] Running: sql_queried_datasette_tables.py
+[2025-06-03 14:19:20] SUCCESS: C:/Users/DanielGodden/Documents/MCHLG/collecting_and_managing_data/scripts\sql_queried_datasette_tables.py
+[2025-06-03 14:19:20] Workflow complete.
+[2025-06-20 13:45:54] Starting workflow...
+[2025-06-20 13:45:54] Running: endpoint_dataset_issue_type_summary.py
+[2025-06-20 13:45:55] SUCCESS: .\scripts\endpoint_dataset_issue_type_summary.py
+[2025-06-20 13:45:55] Running: endpoints_missing_doc_urls.py
+[2025-06-20 13:45:57] SUCCESS: .\scripts\endpoints_missing_doc_urls.py
+[2025-06-20 13:45:57] Running: generate_odp_conformance_csv.py
+[2025-06-20 13:45:58] SUCCESS: .\scripts\generate_odp_conformance_csv.py
+[2025-06-20 13:45:58] Running: generate_odp_issues_csv.py
+[2025-06-20 13:45:59] SUCCESS: .\scripts\generate_odp_issues_csv.py
+[2025-06-20 13:45:59] Running: generate_odp_status_csv.py
+[2025-06-20 13:46:01] SUCCESS: .\scripts\generate_odp_status_csv.py
+[2025-06-20 13:46:01] Running: logs_by_week.py
+[2025-06-20 13:46:02] SUCCESS: .\scripts\logs_by_week.py
+[2025-06-20 13:46:02] Running: operational_issues.py
+[2025-06-20 13:46:03] SUCCESS: .\scripts\operational_issues.py
+[2025-06-20 13:46:03] Running: runaway_resources.py
+[2025-06-20 13:46:04] SUCCESS: .\scripts\runaway_resources.py
+[2025-06-20 13:46:04] All scripts complete. Uploading to SharePoint...
+[2025-06-20 13:46:05] Created 'old files' folder: /sites/DigitalPlanning/Shared Documents/20. Data Management/Reporting/Data files/old files
+[2025-06-20 13:46:05] Created dated folder: /sites/DigitalPlanning/Shared Documents/20. Data Management/Reporting/Data files/2025-06-20
+[2025-06-20 13:46:05] Uploading 'all-endpoints-and-documentation-urls.csv' to base folder and dated folder...
+[2025-06-20 13:46:07] Uploaded: all-endpoints-and-documentation-urls.csv
+[2025-06-20 13:46:07] Uploading 'endpoint-dataset-issue-type-summary.csv' to base folder and dated folder...
+[2025-06-20 13:46:08] Uploaded: endpoint-dataset-issue-type-summary.csv
+[2025-06-20 13:46:08] Uploading 'logs-by-week.csv' to base folder and dated folder...
+[2025-06-20 13:46:09] Uploaded: logs-by-week.csv
+[2025-06-20 13:46:09] Uploading 'odp-conformance.csv' to base folder and dated folder...
+[2025-06-20 13:46:10] Uploaded: odp-conformance.csv
+[2025-06-20 13:46:10] Uploading 'odp-issue.csv' to base folder and dated folder...
+[2025-06-20 13:46:11] Uploaded: odp-issue.csv
+[2025-06-20 13:46:11] Uploading 'odp-status.csv' to base folder and dated folder...
+[2025-06-20 13:46:12] Uploaded: odp-status.csv
+[2025-06-20 13:46:12] Uploading 'operational_issues.csv' to base folder and dated folder...
+[2025-06-20 13:46:13] Uploaded: operational_issues.csv
+[2025-06-20 13:46:13] Uploading 'runaway_resources.csv' to base folder and dated folder...
+[2025-06-20 13:46:14] Uploaded: runaway_resources.csv
+[2025-06-20 13:46:15] Failed to move folder '2025-06-19': ('-2147024891, System.UnauthorizedAccessException', 'Access denied.', "403 Client Error: Forbidden for url: https://mhclg.sharepoint.com/sites/DigitalPlanning/_api/Web/RootFolder/Folders/Add('Shared%20Documents')")
+[2025-06-20 13:46:15] All files uploaded and old folders archived.
+[2025-06-20 13:46:15] Workflow complete.
+[2025-06-20 13:49:59] Starting workflow...
+[2025-06-20 13:49:59] Running: endpoint_dataset_issue_type_summary.py
+[2025-06-20 13:50:00] SUCCESS: .\scripts\endpoint_dataset_issue_type_summary.py
+[2025-06-20 13:50:00] Running: endpoints_missing_doc_urls.py
+[2025-06-20 13:50:01] SUCCESS: .\scripts\endpoints_missing_doc_urls.py
+[2025-06-20 13:50:01] Running: generate_odp_conformance_csv.py
+[2025-06-20 13:50:02] SUCCESS: .\scripts\generate_odp_conformance_csv.py
+[2025-06-20 13:50:02] Running: generate_odp_issues_csv.py
+[2025-06-20 13:50:03] SUCCESS: .\scripts\generate_odp_issues_csv.py
+[2025-06-20 13:50:03] Running: generate_odp_status_csv.py
+[2025-06-20 13:50:04] SUCCESS: .\scripts\generate_odp_status_csv.py
+[2025-06-20 13:50:04] Running: logs_by_week.py
+[2025-06-20 13:50:05] SUCCESS: .\scripts\logs_by_week.py
+[2025-06-20 13:50:05] Running: operational_issues.py
+[2025-06-20 13:50:06] SUCCESS: .\scripts\operational_issues.py
+[2025-06-20 13:50:06] Running: runaway_resources.py
+[2025-06-20 13:50:07] SUCCESS: .\scripts\runaway_resources.py
+[2025-06-20 13:50:07] All scripts complete. Uploading to SharePoint...
+[2025-06-20 13:50:08] Created 'old files' folder: /sites/DigitalPlanning/Shared Documents/20. Data Management/Reporting/Data files/old files
+[2025-06-20 13:50:08] Created dated archive folder: /sites/DigitalPlanning/Shared Documents/20. Data Management/Reporting/Data files/old files/2025-06-20
+[2025-06-20 13:50:09] Uploading 'all-endpoints-and-documentation-urls.csv' to base folder and archive folder...
+[2025-06-20 13:50:11] Uploaded: all-endpoints-and-documentation-urls.csv
+[2025-06-20 13:50:11] Uploading 'endpoint-dataset-issue-type-summary.csv' to base folder and archive folder...
+[2025-06-20 13:50:13] Uploaded: endpoint-dataset-issue-type-summary.csv
+[2025-06-20 13:50:13] Uploading 'logs-by-week.csv' to base folder and archive folder...
+[2025-06-20 13:50:14] Uploaded: logs-by-week.csv
+[2025-06-20 13:50:14] Uploading 'odp-conformance.csv' to base folder and archive folder...
+[2025-06-20 13:50:15] Uploaded: odp-conformance.csv
+[2025-06-20 13:50:15] Uploading 'odp-issue.csv' to base folder and archive folder...
+[2025-06-20 13:50:16] Uploaded: odp-issue.csv
+[2025-06-20 13:50:16] Uploading 'odp-status.csv' to base folder and archive folder...
+[2025-06-20 13:50:17] Uploaded: odp-status.csv
+[2025-06-20 13:50:17] Uploading 'operational_issues.csv' to base folder and archive folder...
+[2025-06-20 13:50:18] Uploaded: operational_issues.csv
+[2025-06-20 13:50:18] Uploading 'runaway_resources.csv' to base folder and archive folder...
+[2025-06-20 13:50:19] Uploaded: runaway_resources.csv
+[2025-06-20 13:50:19] All files uploaded to base and archived in 'old files/2025-06-20'.
+[2025-06-20 13:50:19] Workflow complete.
+[2025-06-20 13:59:52] Starting workflow...
+[2025-06-20 13:59:52] Running: endpoint_dataset_issue_type_summary.py
+[2025-06-20 13:59:53] SUCCESS: .\scripts\endpoint_dataset_issue_type_summary.py
+[2025-06-20 13:59:53] Running: endpoints_missing_doc_urls.py
+[2025-06-20 13:59:54] SUCCESS: .\scripts\endpoints_missing_doc_urls.py
+[2025-06-20 13:59:54] Running: generate_odp_conformance_csv.py
+[2025-06-20 13:59:55] SUCCESS: .\scripts\generate_odp_conformance_csv.py
+[2025-06-20 13:59:55] Running: generate_odp_issues_csv.py
+[2025-06-20 13:59:56] SUCCESS: .\scripts\generate_odp_issues_csv.py
+[2025-06-20 13:59:56] Running: generate_odp_status_csv.py
+[2025-06-20 13:59:57] SUCCESS: .\scripts\generate_odp_status_csv.py
+[2025-06-20 13:59:57] Running: logs_by_week.py
+[2025-06-20 13:59:58] SUCCESS: .\scripts\logs_by_week.py
+[2025-06-20 13:59:58] Running: operational_issues.py
+[2025-06-20 13:59:59] SUCCESS: .\scripts\operational_issues.py
+[2025-06-20 13:59:59] Running: runaway_resources.py
+[2025-06-20 14:00:00] SUCCESS: .\scripts\runaway_resources.py
+[2025-06-20 14:00:00] All scripts complete. Uploading to SharePoint...
+[2025-06-20 14:00:01] Created 'old files' folder: /sites/DigitalPlanning/Shared Documents/20. Data Management/Reporting/Data files/old files
+[2025-06-20 14:00:01] Created dated archive folder: /sites/DigitalPlanning/Shared Documents/20. Data Management/Reporting/Data files/old files/2025-06-20
+[2025-06-20 14:00:02] Uploading 'all-endpoints-and-documentation-urls.csv' to base folder and archive folder...
+[2025-06-20 14:00:03] Uploaded: all-endpoints-and-documentation-urls.csv
+[2025-06-20 14:00:03] Uploading 'endpoint-dataset-issue-type-summary.csv' to base folder and archive folder...
+[2025-06-20 14:00:05] Uploaded: endpoint-dataset-issue-type-summary.csv
+[2025-06-20 14:00:05] Uploading 'logs-by-week.csv' to base folder and archive folder...
+[2025-06-20 14:00:06] Uploaded: logs-by-week.csv
+[2025-06-20 14:00:06] Uploading 'odp-conformance.csv' to base folder and archive folder...
+[2025-06-20 14:00:07] Uploaded: odp-conformance.csv
+[2025-06-20 14:00:07] Uploading 'odp-issue.csv' to base folder and archive folder...
+[2025-06-20 14:00:08] Uploaded: odp-issue.csv
+[2025-06-20 14:00:08] Uploading 'odp-status.csv' to base folder and archive folder...
+[2025-06-20 14:00:09] Uploaded: odp-status.csv
+[2025-06-20 14:00:09] Uploading 'operational_issues.csv' to base folder and archive folder...
+[2025-06-20 14:00:10] Uploaded: operational_issues.csv
+[2025-06-20 14:00:10] Uploading 'runaway_resources.csv' to base folder and archive folder...
+[2025-06-20 14:00:11] Uploaded: runaway_resources.csv
+[2025-06-20 14:00:11] All files uploaded to base and archived in 'old files/2025-06-20'.
+[2025-06-20 14:00:11] Workflow complete.
+[2025-06-20 14:07:49] Starting workflow...
+[2025-06-20 14:07:49] Running: endpoint_dataset_issue_type_summary.py
+[2025-06-20 14:07:50] SUCCESS: .\scripts\endpoint_dataset_issue_type_summary.py
+[2025-06-20 14:07:50] Running: endpoints_missing_doc_urls.py
+[2025-06-20 14:07:51] SUCCESS: .\scripts\endpoints_missing_doc_urls.py
+[2025-06-20 14:07:51] Running: generate_odp_conformance_csv.py
+[2025-06-20 14:07:52] SUCCESS: .\scripts\generate_odp_conformance_csv.py
+[2025-06-20 14:07:52] Running: generate_odp_issues_csv.py
+[2025-06-20 14:07:53] SUCCESS: .\scripts\generate_odp_issues_csv.py
+[2025-06-20 14:07:53] Running: generate_odp_status_csv.py
+[2025-06-20 14:07:54] SUCCESS: .\scripts\generate_odp_status_csv.py
+[2025-06-20 14:07:54] Running: logs_by_week.py
+[2025-06-20 14:07:55] SUCCESS: .\scripts\logs_by_week.py
+[2025-06-20 14:07:55] Running: operational_issues.py
+[2025-06-20 14:07:56] SUCCESS: .\scripts\operational_issues.py
+[2025-06-20 14:07:56] Running: runaway_resources.py
+[2025-06-20 14:07:57] SUCCESS: .\scripts\runaway_resources.py
+[2025-06-20 14:07:57] All scripts complete. Uploading to SharePoint...
+[2025-06-20 14:07:58] Created 'old files' folder: /sites/DigitalPlanning/Shared Documents/20. Data Management/Reporting/Data files/old files
+[2025-06-20 14:07:58] Created dated archive folder: /sites/DigitalPlanning/Shared Documents/20. Data Management/Reporting/Data files/old files/2025-06-20
+[2025-06-20 14:07:58] Uploading 'all-endpoints-and-documentation-urls.csv' to base folder and archive folder...
+[2025-06-20 14:08:00] Uploaded: all-endpoints-and-documentation-urls.csv
+[2025-06-20 14:08:00] Uploading 'endpoint-dataset-issue-type-summary.csv' to base folder and archive folder...
+[2025-06-20 14:08:02] Uploaded: endpoint-dataset-issue-type-summary.csv
+[2025-06-20 14:08:02] Uploading 'logs-by-week.csv' to base folder and archive folder...
+[2025-06-20 14:08:03] Uploaded: logs-by-week.csv
+[2025-06-20 14:08:03] Uploading 'odp-conformance.csv' to base folder and archive folder...
+[2025-06-20 14:08:05] Uploaded: odp-conformance.csv
+[2025-06-20 14:08:05] Uploading 'odp-issue.csv' to base folder and archive folder...
+[2025-06-20 14:08:06] Uploaded: odp-issue.csv
+[2025-06-20 14:08:06] Uploading 'odp-status.csv' to base folder and archive folder...
+[2025-06-20 14:08:07] Uploaded: odp-status.csv
+[2025-06-20 14:08:07] Uploading 'operational_issues.csv' to base folder and archive folder...
+[2025-06-20 14:08:08] Uploaded: operational_issues.csv
+[2025-06-20 14:08:08] Uploading 'runaway_resources.csv' to base folder and archive folder...
+[2025-06-20 14:08:09] Uploaded: runaway_resources.csv
+[2025-06-20 14:08:09] All files uploaded to base and archived in 'old files/2025-06-20'.
+[2025-06-20 14:08:09] Workflow complete.
+[2025-06-20 14:17:29] Starting workflow...
+[2025-06-20 14:17:29] Running: duplicate_geometry_expectations.py
+[2025-06-20 14:17:54] SUCCESS: .\scripts\duplicate_geometry_expectations.py
+[2025-06-20 14:17:54] Running: endpoint_dataset_issue_type_summary.py
+[2025-06-20 14:17:55] SUCCESS: .\scripts\endpoint_dataset_issue_type_summary.py
+[2025-06-20 14:17:55] Running: endpoints_missing_doc_urls.py
+[2025-06-20 14:17:56] SUCCESS: .\scripts\endpoints_missing_doc_urls.py
+[2025-06-20 14:17:56] Running: generate_odp_conformance_csv.py
+[2025-06-20 14:17:58] SUCCESS: .\scripts\generate_odp_conformance_csv.py
+[2025-06-20 14:17:58] Running: generate_odp_issues_csv.py
+[2025-06-20 14:17:59] SUCCESS: .\scripts\generate_odp_issues_csv.py
+[2025-06-20 14:17:59] Running: generate_odp_status_csv.py
+[2025-06-20 14:18:00] SUCCESS: .\scripts\generate_odp_status_csv.py
+[2025-06-20 14:18:00] Running: logs_by_week.py
+[2025-06-20 14:18:01] SUCCESS: .\scripts\logs_by_week.py
+[2025-06-20 14:18:01] Running: operational_issues.py
+[2025-06-20 14:18:01] SUCCESS: .\scripts\operational_issues.py
+[2025-06-20 14:18:01] Running: runaway_resources.py
+[2025-06-20 14:18:02] SUCCESS: .\scripts\runaway_resources.py
+[2025-06-20 14:18:02] All scripts complete. Uploading to SharePoint...
+[2025-06-20 14:18:04] Created 'old files' folder: /sites/DigitalPlanning/Shared Documents/20. Data Management/Reporting/Data files/old files
+[2025-06-20 14:18:04] Created dated archive folder: /sites/DigitalPlanning/Shared Documents/20. Data Management/Reporting/Data files/old files/2025-06-20
+[2025-06-20 14:18:04] Uploading 'all-endpoints-and-documentation-urls.csv' to base folder and archive folder...
+[2025-06-20 14:18:06] Uploaded: all-endpoints-and-documentation-urls.csv
+[2025-06-20 14:18:06] Uploading 'duplicate_entity_expectation.csv' to base folder and archive folder...
+[2025-06-20 14:18:26] Uploaded: duplicate_entity_expectation.csv
+[2025-06-20 14:18:26] Uploading 'duplicate_geometry_summary.csv' to base folder and archive folder...
+[2025-06-20 14:18:27] Uploaded: duplicate_geometry_summary.csv
+[2025-06-20 14:18:27] Uploading 'endpoint-dataset-issue-type-summary.csv' to base folder and archive folder...
+[2025-06-20 14:18:28] Uploaded: endpoint-dataset-issue-type-summary.csv
+[2025-06-20 14:18:28] Uploading 'logs-by-week.csv' to base folder and archive folder...
+[2025-06-20 14:18:29] Uploaded: logs-by-week.csv
+[2025-06-20 14:18:29] Uploading 'odp-conformance.csv' to base folder and archive folder...
+[2025-06-20 14:18:30] Uploaded: odp-conformance.csv
+[2025-06-20 14:18:30] Uploading 'odp-issue.csv' to base folder and archive folder...
+[2025-06-20 14:18:32] Uploaded: odp-issue.csv
+[2025-06-20 14:18:32] Uploading 'odp-status.csv' to base folder and archive folder...
+[2025-06-20 14:18:33] Uploaded: odp-status.csv
+[2025-06-20 14:18:33] Uploading 'operational_issues.csv' to base folder and archive folder...
+[2025-06-20 14:18:34] Uploaded: operational_issues.csv
+[2025-06-20 14:18:34] Uploading 'runaway_resources.csv' to base folder and archive folder...
+[2025-06-20 14:18:35] Uploaded: runaway_resources.csv
+[2025-06-20 14:18:35] All files uploaded to base and archived in 'old files/2025-06-20'.
+[2025-06-20 14:18:35] Workflow complete.
+[2025-06-23 09:53:10] Starting workflow...
+[2025-06-23 09:53:10] Running: duplicate_geometry_expectations.py
+[2025-06-23 09:53:36] FAIL: .\scripts\duplicate_geometry_expectations.py
+[2025-06-23 09:53:36] Error:
+Traceback (most recent call last):
+  File "C:\Users\DanielGodden\Documents\MCHLG\collecting_and_managing_data\monitoring_data_collection_tool\scripts\duplicate_geometry_expectations.py", line 182, in <module>
+    main(args.output_dir)
+  File "C:\Users\DanielGodden\Documents\MCHLG\collecting_and_managing_data\monitoring_data_collection_tool\scripts\duplicate_geometry_expectations.py", line 169, in main
+    df_matches.to_csv(matches_csv, index=False)
+  File "C:\Users\DanielGodden\Documents\MCHLG\collecting_and_managing_data\monitoring_data_collection_tool\.venv\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DanielGodden\Documents\MCHLG\collecting_and_managing_data\monitoring_data_collection_tool\.venv\Lib\site-packages\pandas\core\generic.py", line 3967, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DanielGodden\Documents\MCHLG\collecting_and_managing_data\monitoring_data_collection_tool\.venv\Lib\site-packages\pandas\io\formats\format.py", line 1014, in to_csv
+    csv_formatter.save()
+  File "C:\Users\DanielGodden\Documents\MCHLG\collecting_and_managing_data\monitoring_data_collection_tool\.venv\Lib\site-packages\pandas\io\formats\csvs.py", line 251, in save
+    with get_handle(
+         ^^^^^^^^^^^
+  File "C:\Users\DanielGodden\Documents\MCHLG\collecting_and_managing_data\monitoring_data_collection_tool\.venv\Lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+PermissionError: [Errno 13] Permission denied: '.\\outputs\\duplicate_entity_expectation.csv'
+[2025-06-23 09:53:36] Running: endpoint_dataset_issue_type_summary.py
+[2025-06-23 09:53:37] SUCCESS: .\scripts\endpoint_dataset_issue_type_summary.py
+[2025-06-23 09:53:37] Running: endpoints_missing_doc_urls.py
+[2025-06-23 09:53:40] SUCCESS: .\scripts\endpoints_missing_doc_urls.py
+[2025-06-23 09:53:40] Running: generate_odp_conformance_csv.py
+[2025-06-23 09:53:42] SUCCESS: .\scripts\generate_odp_conformance_csv.py
+[2025-06-23 09:53:42] Running: generate_odp_issues_csv.py
+[2025-06-23 09:53:43] SUCCESS: .\scripts\generate_odp_issues_csv.py
+[2025-06-23 09:53:43] Running: generate_odp_status_csv.py
+[2025-06-23 09:53:44] SUCCESS: .\scripts\generate_odp_status_csv.py
+[2025-06-23 09:53:44] Running: logs_by_week.py
+[2025-06-23 09:53:47] SUCCESS: .\scripts\logs_by_week.py
+[2025-06-23 09:53:47] Running: operational_issues.py
+[2025-06-23 09:53:55] SUCCESS: .\scripts\operational_issues.py
+[2025-06-23 09:53:55] Running: runaway_resources.py
+[2025-06-23 09:53:58] SUCCESS: .\scripts\runaway_resources.py
+[2025-06-23 09:53:58] All scripts complete. Uploading to SharePoint...
+[2025-06-23 09:53:59] Created 'old files' folder: /sites/DigitalPlanning/Shared Documents/20. Data Management/Reporting/Data files/old files
+[2025-06-23 09:54:00] Created dated archive folder: /sites/DigitalPlanning/Shared Documents/20. Data Management/Reporting/Data files/old files/2025-06-23
+[2025-06-23 09:54:00] Uploading 'all-endpoints-and-documentation-urls.csv' to base folder and archive folder...
+[2025-06-23 09:54:02] Uploaded: all-endpoints-and-documentation-urls.csv
+[2025-06-23 09:54:02] Uploading 'duplicate_entity_expectation.csv' to base folder and archive folder...
+[2025-06-23 09:55:36] Starting workflow...
+[2025-06-23 09:55:36] Running: duplicate_geometry_expectations.py
+[2025-06-23 09:55:59] SUCCESS: .\scripts\duplicate_geometry_expectations.py
+[2025-06-23 09:55:59] Running: endpoint_dataset_issue_type_summary.py
+[2025-06-23 09:56:00] SUCCESS: .\scripts\endpoint_dataset_issue_type_summary.py
+[2025-06-23 09:56:00] Running: endpoints_missing_doc_urls.py
+[2025-06-23 09:56:01] SUCCESS: .\scripts\endpoints_missing_doc_urls.py
+[2025-06-23 09:56:01] Running: generate_odp_conformance_csv.py
+[2025-06-23 09:56:03] SUCCESS: .\scripts\generate_odp_conformance_csv.py
+[2025-06-23 09:56:03] Running: generate_odp_issues_csv.py
+[2025-06-23 09:56:04] SUCCESS: .\scripts\generate_odp_issues_csv.py
+[2025-06-23 09:56:04] Running: generate_odp_status_csv.py
+[2025-06-23 09:56:05] SUCCESS: .\scripts\generate_odp_status_csv.py
+[2025-06-23 09:56:05] Running: logs_by_week.py
+[2025-06-23 09:56:06] SUCCESS: .\scripts\logs_by_week.py
+[2025-06-23 09:56:06] Running: operational_issues.py
+[2025-06-23 09:56:07] SUCCESS: .\scripts\operational_issues.py
+[2025-06-23 09:56:07] Running: runaway_resources.py
+[2025-06-23 09:56:09] SUCCESS: .\scripts\runaway_resources.py
+[2025-06-23 09:56:09] All scripts complete. Uploading to SharePoint...
+[2025-06-23 09:56:11] Created 'old files' folder: /sites/DigitalPlanning/Shared Documents/20. Data Management/Reporting/Data files/old files
+[2025-06-23 09:56:11] Created dated archive folder: /sites/DigitalPlanning/Shared Documents/20. Data Management/Reporting/Data files/old files/2025-06-23
+[2025-06-23 09:56:11] Uploading 'all-endpoints-and-documentation-urls.csv' to base folder and archive folder...
+[2025-06-23 09:56:13] Uploaded: all-endpoints-and-documentation-urls.csv
+[2025-06-23 09:56:13] Uploading 'duplicate_entity_expectation.csv' to base folder and archive folder...
+[2025-06-23 09:56:58] Uploaded: duplicate_entity_expectation.csv
+[2025-06-23 09:56:58] Uploading 'duplicate_entity_expectation_summary.csv' to base folder and archive folder...
+[2025-06-23 09:56:59] Uploaded: duplicate_entity_expectation_summary.csv
+[2025-06-23 09:56:59] Uploading 'duplicate_geometry_summary.csv' to base folder and archive folder...
+[2025-06-23 09:57:00] Uploaded: duplicate_geometry_summary.csv
+[2025-06-23 09:57:00] Uploading 'endpoint-dataset-issue-type-summary.csv' to base folder and archive folder...
+[2025-06-23 09:57:02] Uploaded: endpoint-dataset-issue-type-summary.csv
+[2025-06-23 09:57:02] Uploading 'logs-by-week.csv' to base folder and archive folder...
+[2025-06-23 09:57:04] Uploaded: logs-by-week.csv
+[2025-06-23 09:57:04] Uploading 'odp-conformance.csv' to base folder and archive folder...
+[2025-06-23 09:57:05] Uploaded: odp-conformance.csv
+[2025-06-23 09:57:05] Uploading 'odp-issue.csv' to base folder and archive folder...
+[2025-06-23 09:57:06] Uploaded: odp-issue.csv
+[2025-06-23 09:57:06] Uploading 'odp-status.csv' to base folder and archive folder...
+[2025-06-23 09:57:07] Uploaded: odp-status.csv
+[2025-06-23 09:57:07] Uploading 'operational_issues.csv' to base folder and archive folder...
+[2025-06-23 09:57:09] Uploaded: operational_issues.csv
+[2025-06-23 09:57:09] Uploading 'runaway_resources.csv' to base folder and archive folder...
+[2025-06-23 09:57:10] Uploaded: runaway_resources.csv
+[2025-06-23 09:57:10] All files uploaded to base and archived in 'old files/2025-06-23'.
+[2025-06-23 09:57:10] Workflow complete.

@@ -15,6 +15,12 @@ import argparse
 import os
 
 def parse_args():
+    """
+    Parses command-line arguments for specifying the output directory.
+
+    Returns:
+        argparse.Namespace: Parsed arguments containing the output directory path.
+    """
     parser = argparse.ArgumentParser(description="Datasette batch exporter")
     parser.add_argument(
         "--output-dir",
@@ -69,14 +75,14 @@ def get_datasette_query(db, sql, filter=None, url="https://datasette.planning.da
 
 def get_provisions(selected_cohorts, all_cohorts):
     """
-    Queries the 'provision' table for expected dataset provisions across selected cohorts.
+    Queries the Datasette 'provision' table for expected datasets for selected cohorts.
 
     Args:
-        selected_cohorts (list): Cohort IDs to include
-        all_cohorts (list): All cohort definitions to cross-check validity
+        selected_cohorts (list): List of selected cohort IDs (e.g. ['ODP-Track1'])
+        all_cohorts (list): List of all valid cohort definitions (each with 'id' and 'name')
 
     Returns:
-        pd.DataFrame: Provisions grouped by organisation and cohort
+        pd.DataFrame: A DataFrame of expected provisions with organisation names and start dates.
     """
     filtered_cohorts = [
         x
@@ -157,6 +163,16 @@ COHORTS = [
 
 
 def get_column_field_summary(dataset_clause, offset):
+    """
+    Retrieves endpoint dataset resource summaries for datasets matching the clause.
+
+    Args:
+        dataset_clause (str): SQL filter for datasets (e.g. "edrs.pipeline = 'tree'")
+        offset (int): Row offset for pagination
+
+    Returns:
+        pd.DataFrame: Results from `endpoint_dataset_resource_summary` joined with endpoint metadata.
+    """
     sql = f"""
     SELECT edrs.*, rle.licence
     FROM endpoint_dataset_resource_summary AS edrs
@@ -179,6 +195,16 @@ def get_column_field_summary(dataset_clause, offset):
 
 
 def get_issue_summary(dataset_clause, offset):
+    """
+    Retrieves summarised issue counts per dataset and endpoint.
+
+    Args:
+        dataset_clause (str): SQL WHERE clause to filter datasets.
+        offset (int): Pagination offset for result set.
+
+    Returns:
+        pd.DataFrame: Issue summary from Datasette.
+    """
     sql = f"""
     select  * from endpoint_dataset_issue_type_summary edrs
     where ({dataset_clause})
@@ -189,6 +215,18 @@ def get_issue_summary(dataset_clause, offset):
 
 
 def get_odp_conformance_summary(dataset_types, cohorts):
+    """
+    Main function that combines provisions, endpoints, and issues to calculate conformance scores.
+
+    Args:
+        dataset_types (list): One or more of ["spatial", "document"] to filter datasets.
+        cohorts (list): List of cohort IDs to include in the summary.
+
+    Returns:
+        tuple: 
+            - dict: Contains headers, rows, stats, and metadata for rendering a report.
+            - pd.DataFrame: Detailed CSV output with scores and metadata per dataset-endpoint pair.
+    """
     params = {
         "cohorts": COHORTS,
         "dataset_types": DATASET_TYPES,
@@ -532,8 +570,16 @@ def get_odp_conformance_summary(dataset_types, cohorts):
         "percent_100_field_match": percent_100_field_match,
     }, final_count[csv_out_cols]
 
-
 def make_pretty(text):
+    """
+    Formats text or numerical values for presentation in the UI or report tables.
+
+    Args:
+        text (str or float): Raw text or numeric value.
+
+    Returns:
+        str: Human-readable formatted string.
+    """
     if type(text) is float:
         # text is a float, make a percentage
         return str((round(100 * text))) + "%"
@@ -542,8 +588,16 @@ def make_pretty(text):
         return text.replace("_", " ").replace("pct", "%").replace("count", "")
     return text
 
-
 def get_background_class(text):
+    """
+    Assigns a background class based on the numeric value (for HTML/visual display).
+
+    Args:
+        text (float or str): A percentage float value (0.0 to 1.0)
+
+    Returns:
+        str: CSS class name string based on value grouping (e.g., 'reporting-90-100-background').
+    """
     if type(text) is float:
         group = int((text * 100) / 10)
         if group == 10:
@@ -552,10 +606,15 @@ def get_background_class(text):
             return "reporting-" + str(group) + "0-" + str(group + 1) + "0-background"
     return ""
 
-
 def get_dataset_field():
+    """
+    Loads the official dataset-field specification JSON from a local CSV file.
+
+    Returns:
+        pd.DataFrame: Each row represents a dataset/field combination from the JSON spec.
+    """
     specification_df = pd.read_csv(
-        r"C:\Users\DanielGodden\Documents\MCHLG\collecting_and_managing_data\documentation\specification.csv"
+        r"C:\Users\DanielGodden\Documents\MCHLG\collecting_and_managing_data\monitoring_data_collection_tool\documentation\utils\specification.csv"
     )
     rows = []
     for index, row in specification_df.iterrows():
@@ -568,17 +627,16 @@ def get_dataset_field():
     return pd.DataFrame(rows)
 
 if __name__ == "__main__":
-    
+    # Parse CLI args
     args = parse_args()
-
     output_dir = args.output_dir 
     output_path = os.path.join(output_dir, "odp-conformance.csv")
 
-    # Run the function and get the DataFrame
+    # Run summary function and filter invalid cohort rows
     _, df = get_odp_conformance_summary(dataset_types=["spatial", "document"], cohorts=["ODP-Track1", "ODP-Track2", "ODP-Track3", "ODP-Track4"])
-    df = df[df['cohort'].notna() & 
-            (df['cohort'].str.strip() != "")]
+    df = df[df['cohort'].notna() & (df['cohort'].str.strip() != "")]
 
-    # Save to CSV
+    # Save final output
     df.to_csv(output_path, index=False)
     print(f"Saved ODP conformance summary to {output_path}")
+

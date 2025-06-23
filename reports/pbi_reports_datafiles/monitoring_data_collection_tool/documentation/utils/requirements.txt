@@ -46,3 +46,5 @@ typing_extensions==4.13.2
 tzdata==2025.2
 urllib3==2.4.0
 wcwidth==0.2.13
+Office365-REST-Python-Client
+

@@ -1,3 +1,14 @@
+"""
+Script to generate an ODP (Open Digital Planning) status CSV, summarising
+endpoint presence and conformance against expected dataset provisions.
+
+The script:
+- Retrieves all organisations expected to provide datasets ("provisions")
+- Fetches endpoint status from the reporting_latest_endpoints table
+- Matches expected datasets (via pipelines) against actual endpoints
+- Outputs a detailed CSV of provision vs. actual endpoint status
+"""
+
 import os
 import pandas as pd
 import requests
@@ -5,6 +16,7 @@ from requests.adapters import HTTPAdapter
 from urllib3.util import Retry
 import argparse
 
+# Dataset to Pipeline Map
 ALL_PIPELINES = {
     "article-4-direction": ["article-4-direction", "article-4-direction-area"],
     "conservation-area": ["conservation-area", "conservation-area-document"],
@@ -16,9 +28,13 @@ ALL_PIPELINES = {
     ],
 }
 
+# Datasette Query Helpers
 def get_datasette_http():
     """
-    Returns a requests session with retry logic to handle larger datasette queries.
+    Returns a requests session with retry logic to handle larger Datasette queries.
+
+    Returns:
+        requests.Session: Session with retry strategy enabled.
     """
     retry_strategy = Retry(total=3, status_forcelist=[400], backoff_factor=0.2)
     adapter = HTTPAdapter(max_retries=retry_strategy)
@@ -29,7 +45,15 @@ def get_datasette_http():
 
 def get_datasette_query(db: str, sql: str, url="https://datasette.planning.data.gov.uk") -> pd.DataFrame:
     """
-    Executes SQL against the given datasette database and returns a DataFrame.
+    Executes SQL against a Datasette database and returns the result as a DataFrame.
+
+    Args:
+        db (str): The name of the Datasette database (e.g., 'digital-land').
+        sql (str): SQL query string to run.
+        url (str): Base URL of the Datasette instance.
+
+    Returns:
+        pd.DataFrame: The result set, or empty DataFrame on error.
     """
     full_url = f"{url}/{db}.json"
     params = {"sql": sql, "_shape": "array", "_size": "max"}
@@ -43,9 +67,14 @@ def get_datasette_query(db: str, sql: str, url="https://datasette.planning.data.
         print(f"Datasette query failed: {e}")
         return pd.DataFrame()
 
+# Data Retrieval Functions
 def get_provisions():
     """
-    Retrieves cohort provisions (expected organisations and their cohorts).
+    Retrieves provision records showing which organisations are expected to 
+    provide datasets for each cohort.
+
+    Returns:
+        pd.DataFrame: Provision table including cohort and organisation names.
     """
     sql = """
         SELECT
@@ -65,7 +94,10 @@ def get_provisions():
 
 def get_endpoints():
     """
-    Retrieves latest reporting endpoint data.
+    Retrieves latest reporting data for all active endpoints.
+
+    Returns:
+        pd.DataFrame: Table of endpoint metadata and status.
     """
     sql = """
         SELECT
@@ -87,16 +119,24 @@ def get_endpoints():
         FROM reporting_latest_endpoints rle
     """
     df = get_datasette_query("performance", sql)
+
+    # Normalise organisation codes (remove -eng suffix)
     df["organisation"] = df["organisation"].str.replace("-eng", "", regex=False)
     return df
 
+# CSV Export Logic
 def generate_odp_summary_csv(output_dir: str) -> str:
     """
-    Generates a CSV file showing provision status by dataset and saves it to output_dir.
+    Generates a CSV file showing provision status by dataset, pipeline, and endpoint.
+
+    Args:
+        output_dir (str): Directory to save the CSV output.
+
+    Returns:
+        str: Path to the saved CSV file.
     """
     provisions = get_provisions()
     endpoints = get_endpoints()
-
     output_rows = []
 
     for _, row in provisions.iterrows():
@@ -113,6 +153,7 @@ def generate_odp_summary_csv(output_dir: str) -> str:
                 ]
 
                 if not match.empty:
+                    # Endpoint(s) exist — add one row per match
                     for _, ep in match.iterrows():
                         output_rows.append({
                             "organisation": organisation,
@@ -135,6 +176,7 @@ def generate_odp_summary_csv(output_dir: str) -> str:
                             "cohort_start_date": cohort_start_date,
                         })
                 else:
+                    # No endpoint — mark as missing
                     output_rows.append({
                         "organisation": organisation,
                         "cohort": cohort,
@@ -156,22 +198,21 @@ def generate_odp_summary_csv(output_dir: str) -> str:
                         "cohort_start_date": cohort_start_date,
                     })
 
-    # Convert to DataFrame
+    # Convert output to DataFrame and save as CSV
     df_final = pd.DataFrame(output_rows)
-
-    # Save
     os.makedirs(output_dir, exist_ok=True)
     output_path = os.path.join(output_dir, "odp-status.csv")
     df_final.to_csv(output_path, index=False)
     print(f"CSV generated at {output_path} with {len(df_final)} rows")
     return output_path
 
+# CLI Parser
 def parse_args():
     """
-    Parses command-line arguments for the output directory.
+    Parses command-line arguments for specifying the output directory.
 
     Returns:
-        argparse.Namespace: Parsed arguments containing the output directory path.
+        argparse.Namespace: Parsed args containing the output path.
     """
     parser = argparse.ArgumentParser(description="Datasette batch exporter")
     parser.add_argument(
@@ -182,15 +223,11 @@ def parse_args():
     )
     return parser.parse_args()
 
-
-
-# Run Script
-
+# Script Entry Point
 if __name__ == "__main__":
-    # Parse arguments from CLI
+    # Parse CLI arguments
     args = parse_args()
-
-    # Set your desired output path here
     output_directory = args.output_dir
-    
+
+    # Generate and save ODP endpoint summary
     generate_odp_summary_csv(output_directory)
