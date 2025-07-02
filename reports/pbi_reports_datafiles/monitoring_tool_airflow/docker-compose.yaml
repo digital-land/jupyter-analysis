@@ -1,0 +1,53 @@
+x-airflow-common:
+  &airflow-common
+  build: .
+  environment:
+    AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+    AIRFLOW__CORE__FERNET_KEY: ''
+    AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'false'
+    AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+    AIRFLOW__WEBSERVER__EXPOSE_CONFIG: 'true'
+    AIRFLOW__CORE__DAG_FOLDER: /opt/airflow/dags
+    AIRFLOW__CORE__BASE_LOG_FOLDER: /opt/airflow/logs
+    AIRFLOW__LOGGING__LOGGING_LEVEL: INFO
+  volumes:
+    - ./dags:/opt/airflow/dags
+    - ./logs:/opt/airflow/logs
+    - ./plugins:/opt/airflow/plugins
+    - ./monitoring_data_collection_tool:/opt/airflow/monitoring_data_collection_tool
+  user: "${AIRFLOW_UID:-50000}"
+  depends_on:
+    - postgres
+    - redis
+
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - postgres-db-volume:/var/lib/postgresql/data
+
+  redis:
+    image: redis:latest
+
+  airflow-init:
+    <<: *airflow-common
+    entrypoint: /bin/bash
+    command: -c "airflow db init && airflow users create --username admin --firstname admin --lastname admin --role Admin --email admin@example.com --password admin"
+
+  webserver:
+    <<: *airflow-common
+    ports:
+      - "8080:8080"
+    command: webserver
+
+  scheduler:
+    <<: *airflow-common
+    command: scheduler
+
+volumes:
+  postgres-db-volume:
