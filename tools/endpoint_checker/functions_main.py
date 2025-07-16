@@ -94,6 +94,7 @@ def get_workflow_data(data_dir, collection, dataset):
         "prefix.csv",
         # deprecated ..
         "pipeline.csv",
+        "provision-rule.csv",
         "dataset-schema.csv",
         "schema.csv",
         "schema-field.csv",
@@ -402,7 +403,6 @@ def run_endpoint_workflow(
             endpoints=[resource["endpoints"]],
             organisations=[organisation],
             entry_date=resource["start-date"],
-            custom_temp_dir=os.path.join(data_dir, "var", "cache"),
             output_log_dir=os.path.join(data_dir, "log/")
         )
 
