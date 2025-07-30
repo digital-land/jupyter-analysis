@@ -144,12 +144,12 @@ def save_resource_unidentified_lookups(input_path,dataset,organisations, pipelin
     # print lookups phase
     flookups = pipeline.lookups()
 
-
+    print('running pipeline')
     run_pipeline(
             ConvertPhase(
                 path=input_path,
                 dataset_resource_log=dataset_resource_log,
-                custom_temp_dir=custom_temp_dir,
+                output_path=Path(custom_temp_dir, f'{resource}.csv'),
             ),
             NormalisePhase(skip_patterns=skip_patterns, null_path=null_path),
             ParsePhase(),

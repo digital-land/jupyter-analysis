@@ -97,6 +97,7 @@ def get_workflow_data(data_dir, collection, dataset):
         "dataset-schema.csv",
         "schema.csv",
         "schema-field.csv",
+        "provision-rule.csv"
     ]
     for specification_csv in specification_csvs:
         urllib.request.urlretrieve(
@@ -343,6 +344,7 @@ def run_endpoint_workflow(
         return
 
     # retrieve unnassigned entities and assign
+    print('assigning unidentified lookups')
     for resource in resources:
         resource_path = os.path.join(collection_dir, "resource", resource["resource"])
         assign_entries(
