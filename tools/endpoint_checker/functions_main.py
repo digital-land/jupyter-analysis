@@ -404,7 +404,6 @@ def run_endpoint_workflow(
             endpoints=[resource["endpoints"]],
             organisations=[organisation],
             entry_date=resource["start-date"],
-            custom_temp_dir=os.path.join(data_dir, "var", "cache"),
             output_log_dir=os.path.join(data_dir, "log/")
         )
 
