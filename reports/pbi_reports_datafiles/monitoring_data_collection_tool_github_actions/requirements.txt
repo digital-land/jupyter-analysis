@@ -1,3 +1,0 @@
-office365-rest-python-client
-pandas
-requests

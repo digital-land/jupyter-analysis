@@ -1,0 +1,4 @@
+* text=auto
+*.ipynb -text
+*.yaml text eol=lf
+*.yml  text eol=lf
