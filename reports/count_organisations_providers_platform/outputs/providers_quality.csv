@@ -1,0 +1,1380 @@
+dataset,organisation,organisation_name,quality,total_entity_count
+agricultural-land-classification,government-organisation:PB202,Natural England,authoritative,585
+air-quality-management-area,government-organisation:D7,"Department for Environment, Food & Rural Affairs",authoritative,498
+ancient-woodland,government-organisation:PB202,Natural England,authoritative,44373
+ancient-woodland-status,government-organisation:PB202,Natural England,authoritative,2
+archaeological-priority-area,government-organisation:PB1164,Historic England,authoritative,796
+area-of-outstanding-natural-beauty,government-organisation:PB202,Natural England,some,34
+article-4-direction,local-authority:ADU,Adur District Council,authoritative,9
+article-4-direction,local-authority:ASF,Ashford Borough Council,authoritative,75
+article-4-direction,local-authority:BDG,London Borough of Barking and Dagenham,authoritative,3
+article-4-direction,local-authority:BEN,London Borough of Brent,authoritative,39
+article-4-direction,local-authority:BIR,Birmingham City Council,authoritative,12
+article-4-direction,local-authority:BNE,London Borough of Barnet,authoritative,15
+article-4-direction,local-authority:BRO,Broadland District Council,authoritative,28
+article-4-direction,local-authority:BRY,London Borough of Bromley,authoritative,108
+article-4-direction,local-authority:BST,Bristol City Council,authoritative,16
+article-4-direction,local-authority:BUN,Burnley Borough Council,authoritative,4
+article-4-direction,local-authority:CAB,Cambridge City Council,authoritative,19
+article-4-direction,local-authority:CAS,Castle Point Borough Council,authoritative,4
+article-4-direction,local-authority:CBF,Central Bedfordshire Council,authoritative,7
+article-4-direction,local-authority:CHL,Chelmsford City Council,authoritative,27
+article-4-direction,local-authority:CLD,Calderdale Metropolitan Borough Council,authoritative,1
+article-4-direction,local-authority:CMD,London Borough of Camden,authoritative,21
+article-4-direction,local-authority:COL,Colchester City Council,authoritative,10
+article-4-direction,local-authority:COT,Cotswold District Council,authoritative,22
+article-4-direction,local-authority:COV,Coventry City Council,authoritative,14
+article-4-direction,local-authority:CRW,Crawley Borough Council,authoritative,19
+article-4-direction,local-authority:DAR,Dartford Borough Council,authoritative,6
+article-4-direction,local-authority:DOV,Dover District Council,authoritative,55
+article-4-direction,local-authority:DST,Dorset Council,authoritative,78
+article-4-direction,local-authority:ECA,East Cambridgeshire District Council,authoritative,3
+article-4-direction,local-authority:EHA,East Hampshire District Council,authoritative,51
+article-4-direction,local-authority:EPS,Epsom and Ewell Borough Council,authoritative,1
+article-4-direction,local-authority:ERY,East Riding of Yorkshire Council,authoritative,11
+article-4-direction,local-authority:EXE,Exeter City Council,authoritative,1
+article-4-direction,local-authority:FEN,Fenland District Council,authoritative,5
+article-4-direction,local-authority:GAT,Gateshead Metropolitan Borough Council,authoritative,5
+article-4-direction,local-authority:HAA,Havant Borough Council,authoritative,6
+article-4-direction,local-authority:HAL,Halton Borough Council,authoritative,1
+article-4-direction,local-authority:HAR,Harlow District Council,authoritative,14
+article-4-direction,local-authority:HAT,Hart District Council,authoritative,47
+article-4-direction,local-authority:HIL,London Borough of Hillingdon,authoritative,150
+article-4-direction,local-authority:HNS,London Borough of Hounslow,authoritative,3
+article-4-direction,local-authority:HRY,London Borough of Haringey,authoritative,25
+article-4-direction,local-authority:HUN,Huntingdonshire District Council,authoritative,6
+article-4-direction,local-authority:IOS,Council of the Isles of Scilly,authoritative,4
+article-4-direction,local-authority:IPS,Ipswich Borough Council,authoritative,7
+article-4-direction,local-authority:KEC,Royal Borough of Kensington and Chelsea,authoritative,84
+article-4-direction,local-authority:KTT,Royal Borough of Kingston upon Thames,authoritative,3
+article-4-direction,local-authority:KWL,Knowsley Metropolitan Borough Council,authoritative,3
+article-4-direction,local-authority:LBH,London Borough of Lambeth,authoritative,12
+article-4-direction,local-authority:LCE,Leicester City Council,authoritative,231
+article-4-direction,local-authority:LDS,Leeds City Council,authoritative,1
+article-4-direction,local-authority:LEW,London Borough of Lewisham,authoritative,57
+article-4-direction,local-authority:LND,City of London Corporation,authoritative,1
+article-4-direction,local-authority:MAI,Maidstone Borough Council,authoritative,85
+article-4-direction,local-authority:MIK,Milton Keynes City Council,authoritative,17
+article-4-direction,local-authority:NBL,Northumberland County Council,authoritative,6
+article-4-direction,local-authority:NET,Newcastle City Council,authoritative,8
+article-4-direction,local-authority:NEW,New Forest District Council,authoritative,10
+article-4-direction,local-authority:NLN,North Lincolnshire Council,authoritative,12
+article-4-direction,local-authority:NNO,North Norfolk District Council,authoritative,42
+article-4-direction,local-authority:NSM,North Somerset Council,authoritative,38
+article-4-direction,local-authority:NTY,North Tyneside Council,authoritative,7
+article-4-direction,local-authority:NWA,North Warwickshire Borough Council,authoritative,10
+article-4-direction,local-authority:OXO,Oxford City Council,authoritative,4
+article-4-direction,local-authority:PLY,Plymouth City Council,authoritative,1
+article-4-direction,local-authority:PTE,Peterborough City Council,authoritative,108
+article-4-direction,local-authority:RCH,Rochdale Metropolitan Borough Council,authoritative,6
+article-4-direction,local-authority:ROH,Rother District Council,authoritative,61
+article-4-direction,local-authority:ROS,Rossendale Borough Council,authoritative,8
+article-4-direction,local-authority:SAL,St Albans City and District Council,authoritative,30
+article-4-direction,local-authority:SAW,Sandwell Metropolitan Borough Council,authoritative,3
+article-4-direction,local-authority:SCA,South Cambridgeshire District Council,authoritative,9
+article-4-direction,local-authority:SFT,Sefton Metropolitan Borough Council,authoritative,6
+article-4-direction,local-authority:SGC,South Gloucestershire Council,authoritative,2
+article-4-direction,local-authority:SKP,Stockport Metropolitan Borough Council,authoritative,60
+article-4-direction,local-authority:SLF,Salford City Council,authoritative,3
+article-4-direction,local-authority:SNO,South Norfolk District Council,authoritative,55
+article-4-direction,local-authority:SST,South Staffordshire Council,authoritative,16
+article-4-direction,local-authority:STA,Stafford Borough Council,authoritative,3
+article-4-direction,local-authority:STE,Stoke-on-Trent City Council,authoritative,27
+article-4-direction,local-authority:SWK,London Borough of Southwark,authoritative,480
+article-4-direction,local-authority:SWL,Swale Borough Council,authoritative,22
+article-4-direction,local-authority:TAN,Tandridge District Council,authoritative,45
+article-4-direction,local-authority:TEN,Tendring District Council,authoritative,14
+article-4-direction,local-authority:TOB,Torbay Council,authoritative,2
+article-4-direction,local-authority:TWH,London Borough of Tower Hamlets,authoritative,64
+article-4-direction,local-authority:UTT,Uttlesford District Council,authoritative,18
+article-4-direction,local-authority:WAE,Waverley Borough Council,authoritative,29
+article-4-direction,local-authority:WEA,Wealden District Council,authoritative,87
+article-4-direction,local-authority:WFT,London Borough of Waltham Forest,authoritative,15
+article-4-direction,local-authority:WIL,Wiltshire Council,authoritative,48
+article-4-direction,local-authority:WOT,Worthing Borough Council,authoritative,8
+article-4-direction,local-authority:WOX,West Oxfordshire District Council,authoritative,84
+article-4-direction,local-authority:WRL,Wirral Borough Council,authoritative,13
+article-4-direction,local-authority:WSM,City of Westminster,authoritative,10
+article-4-direction,local-authority:YOR,City of York Council,authoritative,4
+article-4-direction,national-park-authority:Q27159704,Lake District National Park Authority,authoritative,30
+article-4-direction,national-park-authority:Q72617158,New Forest National Park Authority,authoritative,26
+article-4-direction-area,local-authority:ADU,Adur District Council,authoritative,9
+article-4-direction-area,local-authority:ASF,Ashford Borough Council,authoritative,75
+article-4-direction-area,local-authority:BDG,London Borough of Barking and Dagenham,authoritative,3
+article-4-direction-area,local-authority:BEN,London Borough of Brent,authoritative,162
+article-4-direction-area,local-authority:BIR,Birmingham City Council,authoritative,13
+article-4-direction-area,local-authority:BNE,London Borough of Barnet,authoritative,48
+article-4-direction-area,local-authority:BPL,Blackpool Borough Council,authoritative,6
+article-4-direction-area,local-authority:BRO,Broadland District Council,authoritative,28
+article-4-direction-area,local-authority:BST,Bristol City Council,authoritative,16
+article-4-direction-area,local-authority:BUC,Buckinghamshire Council,authoritative,389
+article-4-direction-area,local-authority:BUN,Burnley Borough Council,authoritative,12
+article-4-direction-area,local-authority:BUR,Bury Metropolitan Borough Council,authoritative,2
+article-4-direction-area,local-authority:CAB,Cambridge City Council,authoritative,19
+article-4-direction-area,local-authority:CAS,Castle Point Borough Council,authoritative,4
+article-4-direction-area,local-authority:CAT,Canterbury City Council,authoritative,463
+article-4-direction-area,local-authority:CBF,Central Bedfordshire Council,authoritative,7
+article-4-direction-area,local-authority:CHT,Cheltenham Borough Council,authoritative,1
+article-4-direction-area,local-authority:CLD,Calderdale Metropolitan Borough Council,authoritative,8
+article-4-direction-area,local-authority:CMD,London Borough of Camden,authoritative,20
+article-4-direction-area,local-authority:COT,Cotswold District Council,authoritative,22
+article-4-direction-area,local-authority:COV,Coventry City Council,authoritative,14
+article-4-direction-area,local-authority:DAR,Dartford Borough Council,authoritative,6
+article-4-direction-area,local-authority:DNC,Doncaster Metropolitan Borough Council,authoritative,3
+article-4-direction-area,local-authority:DOV,Dover District Council,authoritative,55
+article-4-direction-area,local-authority:DST,Dorset Council,authoritative,78
+article-4-direction-area,local-authority:ECA,East Cambridgeshire District Council,authoritative,292
+article-4-direction-area,local-authority:EHA,East Hampshire District Council,authoritative,50
+article-4-direction-area,local-authority:ENF,London Borough of Enfield,authoritative,33
+article-4-direction-area,local-authority:EPS,Epsom and Ewell Borough Council,authoritative,30
+article-4-direction-area,local-authority:ERY,East Riding of Yorkshire Council,authoritative,11
+article-4-direction-area,local-authority:EXE,Exeter City Council,authoritative,16
+article-4-direction-area,local-authority:FAR,Fareham Borough Council,authoritative,19
+article-4-direction-area,local-authority:FEN,Fenland District Council,authoritative,3
+article-4-direction-area,local-authority:FOE,Forest of Dean District Council,authoritative,2
+article-4-direction-area,local-authority:GAT,Gateshead Metropolitan Borough Council,authoritative,5
+article-4-direction-area,local-authority:GLO,Gloucester City Council,authoritative,55
+article-4-direction-area,local-authority:GRY,Great Yarmouth Borough Council,authoritative,18
+article-4-direction-area,local-authority:HAA,Havant Borough Council,authoritative,6
+article-4-direction-area,local-authority:HAL,Halton Borough Council,authoritative,2
+article-4-direction-area,local-authority:HAR,Harlow District Council,authoritative,14
+article-4-direction-area,local-authority:HAT,Hart District Council,authoritative,47
+article-4-direction-area,local-authority:HIL,London Borough of Hillingdon,authoritative,150
+article-4-direction-area,local-authority:HOR,Horsham District Council,authoritative,53
+article-4-direction-area,local-authority:HRY,London Borough of Haringey,authoritative,25
+article-4-direction-area,local-authority:HUN,Huntingdonshire District Council,authoritative,6
+article-4-direction-area,local-authority:IOS,Council of the Isles of Scilly,authoritative,4
+article-4-direction-area,local-authority:IPS,Ipswich Borough Council,authoritative,7
+article-4-direction-area,local-authority:KEC,Royal Borough of Kensington and Chelsea,authoritative,84
+article-4-direction-area,local-authority:KIN,Borough Council of King's Lynn and West Norfolk,authoritative,12
+article-4-direction-area,local-authority:LBH,London Borough of Lambeth,authoritative,223
+article-4-direction-area,local-authority:LCE,Leicester City Council,authoritative,373
+article-4-direction-area,local-authority:LDS,Leeds City Council,authoritative,1
+article-4-direction-area,local-authority:LEW,London Borough of Lewisham,authoritative,89
+article-4-direction-area,local-authority:LIV,Liverpool City Council,authoritative,1421
+article-4-direction-area,local-authority:MAI,Maidstone Borough Council,authoritative,85
+article-4-direction-area,local-authority:MDW,Medway Council,authoritative,47
+article-4-direction-area,local-authority:MIK,Milton Keynes City Council,authoritative,16
+article-4-direction-area,local-authority:NBL,Northumberland County Council,authoritative,13
+article-4-direction-area,local-authority:NET,Newcastle City Council,authoritative,13
+article-4-direction-area,local-authority:NEW,New Forest District Council,authoritative,9
+article-4-direction-area,local-authority:NLN,North Lincolnshire Council,authoritative,12
+article-4-direction-area,local-authority:NNO,North Norfolk District Council,authoritative,42
+article-4-direction-area,local-authority:NSM,North Somerset Council,authoritative,38
+article-4-direction-area,local-authority:NTY,North Tyneside Council,authoritative,20
+article-4-direction-area,local-authority:NWA,North Warwickshire Borough Council,authoritative,10
+article-4-direction-area,local-authority:OXO,Oxford City Council,authoritative,4
+article-4-direction-area,local-authority:PLY,Plymouth City Council,authoritative,1
+article-4-direction-area,local-authority:PTE,Peterborough City Council,authoritative,108
+article-4-direction-area,local-authority:RCH,Rochdale Metropolitan Borough Council,authoritative,6
+article-4-direction-area,local-authority:ROH,Rother District Council,authoritative,61
+article-4-direction-area,local-authority:ROS,Rossendale Borough Council,authoritative,7
+article-4-direction-area,local-authority:SAL,St Albans City and District Council,authoritative,34
+article-4-direction-area,local-authority:SAW,Sandwell Metropolitan Borough Council,authoritative,12
+article-4-direction-area,local-authority:SCA,South Cambridgeshire District Council,authoritative,9
+article-4-direction-area,local-authority:SFT,Sefton Metropolitan Borough Council,authoritative,6
+article-4-direction-area,local-authority:SGC,South Gloucestershire Council,authoritative,2
+article-4-direction-area,local-authority:SKP,Stockport Metropolitan Borough Council,authoritative,30
+article-4-direction-area,local-authority:SLF,Salford City Council,authoritative,3
+article-4-direction-area,local-authority:SNO,South Norfolk District Council,authoritative,55
+article-4-direction-area,local-authority:SPE,Spelthorne Borough Council,authoritative,4
+article-4-direction-area,local-authority:SST,South Staffordshire Council,authoritative,15
+article-4-direction-area,local-authority:STA,Stafford Borough Council,authoritative,3
+article-4-direction-area,local-authority:STE,Stoke-on-Trent City Council,authoritative,27
+article-4-direction-area,local-authority:SWK,London Borough of Southwark,authoritative,480
+article-4-direction-area,local-authority:SWL,Swale Borough Council,authoritative,22
+article-4-direction-area,local-authority:TAN,Tandridge District Council,authoritative,50
+article-4-direction-area,local-authority:TEW,Tewkesbury Borough Council,authoritative,11
+article-4-direction-area,local-authority:TOB,Torbay Council,authoritative,2
+article-4-direction-area,local-authority:TWH,London Borough of Tower Hamlets,authoritative,63
+article-4-direction-area,local-authority:UTT,Uttlesford District Council,authoritative,18
+article-4-direction-area,local-authority:WAE,Waverley Borough Council,authoritative,29
+article-4-direction-area,local-authority:WBK,West Berkshire Council,authoritative,9
+article-4-direction-area,local-authority:WFT,London Borough of Waltham Forest,authoritative,807
+article-4-direction-area,local-authority:WIL,Wiltshire Council,authoritative,48
+article-4-direction-area,local-authority:WOT,Worthing Borough Council,authoritative,8
+article-4-direction-area,local-authority:WOX,West Oxfordshire District Council,authoritative,84
+article-4-direction-area,local-authority:WRL,Wirral Borough Council,authoritative,13
+article-4-direction-area,local-authority:WSM,City of Westminster,authoritative,10
+article-4-direction-area,local-authority:YOR,City of York Council,authoritative,4
+article-4-direction-area,national-park-authority:Q27159704,Lake District National Park Authority,authoritative,30
+article-4-direction-area,national-park-authority:Q72617158,New Forest National Park Authority,authoritative,26
+article-4-direction-rule,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",some,103
+asset-of-community-value,local-authority:CMD,London Borough of Camden,authoritative,101
+battlefield,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",authoritative,47
+battlefield,government-organisation:PB1164,Historic England,authoritative,47
+border,government-organisation:D303,Office for National Statistics,authoritative,1
+brownfield-land,development-corporation:Q20648596,Old Oak and Park Royal Development Corporation,authoritative,79
+brownfield-land,development-corporation:Q6670544,London Legacy Development Corporation,authoritative,3
+brownfield-land,local-authority:ADU,Adur District Council,authoritative,46
+brownfield-land,local-authority:AMB,Amber Valley Borough Council,authoritative,67
+brownfield-land,local-authority:ARU,Arun District Council,authoritative,46
+brownfield-land,local-authority:ASF,Ashford Borough Council,authoritative,28
+brownfield-land,local-authority:ASH,Ashfield District Council,authoritative,39
+brownfield-land,local-authority:BAB,Babergh District Council,authoritative,20
+brownfield-land,local-authority:BAE,Bassetlaw District Council,authoritative,62
+brownfield-land,local-authority:BAI,Basildon Borough Council,authoritative,145
+brownfield-land,local-authority:BAN,Basingstoke and Deane Borough Council,authoritative,116
+brownfield-land,local-authority:BAS,Bath and North East Somerset Council,authoritative,114
+brownfield-land,local-authority:BBD,Blackburn with Darwen Borough Council,authoritative,32
+brownfield-land,local-authority:BDF,Bedford Borough Council,authoritative,169
+brownfield-land,local-authority:BDG,London Borough of Barking and Dagenham,authoritative,126
+brownfield-land,local-authority:BEN,London Borough of Brent,authoritative,287
+brownfield-land,local-authority:BEX,London Borough of Bexley,authoritative,173
+brownfield-land,local-authority:BIR,Birmingham City Council,authoritative,1731
+brownfield-land,local-authority:BLA,Blaby District Council,authoritative,29
+brownfield-land,local-authority:BNE,London Borough of Barnet,authoritative,267
+brownfield-land,local-authority:BNH,Brighton and Hove City Council,authoritative,301
+brownfield-land,local-authority:BNS,Barnsley Metropolitan Borough Council,authoritative,99
+brownfield-land,local-authority:BOL,Bolton Metropolitan Borough Council,authoritative,149
+brownfield-land,local-authority:BOS,Bolsover District Council,authoritative,91
+brownfield-land,local-authority:BOT,Boston Borough Council,authoritative,46
+brownfield-land,local-authority:BPC,"Bournemouth, Christchurch and Poole Council",authoritative,346
+brownfield-land,local-authority:BPL,Blackpool Borough Council,authoritative,64
+brownfield-land,local-authority:BRA,Braintree District Council,authoritative,48
+brownfield-land,local-authority:BRC,Bracknell Forest Council,authoritative,59
+brownfield-land,local-authority:BRD,City of Bradford Metropolitan District Council,authoritative,387
+brownfield-land,local-authority:BRE,Breckland District Council,authoritative,25
+brownfield-land,local-authority:BRM,Bromsgrove District Council,authoritative,14
+brownfield-land,local-authority:BRO,Broadland District Council,authoritative,23
+brownfield-land,local-authority:BRT,Broxtowe Borough Council,authoritative,23
+brownfield-land,local-authority:BRW,Brentwood Borough Council,authoritative,81
+brownfield-land,local-authority:BRX,Broxbourne Borough Council,authoritative,42
+brownfield-land,local-authority:BRY,London Borough of Bromley,authoritative,88
+brownfield-land,local-authority:BST,Bristol City Council,authoritative,582
+brownfield-land,local-authority:BUC,Buckinghamshire Council,authoritative,317
+brownfield-land,local-authority:BUN,Burnley Borough Council,authoritative,28
+brownfield-land,local-authority:BUR,Bury Metropolitan Borough Council,authoritative,108
+brownfield-land,local-authority:CAB,Cambridge City Council,authoritative,127
+brownfield-land,local-authority:CAN,Cannock Chase District Council,authoritative,129
+brownfield-land,local-authority:CAS,Castle Point Borough Council,authoritative,73
+brownfield-land,local-authority:CAT,Canterbury City Council,authoritative,77
+brownfield-land,local-authority:CBF,Central Bedfordshire Council,authoritative,94
+brownfield-land,local-authority:CHA,Charnwood Borough Council,authoritative,115
+brownfield-land,local-authority:CHE,Cheshire East Council,authoritative,194
+brownfield-land,local-authority:CHI,Chichester District Council,authoritative,29
+brownfield-land,local-authority:CHL,Chelmsford City Council,authoritative,421
+brownfield-land,local-authority:CHO,Chorley Borough Council,authoritative,80
+brownfield-land,local-authority:CHR,Cherwell District Council,authoritative,133
+brownfield-land,local-authority:CHS,Chesterfield Borough Council,authoritative,71
+brownfield-land,local-authority:CHT,Cheltenham Borough Council,authoritative,76
+brownfield-land,local-authority:CHW,Cheshire West and Chester Council,authoritative,497
+brownfield-land,local-authority:CLD,Calderdale Metropolitan Borough Council,authoritative,220
+brownfield-land,local-authority:CMD,London Borough of Camden,authoritative,151
+brownfield-land,local-authority:COL,Colchester City Council,authoritative,33
+brownfield-land,local-authority:CON,Cornwall Council,authoritative,295
+brownfield-land,local-authority:COP,Copeland Borough Council,authoritative,23
+brownfield-land,local-authority:COT,Cotswold District Council,authoritative,58
+brownfield-land,local-authority:COV,Coventry City Council,authoritative,76
+brownfield-land,local-authority:CRW,Crawley Borough Council,authoritative,48
+brownfield-land,local-authority:CRY,London Borough of Croydon,authoritative,552
+brownfield-land,local-authority:DAC,Dacorum Borough Council,authoritative,41
+brownfield-land,local-authority:DAL,Darlington Borough Council,authoritative,23
+brownfield-land,local-authority:DAR,Dartford Borough Council,authoritative,94
+brownfield-land,local-authority:DEB,Derbyshire Dales District Council,authoritative,40
+brownfield-land,local-authority:DER,Derby City Council,authoritative,46
+brownfield-land,local-authority:DNC,Doncaster Metropolitan Borough Council,authoritative,243
+brownfield-land,local-authority:DOV,Dover District Council,authoritative,129
+brownfield-land,local-authority:DST,Dorset Council,authoritative,83
+brownfield-land,local-authority:DUD,Dudley Metropolitan Borough Council,authoritative,201
+brownfield-land,local-authority:DUR,Durham County Council,authoritative,69
+brownfield-land,local-authority:EAL,London Borough of Ealing,authoritative,70
+brownfield-land,local-authority:EAS,Eastbourne Borough Council,authoritative,133
+brownfield-land,local-authority:EAT,Eastleigh Borough Council,authoritative,41
+brownfield-land,local-authority:ECA,East Cambridgeshire District Council,authoritative,125
+brownfield-land,local-authority:EDE,East Devon District Council,authoritative,39
+brownfield-land,local-authority:EHA,East Hampshire District Council,authoritative,12
+brownfield-land,local-authority:EHE,East Hertfordshire District Council,authoritative,6
+brownfield-land,local-authority:ELI,East Lindsey District Council,authoritative,29
+brownfield-land,local-authority:ELM,Elmbridge Borough Council,authoritative,251
+brownfield-land,local-authority:ENF,London Borough of Enfield,authoritative,27
+brownfield-land,local-authority:EPP,Epping Forest District Council,authoritative,131
+brownfield-land,local-authority:EPS,Epsom and Ewell Borough Council,authoritative,46
+brownfield-land,local-authority:ERE,Erewash Borough Council,authoritative,140
+brownfield-land,local-authority:ERY,East Riding of Yorkshire Council,authoritative,302
+brownfield-land,local-authority:ESK,East Suffolk Council,authoritative,139
+brownfield-land,local-authority:EST,East Staffordshire Borough Council,authoritative,93
+brownfield-land,local-authority:EXE,Exeter City Council,authoritative,66
+brownfield-land,local-authority:FAR,Fareham Borough Council,authoritative,75
+brownfield-land,local-authority:FEN,Fenland District Council,authoritative,60
+brownfield-land,local-authority:FOE,Forest of Dean District Council,authoritative,81
+brownfield-land,local-authority:FYL,Fylde Borough Council,authoritative,47
+brownfield-land,local-authority:GAT,Gateshead Metropolitan Borough Council,authoritative,155
+brownfield-land,local-authority:GED,Gedling Borough Council,authoritative,81
+brownfield-land,local-authority:GLO,Gloucester City Council,authoritative,57
+brownfield-land,local-authority:GOS,Gosport Borough Council,authoritative,32
+brownfield-land,local-authority:GRA,Gravesham Borough Council,authoritative,97
+brownfield-land,local-authority:GRE,Royal Borough of Greenwich,authoritative,123
+brownfield-land,local-authority:GRT,Guildford Borough Council,authoritative,144
+brownfield-land,local-authority:GRY,Great Yarmouth Borough Council,authoritative,103
+brownfield-land,local-authority:HAA,Havant Borough Council,authoritative,87
+brownfield-land,local-authority:HAL,Halton Borough Council,authoritative,96
+brownfield-land,local-authority:HAO,Harborough District Council,authoritative,32
+brownfield-land,local-authority:HAR,Harlow District Council,authoritative,111
+brownfield-land,local-authority:HAS,Hastings Borough Council,authoritative,45
+brownfield-land,local-authority:HAT,Hart District Council,authoritative,138
+brownfield-land,local-authority:HAV,London Borough of Havering,authoritative,114
+brownfield-land,local-authority:HCK,London Borough of Hackney,authoritative,38
+brownfield-land,local-authority:HEF,Herefordshire Council,authoritative,75
+brownfield-land,local-authority:HER,Hertsmere Borough Council,authoritative,101
+brownfield-land,local-authority:HIG,High Peak Borough Council,authoritative,52
+brownfield-land,local-authority:HIL,London Borough of Hillingdon,authoritative,203
+brownfield-land,local-authority:HIN,Hinckley and Bosworth Borough Council,authoritative,10
+brownfield-land,local-authority:HMF,London Borough of Hammersmith & Fulham,authoritative,23
+brownfield-land,local-authority:HNS,London Borough of Hounslow,authoritative,179
+brownfield-land,local-authority:HOR,Horsham District Council,authoritative,48
+brownfield-land,local-authority:HPL,Hartlepool Borough Council,authoritative,40
+brownfield-land,local-authority:HRW,London Borough of Harrow,authoritative,102
+brownfield-land,local-authority:HRY,London Borough of Haringey,authoritative,277
+brownfield-land,local-authority:HUN,Huntingdonshire District Council,authoritative,38
+brownfield-land,local-authority:HYN,Hyndburn Borough Council,authoritative,38
+brownfield-land,local-authority:IOS,Council of the Isles of Scilly,authoritative,2
+brownfield-land,local-authority:IOW,Isle of Wight Council,authoritative,116
+brownfield-land,local-authority:IPS,Ipswich Borough Council,authoritative,151
+brownfield-land,local-authority:ISL,London Borough of Islington,authoritative,146
+brownfield-land,local-authority:KEC,Royal Borough of Kensington and Chelsea,authoritative,74
+brownfield-land,local-authority:KHL,Hull City Council,authoritative,87
+brownfield-land,local-authority:KIN,Borough Council of King's Lynn and West Norfolk,authoritative,89
+brownfield-land,local-authority:KIR,Kirklees Council,authoritative,200
+brownfield-land,local-authority:KTT,Royal Borough of Kingston upon Thames,authoritative,49
+brownfield-land,local-authority:KWL,Knowsley Metropolitan Borough Council,authoritative,172
+brownfield-land,local-authority:LAC,Lancaster City Council,authoritative,63
+brownfield-land,local-authority:LBH,London Borough of Lambeth,authoritative,171
+brownfield-land,local-authority:LCE,Leicester City Council,authoritative,66
+brownfield-land,local-authority:LDS,Leeds City Council,authoritative,496
+brownfield-land,local-authority:LEE,Lewes District Council,authoritative,71
+brownfield-land,local-authority:LEW,London Borough of Lewisham,authoritative,336
+brownfield-land,local-authority:LIC,City of Lincoln Council,authoritative,14
+brownfield-land,local-authority:LIF,Lichfield District Council,authoritative,67
+brownfield-land,local-authority:LIV,Liverpool City Council,authoritative,89
+brownfield-land,local-authority:LND,City of London Corporation,authoritative,2
+brownfield-land,local-authority:LUT,Luton Borough Council,authoritative,166
+brownfield-land,local-authority:MAI,Maidstone Borough Council,authoritative,158
+brownfield-land,local-authority:MAL,Maldon District Council,authoritative,9
+brownfield-land,local-authority:MAN,Manchester City Council,authoritative,616
+brownfield-land,local-authority:MAS,Mansfield District Council,authoritative,18
+brownfield-land,local-authority:MAV,Malvern Hills District Council,authoritative,37
+brownfield-land,local-authority:MDB,Middlesbrough Borough Council,authoritative,64
+brownfield-land,local-authority:MDE,Mid Devon District Council,authoritative,21
+brownfield-land,local-authority:MDW,Medway Council,authoritative,135
+brownfield-land,local-authority:MEL,Melton Borough Council,authoritative,60
+brownfield-land,local-authority:MEN,Mendip District Council,authoritative,2
+brownfield-land,local-authority:MIK,Milton Keynes City Council,authoritative,95
+brownfield-land,local-authority:MOL,Mole Valley District Council,authoritative,77
+brownfield-land,local-authority:MRT,London Borough of Merton,authoritative,277
+brownfield-land,local-authority:MSS,Mid Sussex District Council,authoritative,100
+brownfield-land,local-authority:MSU,Mid Suffolk District Council,authoritative,32
+brownfield-land,local-authority:NBL,Northumberland County Council,authoritative,360
+brownfield-land,local-authority:NDE,North Devon District Council,authoritative,104
+brownfield-land,local-authority:NEA,Newark and Sherwood District Council,authoritative,79
+brownfield-land,local-authority:NEC,Newcastle-under-Lyme Borough Council,authoritative,82
+brownfield-land,local-authority:NED,North East Derbyshire District Council,authoritative,52
+brownfield-land,local-authority:NEL,North East Lincolnshire Council,authoritative,69
+brownfield-land,local-authority:NET,Newcastle City Council,authoritative,188
+brownfield-land,local-authority:NEW,New Forest District Council,authoritative,72
+brownfield-land,local-authority:NGM,Nottingham City Council,authoritative,438
+brownfield-land,local-authority:NHE,North Hertfordshire District Council,authoritative,57
+brownfield-land,local-authority:NKE,North Kesteven District Council,authoritative,7
+brownfield-land,local-authority:NLN,North Lincolnshire Council,authoritative,80
+brownfield-land,local-authority:NNO,North Norfolk District Council,authoritative,16
+brownfield-land,local-authority:NNUA,North Northamptonshire Council,authoritative,18
+brownfield-land,local-authority:NOW,Norwich City Council,authoritative,154
+brownfield-land,local-authority:NSM,North Somerset Council,authoritative,93
+brownfield-land,local-authority:NTY,North Tyneside Council,authoritative,150
+brownfield-land,local-authority:NUN,Nuneaton and Bedworth Borough Council,authoritative,158
+brownfield-land,local-authority:NWA,North Warwickshire Borough Council,authoritative,37
+brownfield-land,local-authority:NWL,North West Leicestershire District Council,authoritative,41
+brownfield-land,local-authority:NWM,London Borough of Newham,authoritative,96
+brownfield-land,local-authority:OAD,Oadby and Wigston Borough Council,authoritative,22
+brownfield-land,local-authority:OLD,Oldham Metropolitan Borough Council,authoritative,161
+brownfield-land,local-authority:OXO,Oxford City Council,authoritative,130
+brownfield-land,local-authority:PEN,Pendle Borough Council,authoritative,77
+brownfield-land,local-authority:PLY,Plymouth City Council,authoritative,166
+brownfield-land,local-authority:POR,Portsmouth City Council,authoritative,234
+brownfield-land,local-authority:PRE,Preston City Council,authoritative,65
+brownfield-land,local-authority:PTE,Peterborough City Council,authoritative,72
+brownfield-land,local-authority:RCC,Redcar and Cleveland Borough Council,authoritative,59
+brownfield-land,local-authority:RCH,Rochdale Metropolitan Borough Council,authoritative,153
+brownfield-land,local-authority:RDB,London Borough of Redbridge,authoritative,188
+brownfield-land,local-authority:RDG,Reading Borough Council,authoritative,217
+brownfield-land,local-authority:RED,Redditch Borough Council,authoritative,18
+brownfield-land,local-authority:REI,Reigate and Banstead Borough Council,authoritative,187
+brownfield-land,local-authority:RIB,Ribble Valley Borough Council,authoritative,25
+brownfield-land,local-authority:RIC,London Borough of Richmond upon Thames,authoritative,118
+brownfield-land,local-authority:ROC,Rochford District Council,authoritative,31
+brownfield-land,local-authority:ROH,Rother District Council,authoritative,65
+brownfield-land,local-authority:ROS,Rossendale Borough Council,authoritative,55
+brownfield-land,local-authority:ROT,Rotherham Metropolitan Borough Council,authoritative,88
+brownfield-land,local-authority:RUG,Rugby Borough Council,authoritative,23
+brownfield-land,local-authority:RUH,Rushmoor Borough Council,authoritative,75
+brownfield-land,local-authority:RUN,Runnymede Borough Council,authoritative,187
+brownfield-land,local-authority:RUS,Rushcliffe Borough Council,authoritative,32
+brownfield-land,local-authority:RUT,Rutland County Council,authoritative,9
+brownfield-land,local-authority:SAL,St Albans City and District Council,authoritative,42
+brownfield-land,local-authority:SAW,Sandwell Metropolitan Borough Council,authoritative,429
+brownfield-land,local-authority:SCA,South Cambridgeshire District Council,authoritative,205
+brownfield-land,local-authority:SDE,South Derbyshire District Council,authoritative,37
+brownfield-land,local-authority:SEV,Sevenoaks District Council,authoritative,191
+brownfield-land,local-authority:SFT,Sefton Metropolitan Borough Council,authoritative,62
+brownfield-land,local-authority:SGC,South Gloucestershire Council,authoritative,185
+brownfield-land,local-authority:SHA,South Hams District Council,authoritative,13
+brownfield-land,local-authority:SHF,Sheffield City Council,authoritative,667
+brownfield-land,local-authority:SHN,St Helens Council,authoritative,130
+brownfield-land,local-authority:SHO,South Holland District Council,authoritative,42
+brownfield-land,local-authority:SHR,Shropshire Council,authoritative,191
+brownfield-land,local-authority:SKE,South Kesteven District Council,authoritative,12
+brownfield-land,local-authority:SKP,Stockport Metropolitan Borough Council,authoritative,116
+brownfield-land,local-authority:SLF,Salford City Council,authoritative,526
+brownfield-land,local-authority:SLG,Slough Borough Council,authoritative,111
+brownfield-land,local-authority:SND,Sunderland City Council,authoritative,129
+brownfield-land,local-authority:SNO,South Norfolk District Council,authoritative,78
+brownfield-land,local-authority:SOL,Solihull Metropolitan Borough Council,authoritative,154
+brownfield-land,local-authority:SOS,Southend-on-Sea Borough Council,authoritative,56
+brownfield-land,local-authority:SOX,South Oxfordshire District Council,authoritative,96
+brownfield-land,local-authority:SPE,Spelthorne Borough Council,authoritative,59
+brownfield-land,local-authority:SRI,South Ribble Borough Council,authoritative,37
+brownfield-land,local-authority:SSO,South Somerset District Council,authoritative,37
+brownfield-land,local-authority:SST,South Staffordshire Council,authoritative,63
+brownfield-land,local-authority:STA,Stafford Borough Council,authoritative,31
+brownfield-land,local-authority:STE,Stoke-on-Trent City Council,authoritative,353
+brownfield-land,local-authority:STF,Staffordshire Moorlands District Council,authoritative,55
+brownfield-land,local-authority:STH,Southampton City Council,authoritative,37
+brownfield-land,local-authority:STN,London Borough of Sutton,authoritative,103
+brownfield-land,local-authority:STO,Stroud District Council,authoritative,98
+brownfield-land,local-authority:STR,Stratford-on-Avon District Council,authoritative,99
+brownfield-land,local-authority:STT,Stockton-on-Tees Borough Council,authoritative,26
+brownfield-land,local-authority:STV,Stevenage Borough Council,authoritative,18
+brownfield-land,local-authority:STY,South Tyneside Council,authoritative,73
+brownfield-land,local-authority:SUR,Surrey Heath Borough Council,authoritative,122
+brownfield-land,local-authority:SWD,Swindon Borough Council,authoritative,224
+brownfield-land,local-authority:SWK,London Borough of Southwark,authoritative,791
+brownfield-land,local-authority:SWL,Swale Borough Council,authoritative,58
+brownfield-land,local-authority:TAM,Tameside Metropolitan Borough Council,authoritative,204
+brownfield-land,local-authority:TAN,Tandridge District Council,authoritative,178
+brownfield-land,local-authority:TAW,Tamworth Borough Council,authoritative,39
+brownfield-land,local-authority:TEI,Teignbridge District Council,authoritative,70
+brownfield-land,local-authority:TEN,Tendring District Council,authoritative,66
+brownfield-land,local-authority:TES,Test Valley Borough Council,authoritative,18
+brownfield-land,local-authority:TEW,Tewkesbury Borough Council,authoritative,15
+brownfield-land,local-authority:TFW,Telford & Wrekin Council,authoritative,63
+brownfield-land,local-authority:THA,Thanet District Council,authoritative,474
+brownfield-land,local-authority:THE,Three Rivers District Council,authoritative,62
+brownfield-land,local-authority:THR,Thurrock Council,authoritative,72
+brownfield-land,local-authority:TOB,Torbay Council,authoritative,99
+brownfield-land,local-authority:TON,Tonbridge and Malling Borough Council,authoritative,17
+brownfield-land,local-authority:TOR,Torridge District Council,authoritative,76
+brownfield-land,local-authority:TRF,Trafford Metropolitan Borough Council,authoritative,62
+brownfield-land,local-authority:TUN,Tunbridge Wells Borough Council,authoritative,124
+brownfield-land,local-authority:TWH,London Borough of Tower Hamlets,authoritative,26
+brownfield-land,local-authority:UTT,Uttlesford District Council,authoritative,31
+brownfield-land,local-authority:VAL,Vale of White Horse District Council,authoritative,74
+brownfield-land,local-authority:WAE,Waverley Borough Council,authoritative,110
+brownfield-land,local-authority:WAT,Watford Borough Council,authoritative,85
+brownfield-land,local-authority:WAW,Warwick District Council,authoritative,33
+brownfield-land,local-authority:WBK,West Berkshire Council,authoritative,109
+brownfield-land,local-authority:WDE,West Devon Borough Council,authoritative,4
+brownfield-land,local-authority:WEA,Wealden District Council,authoritative,72
+brownfield-land,local-authority:WEW,Welwyn Hatfield Borough Council,authoritative,106
+brownfield-land,local-authority:WFT,London Borough of Waltham Forest,authoritative,224
+brownfield-land,local-authority:WFUA,Westmorland and Furness Council,authoritative,66
+brownfield-land,local-authority:WGN,Wigan Metropolitan Borough Council,authoritative,226
+brownfield-land,local-authority:WIL,Wiltshire Council,authoritative,173
+brownfield-land,local-authority:WIN,Winchester City Council,authoritative,176
+brownfield-land,local-authority:WKF,Wakefield Metropolitan District Council,authoritative,210
+brownfield-land,local-authority:WLA,West Lancashire Borough Council,authoritative,40
+brownfield-land,local-authority:WLI,West Lindsey District Council,authoritative,89
+brownfield-land,local-authority:WLL,Walsall Metropolitan Borough Council,authoritative,125
+brownfield-land,local-authority:WLV,City of Wolverhampton Council,authoritative,971
+brownfield-land,local-authority:WND,London Borough of Wandsworth,authoritative,408
+brownfield-land,local-authority:WNM,Royal Borough of Windsor and Maidenhead,authoritative,68
+brownfield-land,local-authority:WNUA,West Northamptonshire Council,authoritative,86
+brownfield-land,local-authority:WOC,Worcester City Council,authoritative,109
+brownfield-land,local-authority:WOI,Woking Borough Council,authoritative,122
+brownfield-land,local-authority:WOK,Wokingham Borough Council,authoritative,101
+brownfield-land,local-authority:WOT,Worthing Borough Council,authoritative,64
+brownfield-land,local-authority:WOX,West Oxfordshire District Council,authoritative,33
+brownfield-land,local-authority:WRL,Wirral Borough Council,authoritative,190
+brownfield-land,local-authority:WRT,Warrington Borough Council,authoritative,163
+brownfield-land,local-authority:WSK,West Suffolk Council,authoritative,27
+brownfield-land,local-authority:WSM,City of Westminster,authoritative,280
+brownfield-land,local-authority:WYC,Wychavon District Council,authoritative,42
+brownfield-land,local-authority:WYE,Wyre Forest District Council,authoritative,59
+brownfield-land,local-authority:WYR,Wyre Borough Council,authoritative,43
+brownfield-land,local-authority:YOR,City of York Council,authoritative,125
+brownfield-land,national-park-authority:Q20198711,South Downs National Park Authority,authoritative,78
+brownfield-land,national-park-authority:Q27159704,Lake District National Park Authority,authoritative,9
+brownfield-land,national-park-authority:Q27178932,Yorkshire Dales National Park Authority,authoritative,11
+brownfield-land,national-park-authority:Q4972284,Broads Authority,authoritative,53
+brownfield-land,national-park-authority:Q5225646,Dartmoor National Park Authority,authoritative,7
+brownfield-land,national-park-authority:Q72617158,New Forest National Park Authority,authoritative,43
+brownfield-land,national-park-authority:Q72617669,North York Moors National Park Authority,authoritative,5
+brownfield-land,national-park-authority:Q72617784,Exmoor National Park Authority,authoritative,6
+brownfield-land,national-park-authority:Q72617890,Northumberland National Park Authority,authoritative,1
+brownfield-land,national-park-authority:Q72617988,Peak District National Park Authority,authoritative,2
+brownfield-site,local-authority:CON,Cornwall Council,authoritative,294
+brownfield-site,local-authority:DNC,Doncaster Metropolitan Borough Council,authoritative,152
+brownfield-site,local-authority:SWK,London Borough of Southwark,authoritative,346
+building-preservation-notice,government-organisation:PB1164,Historic England,authoritative,9
+built-up-area,government-organisation:D303,Office for National Statistics,authoritative,7157
+certificate-of-immunity,government-organisation:PB1164,Historic England,authoritative,252
+conservation-area,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",some,431
+conservation-area,government-organisation:PB1164,Historic England,some,3
+conservation-area,local-authority:ADU,Adur District Council,authoritative,7
+conservation-area,local-authority:ASF,Ashford Borough Council,authoritative,44
+conservation-area,local-authority:BAE,Bassetlaw District Council,authoritative,33
+conservation-area,local-authority:BDG,London Borough of Barking and Dagenham,authoritative,4
+conservation-area,local-authority:BEN,London Borough of Brent,authoritative,23
+conservation-area,local-authority:BIR,Birmingham City Council,authoritative,29
+conservation-area,local-authority:BNE,London Borough of Barnet,authoritative,16
+conservation-area,local-authority:BOL,Bolton Metropolitan Borough Council,authoritative,26
+conservation-area,local-authority:BRD,City of Bradford Metropolitan District Council,authoritative,58
+conservation-area,local-authority:BRO,Broadland District Council,authoritative,31
+conservation-area,local-authority:BST,Bristol City Council,authoritative,34
+conservation-area,local-authority:BUC,Buckinghamshire Council,authoritative,186
+conservation-area,local-authority:BUN,Burnley Borough Council,authoritative,10
+conservation-area,local-authority:BUR,Bury Metropolitan Borough Council,authoritative,12
+conservation-area,local-authority:CAB,Cambridge City Council,authoritative,13
+conservation-area,local-authority:CAS,Castle Point Borough Council,authoritative,2
+conservation-area,local-authority:CAT,Canterbury City Council,authoritative,98
+conservation-area,local-authority:CBF,Central Bedfordshire Council,authoritative,61
+conservation-area,local-authority:CLD,Calderdale Metropolitan Borough Council,authoritative,27
+conservation-area,local-authority:CMD,London Borough of Camden,authoritative,40
+conservation-area,local-authority:COL,Colchester City Council,authoritative,24
+conservation-area,local-authority:CON,Cornwall Council,authoritative,145
+conservation-area,local-authority:COT,Cotswold District Council,authoritative,144
+conservation-area,local-authority:COV,Coventry City Council,authoritative,18
+conservation-area,local-authority:CRW,Crawley Borough Council,authoritative,13
+conservation-area,local-authority:DAR,Dartford Borough Council,authoritative,6
+conservation-area,local-authority:DNC,Doncaster Metropolitan Borough Council,authoritative,38
+conservation-area,local-authority:DOV,Dover District Council,authoritative,103
+conservation-area,local-authority:DST,Dorset Council,authoritative,311
+conservation-area,local-authority:DUD,Dudley Metropolitan Borough Council,authoritative,22
+conservation-area,local-authority:ECA,East Cambridgeshire District Council,authoritative,28
+conservation-area,local-authority:EHA,East Hampshire District Council,authoritative,50
+conservation-area,local-authority:EHE,East Hertfordshire District Council,authoritative,42
+conservation-area,local-authority:ENF,London Borough of Enfield,authoritative,24
+conservation-area,local-authority:EPS,Epsom and Ewell Borough Council,authoritative,28
+conservation-area,local-authority:ERY,East Riding of Yorkshire Council,authoritative,126
+conservation-area,local-authority:EXE,Exeter City Council,authoritative,20
+conservation-area,local-authority:FAR,Fareham Borough Council,authoritative,13
+conservation-area,local-authority:FEN,Fenland District Council,authoritative,13
+conservation-area,local-authority:FOE,Forest of Dean District Council,authoritative,27
+conservation-area,local-authority:GAT,Gateshead Metropolitan Borough Council,authoritative,22
+conservation-area,local-authority:GED,Gedling Borough Council,authoritative,6
+conservation-area,local-authority:GLO,Gloucester City Council,authoritative,14
+conservation-area,local-authority:GRY,Great Yarmouth Borough Council,authoritative,23
+conservation-area,local-authority:HAA,Havant Borough Council,authoritative,15
+conservation-area,local-authority:HAL,Halton Borough Council,authoritative,13
+conservation-area,local-authority:HAR,Harlow District Council,authoritative,10
+conservation-area,local-authority:HAT,Hart District Council,authoritative,39
+conservation-area,local-authority:HIL,London Borough of Hillingdon,authoritative,42
+conservation-area,local-authority:HMF,London Borough of Hammersmith & Fulham,authoritative,47
+conservation-area,local-authority:HNS,London Borough of Hounslow,authoritative,43
+conservation-area,local-authority:HOR,Horsham District Council,authoritative,40
+conservation-area,local-authority:HRY,London Borough of Haringey,authoritative,33
+conservation-area,local-authority:HUN,Huntingdonshire District Council,authoritative,59
+conservation-area,local-authority:IOS,Council of the Isles of Scilly,authoritative,1
+conservation-area,local-authority:IPS,Ipswich Borough Council,authoritative,15
+conservation-area,local-authority:KEC,Royal Borough of Kensington and Chelsea,authoritative,41
+conservation-area,local-authority:KHL,Hull City Council,authoritative,26
+conservation-area,local-authority:KIN,Borough Council of King's Lynn and West Norfolk,authoritative,87
+conservation-area,local-authority:LBH,London Borough of Lambeth,authoritative,65
+conservation-area,local-authority:LCE,Leicester City Council,authoritative,25
+conservation-area,local-authority:LDS,Leeds City Council,authoritative,80
+conservation-area,local-authority:LEW,London Borough of Lewisham,authoritative,30
+conservation-area,local-authority:LIV,Liverpool City Council,authoritative,36
+conservation-area,local-authority:LND,City of London Corporation,authoritative,28
+conservation-area,local-authority:MAI,Maidstone Borough Council,authoritative,53
+conservation-area,local-authority:MAL,Maldon District Council,authoritative,92
+conservation-area,local-authority:MDW,Medway Council,authoritative,24
+conservation-area,local-authority:MIK,Milton Keynes City Council,authoritative,40
+conservation-area,local-authority:MOL,Mole Valley District Council,authoritative,37
+conservation-area,local-authority:NBL,Northumberland County Council,authoritative,70
+conservation-area,local-authority:NED,North East Derbyshire District Council,authoritative,33
+conservation-area,local-authority:NET,Newcastle City Council,authoritative,12
+conservation-area,local-authority:NEW,New Forest District Council,authoritative,23
+conservation-area,local-authority:NLN,North Lincolnshire Council,authoritative,17
+conservation-area,local-authority:NNO,North Norfolk District Council,authoritative,91
+conservation-area,local-authority:NOW,Norwich City Council,authoritative,17
+conservation-area,local-authority:NSM,North Somerset Council,authoritative,39
+conservation-area,local-authority:NTY,North Tyneside Council,authoritative,17
+conservation-area,local-authority:NWA,North Warwickshire Borough Council,authoritative,11
+conservation-area,local-authority:OLD,Oldham Metropolitan Borough Council,authoritative,33
+conservation-area,local-authority:OXO,Oxford City Council,authoritative,18
+conservation-area,local-authority:PLY,Plymouth City Council,authoritative,15
+conservation-area,local-authority:PTE,Peterborough City Council,authoritative,30
+conservation-area,local-authority:RCH,Rochdale Metropolitan Borough Council,authoritative,30
+conservation-area,local-authority:ROC,Rochford District Council,authoritative,10
+conservation-area,local-authority:ROH,Rother District Council,authoritative,10
+conservation-area,local-authority:ROS,Rossendale Borough Council,authoritative,10
+conservation-area,local-authority:SAL,St Albans City and District Council,authoritative,45
+conservation-area,local-authority:SAW,Sandwell Metropolitan Borough Council,authoritative,9
+conservation-area,local-authority:SCA,South Cambridgeshire District Council,authoritative,85
+conservation-area,local-authority:SFT,Sefton Metropolitan Borough Council,authoritative,25
+conservation-area,local-authority:SGC,South Gloucestershire Council,authoritative,30
+conservation-area,local-authority:SHN,St Helens Council,authoritative,14
+conservation-area,local-authority:SKP,Stockport Metropolitan Borough Council,authoritative,37
+conservation-area,local-authority:SLF,Salford City Council,authoritative,16
+conservation-area,local-authority:SNO,South Norfolk District Council,authoritative,84
+conservation-area,local-authority:SOS,Southend-on-Sea Borough Council,authoritative,19
+conservation-area,local-authority:SOX,South Oxfordshire District Council,authoritative,71
+conservation-area,local-authority:SPE,Spelthorne Borough Council,authoritative,8
+conservation-area,local-authority:SST,South Staffordshire Council,authoritative,19
+conservation-area,local-authority:STA,Stafford Borough Council,authoritative,31
+conservation-area,local-authority:STE,Stoke-on-Trent City Council,authoritative,22
+conservation-area,local-authority:STH,Southampton City Council,authoritative,23
+conservation-area,local-authority:STV,Stevenage Borough Council,authoritative,7
+conservation-area,local-authority:SUR,Surrey Heath Borough Council,authoritative,11
+conservation-area,local-authority:SWK,London Borough of Southwark,authoritative,56
+conservation-area,local-authority:SWL,Swale Borough Council,authoritative,52
+conservation-area,local-authority:TAN,Tandridge District Council,authoritative,19
+conservation-area,local-authority:TEW,Tewkesbury Borough Council,authoritative,14
+conservation-area,local-authority:THA,Thanet District Council,authoritative,27
+conservation-area,local-authority:TOB,Torbay Council,authoritative,24
+conservation-area,local-authority:TRF,Trafford Metropolitan Borough Council,authoritative,22
+conservation-area,local-authority:TWH,London Borough of Tower Hamlets,authoritative,61
+conservation-area,local-authority:UTT,Uttlesford District Council,authoritative,42
+conservation-area,local-authority:VAL,Vale of White Horse District Council,authoritative,55
+conservation-area,local-authority:WAE,Waverley Borough Council,authoritative,44
+conservation-area,local-authority:WBK,West Berkshire Council,authoritative,51
+conservation-area,local-authority:WEA,Wealden District Council,authoritative,33
+conservation-area,local-authority:WFT,London Borough of Waltham Forest,authoritative,15
+conservation-area,local-authority:WIL,Wiltshire Council,authoritative,245
+conservation-area,local-authority:WOT,Worthing Borough Council,authoritative,26
+conservation-area,local-authority:WOX,West Oxfordshire District Council,authoritative,50
+conservation-area,local-authority:WRL,Wirral Borough Council,authoritative,29
+conservation-area,local-authority:WSM,City of Westminster,authoritative,56
+conservation-area,local-authority:YOR,City of York Council,authoritative,35
+conservation-area,national-park-authority:Q27159704,Lake District National Park Authority,authoritative,24
+conservation-area,national-park-authority:Q5225646,Dartmoor National Park Authority,authoritative,25
+conservation-area,national-park-authority:Q72617158,New Forest National Park Authority,authoritative,26
+conservation-area,national-park-authority:Q72617988,Peak District National Park Authority,authoritative,108
+conservation-area-document,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",some,72
+conservation-area-document,local-authority:ADU,Adur District Council,authoritative,7
+conservation-area-document,local-authority:ASF,Ashford Borough Council,authoritative,44
+conservation-area-document,local-authority:BDG,London Borough of Barking and Dagenham,authoritative,4
+conservation-area-document,local-authority:BEN,London Borough of Brent,authoritative,22
+conservation-area-document,local-authority:BIR,Birmingham City Council,authoritative,42
+conservation-area-document,local-authority:BNE,London Borough of Barnet,authoritative,40
+conservation-area-document,local-authority:BRO,Broadland District Council,authoritative,32
+conservation-area-document,local-authority:BST,Bristol City Council,authoritative,34
+conservation-area-document,local-authority:CAS,Castle Point Borough Council,authoritative,2
+conservation-area-document,local-authority:CBF,Central Bedfordshire Council,authoritative,61
+conservation-area-document,local-authority:CLD,Calderdale Metropolitan Borough Council,authoritative,21
+conservation-area-document,local-authority:CMD,London Borough of Camden,authoritative,40
+conservation-area-document,local-authority:COT,Cotswold District Council,authoritative,214
+conservation-area-document,local-authority:COV,Coventry City Council,authoritative,13
+conservation-area-document,local-authority:CRW,Crawley Borough Council,authoritative,22
+conservation-area-document,local-authority:DAR,Dartford Borough Council,authoritative,6
+conservation-area-document,local-authority:ECA,East Cambridgeshire District Council,authoritative,45
+conservation-area-document,local-authority:EHA,East Hampshire District Council,authoritative,56
+conservation-area-document,local-authority:ERY,East Riding of Yorkshire Council,authoritative,123
+conservation-area-document,local-authority:EXE,Exeter City Council,authoritative,20
+conservation-area-document,local-authority:FEN,Fenland District Council,authoritative,8
+conservation-area-document,local-authority:FOE,Forest of Dean District Council,authoritative,43
+conservation-area-document,local-authority:HAA,Havant Borough Council,authoritative,15
+conservation-area-document,local-authority:HAL,Halton Borough Council,authoritative,5
+conservation-area-document,local-authority:HAR,Harlow District Council,authoritative,10
+conservation-area-document,local-authority:HAT,Hart District Council,authoritative,78
+conservation-area-document,local-authority:HIL,London Borough of Hillingdon,authoritative,33
+conservation-area-document,local-authority:HRY,London Borough of Haringey,authoritative,28
+conservation-area-document,local-authority:IOS,Council of the Isles of Scilly,authoritative,1
+conservation-area-document,local-authority:IPS,Ipswich Borough Council,authoritative,30
+conservation-area-document,local-authority:KHL,Hull City Council,authoritative,26
+conservation-area-document,local-authority:LCE,Leicester City Council,authoritative,33
+conservation-area-document,local-authority:LEW,London Borough of Lewisham,authoritative,29
+conservation-area-document,local-authority:MAI,Maidstone Borough Council,authoritative,53
+conservation-area-document,local-authority:NBL,Northumberland County Council,authoritative,250
+conservation-area-document,local-authority:NEW,New Forest District Council,authoritative,157
+conservation-area-document,local-authority:NLN,North Lincolnshire Council,authoritative,17
+conservation-area-document,local-authority:NNO,North Norfolk District Council,authoritative,161
+conservation-area-document,local-authority:NTY,North Tyneside Council,authoritative,25
+conservation-area-document,local-authority:NWA,North Warwickshire Borough Council,authoritative,22
+conservation-area-document,local-authority:OXO,Oxford City Council,authoritative,18
+conservation-area-document,local-authority:PLY,Plymouth City Council,authoritative,15
+conservation-area-document,local-authority:PTE,Peterborough City Council,authoritative,56
+conservation-area-document,local-authority:RCH,Rochdale Metropolitan Borough Council,authoritative,29
+conservation-area-document,local-authority:ROH,Rother District Council,authoritative,16
+conservation-area-document,local-authority:ROS,Rossendale Borough Council,authoritative,34
+conservation-area-document,local-authority:SAL,St Albans City and District Council,authoritative,45
+conservation-area-document,local-authority:SAW,Sandwell Metropolitan Borough Council,authoritative,21
+conservation-area-document,local-authority:SCA,South Cambridgeshire District Council,authoritative,84
+conservation-area-document,local-authority:SFT,Sefton Metropolitan Borough Council,authoritative,74
+conservation-area-document,local-authority:SGC,South Gloucestershire Council,authoritative,30
+conservation-area-document,local-authority:SKP,Stockport Metropolitan Borough Council,authoritative,74
+conservation-area-document,local-authority:SLF,Salford City Council,authoritative,23
+conservation-area-document,local-authority:SNO,South Norfolk District Council,authoritative,84
+conservation-area-document,local-authority:SPE,Spelthorne Borough Council,authoritative,9
+conservation-area-document,local-authority:SST,South Staffordshire Council,authoritative,19
+conservation-area-document,local-authority:STA,Stafford Borough Council,authoritative,29
+conservation-area-document,local-authority:STE,Stoke-on-Trent City Council,authoritative,22
+conservation-area-document,local-authority:SUR,Surrey Heath Borough Council,authoritative,11
+conservation-area-document,local-authority:SWL,Swale Borough Council,authoritative,52
+conservation-area-document,local-authority:TAN,Tandridge District Council,authoritative,19
+conservation-area-document,local-authority:TEN,Tendring District Council,authoritative,20
+conservation-area-document,local-authority:TOB,Torbay Council,authoritative,51
+conservation-area-document,local-authority:TWH,London Borough of Tower Hamlets,authoritative,58
+conservation-area-document,local-authority:UTT,Uttlesford District Council,authoritative,62
+conservation-area-document,local-authority:WAE,Waverley Borough Council,authoritative,42
+conservation-area-document,local-authority:WFT,London Borough of Waltham Forest,authoritative,15
+conservation-area-document,local-authority:WIL,Wiltshire Council,authoritative,244
+conservation-area-document,local-authority:WOT,Worthing Borough Council,authoritative,27
+conservation-area-document,local-authority:WOX,West Oxfordshire District Council,authoritative,94
+conservation-area-document,local-authority:WRL,Wirral Borough Council,authoritative,150
+conservation-area-document,local-authority:WSM,City of Westminster,authoritative,56
+conservation-area-document,national-park-authority:Q27159704,Lake District National Park Authority,authoritative,23
+conservation-area-document,national-park-authority:Q72617158,New Forest National Park Authority,authoritative,133
+conservation-area-document-type,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",some,6
+contribution-funding-status,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",some,6
+contribution-purpose,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",some,22
+design-code,local-authority:BUC,Buckinghamshire Council,authoritative,1
+design-code,local-authority:DAC,Dacorum Borough Council,authoritative,2
+design-code,local-authority:GRT,Guildford Borough Council,authoritative,1
+design-code,local-authority:HEF,Herefordshire Council,authoritative,1
+design-code,local-authority:HYN,Hyndburn Borough Council,authoritative,1
+design-code,local-authority:NUN,Nuneaton and Bedworth Borough Council,authoritative,1
+design-code,local-authority:NWL,North West Leicestershire District Council,authoritative,1
+design-code,local-authority:POR,Portsmouth City Council,authoritative,2
+design-code,local-authority:SWK,London Borough of Southwark,authoritative,1
+design-code-area,local-authority:BUC,Buckinghamshire Council,authoritative,1
+design-code-area,local-authority:GRT,Guildford Borough Council,authoritative,1
+design-code-area,local-authority:HYN,Hyndburn Borough Council,authoritative,1
+design-code-area,local-authority:NUN,Nuneaton and Bedworth Borough Council,authoritative,2
+design-code-area,local-authority:NWL,North West Leicestershire District Council,authoritative,1
+design-code-area,local-authority:POR,Portsmouth City Council,authoritative,5
+design-code-area-type,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",authoritative,10
+design-code-characteristic,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",authoritative,11
+design-code-rule-category,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",some,78
+design-code-status,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",some,5
+developer-agreement,local-authority:ADU,Adur District Council,authoritative,8
+developer-agreement,local-authority:AMB,Amber Valley Borough Council,authoritative,14
+developer-agreement,local-authority:ARU,Arun District Council,authoritative,1559
+developer-agreement,local-authority:ASF,Ashford Borough Council,authoritative,22
+developer-agreement,local-authority:ASH,Ashfield District Council,authoritative,60
+developer-agreement,local-authority:BAE,Bassetlaw District Council,authoritative,621
+developer-agreement,local-authority:BLA,Blaby District Council,authoritative,18
+developer-agreement,local-authority:BNH,Brighton and Hove City Council,authoritative,86
+developer-agreement,local-authority:BOL,Bolton Metropolitan Borough Council,authoritative,139
+developer-agreement,local-authority:BOT,Boston Borough Council,authoritative,11
+developer-agreement,local-authority:BRA,Braintree District Council,authoritative,47
+developer-agreement,local-authority:BRE,Breckland District Council,authoritative,367
+developer-agreement,local-authority:BRX,Broxbourne Borough Council,authoritative,290
+developer-agreement,local-authority:CHA,Charnwood Borough Council,authoritative,68
+developer-agreement,local-authority:CHR,Cherwell District Council,authoritative,12
+developer-agreement,local-authority:CHT,Cheltenham Borough Council,authoritative,283
+developer-agreement,local-authority:CMA,Cumbria County Council,authoritative,15
+developer-agreement,local-authority:COL,Colchester City Council,authoritative,24
+developer-agreement,local-authority:COV,Coventry City Council,authoritative,203
+developer-agreement,local-authority:DOV,Dover District Council,authoritative,99
+developer-agreement,local-authority:ECA,East Cambridgeshire District Council,authoritative,198
+developer-agreement,local-authority:EHA,East Hampshire District Council,authoritative,1756
+developer-agreement,local-authority:EHE,East Hertfordshire District Council,authoritative,15
+developer-agreement,local-authority:EPS,Epsom and Ewell Borough Council,authoritative,29
+developer-agreement,local-authority:ERE,Erewash Borough Council,authoritative,21
+developer-agreement,local-authority:ERY,East Riding of Yorkshire Council,authoritative,182
+developer-agreement,local-authority:EST,East Staffordshire Borough Council,authoritative,7
+developer-agreement,local-authority:EXE,Exeter City Council,authoritative,30
+developer-agreement,local-authority:GAT,Gateshead Metropolitan Borough Council,authoritative,15
+developer-agreement,local-authority:GLO,Gloucester City Council,authoritative,139
+developer-agreement,local-authority:GOS,Gosport Borough Council,authoritative,38
+developer-agreement,local-authority:GRE,Royal Borough of Greenwich,authoritative,370
+developer-agreement,local-authority:HAA,Havant Borough Council,authoritative,601
+developer-agreement,local-authority:HAL,Halton Borough Council,authoritative,124
+developer-agreement,local-authority:HAO,Harborough District Council,authoritative,36
+developer-agreement,local-authority:HAT,Hart District Council,authoritative,6
+developer-agreement,local-authority:HRT,Hertfordshire County Council,authoritative,42
+developer-agreement,local-authority:IOW,Isle of Wight Council,authoritative,252
+developer-agreement,local-authority:ISL,London Borough of Islington,authoritative,87
+developer-agreement,local-authority:NEA,Newark and Sherwood District Council,authoritative,58
+developer-agreement,local-authority:NFK,Norfolk County Council,authoritative,90
+developer-agreement,local-authority:NHE,North Hertfordshire District Council,authoritative,8
+developer-agreement,local-authority:NLN,North Lincolnshire Council,authoritative,174
+developer-agreement,local-authority:NTY,North Tyneside Council,authoritative,123
+developer-agreement,local-authority:SHA,South Hams District Council,authoritative,61
+developer-agreement,local-authority:SLF,Salford City Council,authoritative,75
+developer-agreement,local-authority:SND,Sunderland City Council,authoritative,234
+developer-agreement,local-authority:STO,Stroud District Council,authoritative,1423
+developer-agreement,local-authority:TEW,Tewkesbury Borough Council,authoritative,77
+developer-agreement,local-authority:TOB,Torbay Council,authoritative,1589
+developer-agreement,local-authority:TON,Tonbridge and Malling Borough Council,authoritative,173
+developer-agreement,local-authority:TUN,Tunbridge Wells Borough Council,authoritative,37
+developer-agreement,local-authority:WDE,West Devon Borough Council,authoritative,32
+developer-agreement,local-authority:WIL,Wiltshire Council,authoritative,254
+developer-agreement,local-authority:WOT,Worthing Borough Council,authoritative,52
+developer-agreement,national-park-authority:Q20198711,South Downs National Park Authority,authoritative,80
+developer-agreement,national-park-authority:Q27178932,Yorkshire Dales National Park Authority,authoritative,14
+developer-agreement,national-park-authority:Q4972284,Broads Authority,authoritative,1
+developer-agreement,national-park-authority:Q72617158,New Forest National Park Authority,authoritative,133
+developer-agreement,national-park-authority:Q72617669,North York Moors National Park Authority,authoritative,14
+developer-agreement-contribution,local-authority:ADU,Adur District Council,authoritative,22
+developer-agreement-contribution,local-authority:AMB,Amber Valley Borough Council,authoritative,63
+developer-agreement-contribution,local-authority:ARU,Arun District Council,authoritative,2491
+developer-agreement-contribution,local-authority:ASF,Ashford Borough Council,authoritative,224
+developer-agreement-contribution,local-authority:ASH,Ashfield District Council,authoritative,298
+developer-agreement-contribution,local-authority:BAE,Bassetlaw District Council,authoritative,620
+developer-agreement-contribution,local-authority:BLA,Blaby District Council,authoritative,163
+developer-agreement-contribution,local-authority:BNH,Brighton and Hove City Council,authoritative,139
+developer-agreement-contribution,local-authority:BOL,Bolton Metropolitan Borough Council,authoritative,162
+developer-agreement-contribution,local-authority:BOT,Boston Borough Council,authoritative,10
+developer-agreement-contribution,local-authority:BRA,Braintree District Council,authoritative,69
+developer-agreement-contribution,local-authority:BRE,Breckland District Council,authoritative,762
+developer-agreement-contribution,local-authority:BRX,Broxbourne Borough Council,authoritative,58
+developer-agreement-contribution,local-authority:CHA,Charnwood Borough Council,authoritative,144
+developer-agreement-contribution,local-authority:CHR,Cherwell District Council,authoritative,118
+developer-agreement-contribution,local-authority:CHT,Cheltenham Borough Council,authoritative,825
+developer-agreement-contribution,local-authority:CMA,Cumbria County Council,authoritative,32
+developer-agreement-contribution,local-authority:COL,Colchester City Council,authoritative,17
+developer-agreement-contribution,local-authority:COV,Coventry City Council,authoritative,61
+developer-agreement-contribution,local-authority:DOV,Dover District Council,authoritative,597
+developer-agreement-contribution,local-authority:ECA,East Cambridgeshire District Council,authoritative,565
+developer-agreement-contribution,local-authority:EHA,East Hampshire District Council,authoritative,7666
+developer-agreement-contribution,local-authority:EHE,East Hertfordshire District Council,authoritative,57
+developer-agreement-contribution,local-authority:EPS,Epsom and Ewell Borough Council,authoritative,131
+developer-agreement-contribution,local-authority:ERE,Erewash Borough Council,authoritative,102
+developer-agreement-contribution,local-authority:ERY,East Riding of Yorkshire Council,authoritative,519
+developer-agreement-contribution,local-authority:EST,East Staffordshire Borough Council,authoritative,6
+developer-agreement-contribution,local-authority:EXE,Exeter City Council,authoritative,117
+developer-agreement-contribution,local-authority:GAT,Gateshead Metropolitan Borough Council,authoritative,40
+developer-agreement-contribution,local-authority:GLO,Gloucester City Council,authoritative,262
+developer-agreement-contribution,local-authority:GOS,Gosport Borough Council,authoritative,103
+developer-agreement-contribution,local-authority:GRE,Royal Borough of Greenwich,authoritative,1398
+developer-agreement-contribution,local-authority:HAA,Havant Borough Council,authoritative,2359
+developer-agreement-contribution,local-authority:HAL,Halton Borough Council,authoritative,194
+developer-agreement-contribution,local-authority:HAO,Harborough District Council,authoritative,51
+developer-agreement-contribution,local-authority:HAT,Hart District Council,authoritative,17
+developer-agreement-contribution,local-authority:HRT,Hertfordshire County Council,authoritative,42
+developer-agreement-contribution,local-authority:IOW,Isle of Wight Council,authoritative,404
+developer-agreement-contribution,local-authority:ISL,London Borough of Islington,authoritative,312
+developer-agreement-contribution,local-authority:NEA,Newark and Sherwood District Council,authoritative,65
+developer-agreement-contribution,local-authority:NEW,New Forest District Council,authoritative,205
+developer-agreement-contribution,local-authority:NFK,Norfolk County Council,authoritative,80
+developer-agreement-contribution,local-authority:NHE,North Hertfordshire District Council,authoritative,31
+developer-agreement-contribution,local-authority:NLN,North Lincolnshire Council,authoritative,534
+developer-agreement-contribution,local-authority:NTY,North Tyneside Council,authoritative,465
+developer-agreement-contribution,local-authority:SGC,South Gloucestershire Council,authoritative,2112
+developer-agreement-contribution,local-authority:SHA,South Hams District Council,authoritative,136
+developer-agreement-contribution,local-authority:SLF,Salford City Council,authoritative,198
+developer-agreement-contribution,local-authority:SND,Sunderland City Council,authoritative,1178
+developer-agreement-contribution,local-authority:STO,Stroud District Council,authoritative,3373
+developer-agreement-contribution,local-authority:TEW,Tewkesbury Borough Council,authoritative,135
+developer-agreement-contribution,local-authority:TOB,Torbay Council,authoritative,7317
+developer-agreement-contribution,local-authority:TON,Tonbridge and Malling Borough Council,authoritative,1270
+developer-agreement-contribution,local-authority:TUN,Tunbridge Wells Borough Council,authoritative,163
+developer-agreement-contribution,local-authority:WDE,West Devon Borough Council,authoritative,59
+developer-agreement-contribution,local-authority:WIL,Wiltshire Council,authoritative,130
+developer-agreement-contribution,local-authority:WOC,Worcester City Council,authoritative,22
+developer-agreement-contribution,local-authority:WOT,Worthing Borough Council,authoritative,64
+developer-agreement-contribution,national-park-authority:Q20198711,South Downs National Park Authority,authoritative,200
+developer-agreement-contribution,national-park-authority:Q27178932,Yorkshire Dales National Park Authority,authoritative,15
+developer-agreement-contribution,national-park-authority:Q4972284,Broads Authority,authoritative,1
+developer-agreement-contribution,national-park-authority:Q72617158,New Forest National Park Authority,authoritative,123
+developer-agreement-contribution,national-park-authority:Q72617669,North York Moors National Park Authority,authoritative,27
+developer-agreement-transaction,local-authority:ADU,Adur District Council,authoritative,9
+developer-agreement-transaction,local-authority:AMB,Amber Valley Borough Council,authoritative,63
+developer-agreement-transaction,local-authority:ARU,Arun District Council,authoritative,1372
+developer-agreement-transaction,local-authority:ASF,Ashford Borough Council,authoritative,1087
+developer-agreement-transaction,local-authority:ASH,Ashfield District Council,authoritative,298
+developer-agreement-transaction,local-authority:BAE,Bassetlaw District Council,authoritative,519
+developer-agreement-transaction,local-authority:BLA,Blaby District Council,authoritative,339
+developer-agreement-transaction,local-authority:BNH,Brighton and Hove City Council,authoritative,101
+developer-agreement-transaction,local-authority:BOL,Bolton Metropolitan Borough Council,authoritative,317
+developer-agreement-transaction,local-authority:BOT,Boston Borough Council,authoritative,11
+developer-agreement-transaction,local-authority:BRE,Breckland District Council,authoritative,500
+developer-agreement-transaction,local-authority:BRX,Broxbourne Borough Council,authoritative,82
+developer-agreement-transaction,local-authority:CHA,Charnwood Borough Council,authoritative,44
+developer-agreement-transaction,local-authority:CHR,Cherwell District Council,authoritative,201
+developer-agreement-transaction,local-authority:CHT,Cheltenham Borough Council,authoritative,444
+developer-agreement-transaction,local-authority:CMA,Cumbria County Council,authoritative,135
+developer-agreement-transaction,local-authority:COV,Coventry City Council,authoritative,132
+developer-agreement-transaction,local-authority:DOV,Dover District Council,authoritative,433
+developer-agreement-transaction,local-authority:ECA,East Cambridgeshire District Council,authoritative,361
+developer-agreement-transaction,local-authority:EHA,East Hampshire District Council,authoritative,9763
+developer-agreement-transaction,local-authority:EHE,East Hertfordshire District Council,authoritative,62
+developer-agreement-transaction,local-authority:EPS,Epsom and Ewell Borough Council,authoritative,187
+developer-agreement-transaction,local-authority:ERE,Erewash Borough Council,authoritative,89
+developer-agreement-transaction,local-authority:EST,East Staffordshire Borough Council,authoritative,63
+developer-agreement-transaction,local-authority:EXE,Exeter City Council,authoritative,35
+developer-agreement-transaction,local-authority:GAT,Gateshead Metropolitan Borough Council,authoritative,50
+developer-agreement-transaction,local-authority:GLO,Gloucester City Council,authoritative,473
+developer-agreement-transaction,local-authority:GOS,Gosport Borough Council,authoritative,201
+developer-agreement-transaction,local-authority:GRE,Royal Borough of Greenwich,authoritative,813
+developer-agreement-transaction,local-authority:HAA,Havant Borough Council,authoritative,2041
+developer-agreement-transaction,local-authority:HAL,Halton Borough Council,authoritative,525
+developer-agreement-transaction,local-authority:HAT,Hart District Council,authoritative,127
+developer-agreement-transaction,local-authority:HRT,Hertfordshire County Council,authoritative,627
+developer-agreement-transaction,local-authority:IOW,Isle of Wight Council,authoritative,199
+developer-agreement-transaction,local-authority:ISL,London Borough of Islington,authoritative,312
+developer-agreement-transaction,local-authority:NEA,Newark and Sherwood District Council,authoritative,369
+developer-agreement-transaction,local-authority:NEW,New Forest District Council,authoritative,216
+developer-agreement-transaction,local-authority:NFK,Norfolk County Council,authoritative,259
+developer-agreement-transaction,local-authority:NHE,North Hertfordshire District Council,authoritative,170
+developer-agreement-transaction,local-authority:NLN,North Lincolnshire Council,authoritative,187
+developer-agreement-transaction,local-authority:NTY,North Tyneside Council,authoritative,241
+developer-agreement-transaction,local-authority:SGC,South Gloucestershire Council,authoritative,2552
+developer-agreement-transaction,local-authority:SHA,South Hams District Council,authoritative,80
+developer-agreement-transaction,local-authority:SLF,Salford City Council,authoritative,451
+developer-agreement-transaction,local-authority:SND,Sunderland City Council,authoritative,2797
+developer-agreement-transaction,local-authority:STO,Stroud District Council,authoritative,3591
+developer-agreement-transaction,local-authority:TEW,Tewkesbury Borough Council,authoritative,279
+developer-agreement-transaction,local-authority:TOB,Torbay Council,authoritative,14486
+developer-agreement-transaction,local-authority:TON,Tonbridge and Malling Borough Council,authoritative,1144
+developer-agreement-transaction,local-authority:TUN,Tunbridge Wells Borough Council,authoritative,105
+developer-agreement-transaction,local-authority:WDE,West Devon Borough Council,authoritative,38
+developer-agreement-transaction,local-authority:WIL,Wiltshire Council,authoritative,113
+developer-agreement-transaction,local-authority:WOC,Worcester City Council,authoritative,51
+developer-agreement-transaction,local-authority:WOT,Worthing Borough Council,authoritative,60
+developer-agreement-transaction,national-park-authority:Q20198711,South Downs National Park Authority,authoritative,211
+developer-agreement-transaction,national-park-authority:Q27178932,Yorkshire Dales National Park Authority,authoritative,1
+developer-agreement-transaction,national-park-authority:Q72617158,New Forest National Park Authority,authoritative,130
+developer-agreement-transaction,national-park-authority:Q72617669,North York Moors National Park Authority,authoritative,29
+developer-agreement-type,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",some,3
+development-corporation,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",some,1
+development-corporation-boundary,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",some,9
+development-corporation-boundary,local-authority:GMCA,Greater Manchester Combined Authority,authoritative,4
+development-plan-document,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",authoritative,5
+development-plan-document-type,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",authoritative,16
+educational-establishment,government-organisation:D6,Department for Education,authoritative,47047
+flood-risk-level,government-organisation:EA199,Environment Agency,authoritative,3
+flood-risk-type,government-organisation:EA199,Environment Agency,authoritative,5
+flood-risk-zone,government-organisation:EA199,Environment Agency,authoritative,780636
+flood-storage-area,government-organisation:EA199,Environment Agency,authoritative,510
+government-organisation,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",authoritative,1
+green-belt,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",authoritative,190
+green-belt-core,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",authoritative,16
+heritage-at-risk,government-organisation:PB1164,Historic England,authoritative,5490
+heritage-coast,government-organisation:PB202,Natural England,authoritative,32
+infrastructure-funding-statement,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",some,205
+infrastructure-funding-statement,local-authority:EAT,Eastleigh Borough Council,authoritative,7
+infrastructure-funding-statement,local-authority:HAL,Halton Borough Council,authoritative,6
+infrastructure-funding-statement,local-authority:HNS,London Borough of Hounslow,authoritative,2
+infrastructure-funding-statement,local-authority:IOS,Council of the Isles of Scilly,authoritative,3
+infrastructure-funding-statement,local-authority:SST,South Staffordshire Council,authoritative,5
+infrastructure-funding-statement,local-authority:TOB,Torbay Council,authoritative,1
+infrastructure-project,government-organisation:EA39,Planning Inspectorate,authoritative,233
+infrastructure-project-decision,government-organisation:EA39,Planning Inspectorate,authoritative,4
+infrastructure-project-document-type,government-organisation:EA39,Planning Inspectorate,authoritative,5
+infrastructure-project-event,government-organisation:EA39,Planning Inspectorate,authoritative,9
+infrastructure-project-type,government-organisation:EA39,Planning Inspectorate,authoritative,10
+listed-building,government-organisation:PB1164,Historic England,authoritative,382193
+listed-building-grade,government-organisation:PB1164,Historic England,some,3
+listed-building-outline,local-authority:ADU,Adur District Council,authoritative,118
+listed-building-outline,local-authority:ASF,Ashford Borough Council,authoritative,2410
+listed-building-outline,local-authority:BAE,Bassetlaw District Council,authoritative,1116
+listed-building-outline,local-authority:BDG,London Borough of Barking and Dagenham,authoritative,48
+listed-building-outline,local-authority:BEN,London Borough of Brent,authoritative,582
+listed-building-outline,local-authority:BIR,Birmingham City Council,authoritative,1498
+listed-building-outline,local-authority:BNE,London Borough of Barnet,authoritative,651
+listed-building-outline,local-authority:BST,Bristol City Council,authoritative,4154
+listed-building-outline,local-authority:BUC,Buckinghamshire Council,authoritative,5877
+listed-building-outline,local-authority:CAB,Cambridge City Council,authoritative,839
+listed-building-outline,local-authority:CAS,Castle Point Borough Council,authoritative,36
+listed-building-outline,local-authority:CAT,Canterbury City Council,authoritative,1876
+listed-building-outline,local-authority:CBF,Central Bedfordshire Council,authoritative,1918
+listed-building-outline,local-authority:CLD,Calderdale Metropolitan Borough Council,authoritative,2197
+listed-building-outline,local-authority:CMD,London Borough of Camden,authoritative,1967
+listed-building-outline,local-authority:COL,Colchester City Council,authoritative,1560
+listed-building-outline,local-authority:COT,Cotswold District Council,authoritative,5016
+listed-building-outline,local-authority:COV,Coventry City Council,authoritative,313
+listed-building-outline,local-authority:DAR,Dartford Borough Council,authoritative,187
+listed-building-outline,local-authority:DNC,Doncaster Metropolitan Borough Council,authoritative,800
+listed-building-outline,local-authority:DOV,Dover District Council,authoritative,1699
+listed-building-outline,local-authority:DST,Dorset Council,authoritative,8859
+listed-building-outline,local-authority:ECA,East Cambridgeshire District Council,authoritative,990
+listed-building-outline,local-authority:EHA,East Hampshire District Council,authoritative,1581
+listed-building-outline,local-authority:EHE,East Hertfordshire District Council,authoritative,3020
+listed-building-outline,local-authority:EPS,Epsom and Ewell Borough Council,authoritative,272
+listed-building-outline,local-authority:FOE,Forest of Dean District Council,authoritative,1487
+listed-building-outline,local-authority:GAT,Gateshead Metropolitan Borough Council,authoritative,248
+listed-building-outline,local-authority:GLO,Gloucester City Council,authoritative,486
+listed-building-outline,local-authority:GRY,Great Yarmouth Borough Council,authoritative,431
+listed-building-outline,local-authority:HAA,Havant Borough Council,authoritative,246
+listed-building-outline,local-authority:HAL,Halton Borough Council,authoritative,132
+listed-building-outline,local-authority:HAR,Harlow District Council,authoritative,179
+listed-building-outline,local-authority:HAT,Hart District Council,authoritative,977
+listed-building-outline,local-authority:HIL,London Borough of Hillingdon,authoritative,441
+listed-building-outline,local-authority:HOR,Horsham District Council,authoritative,1765
+listed-building-outline,local-authority:HRY,London Borough of Haringey,authoritative,224
+listed-building-outline,local-authority:HUN,Huntingdonshire District Council,authoritative,2236
+listed-building-outline,local-authority:KEC,Royal Borough of Kensington and Chelsea,authoritative,2609
+listed-building-outline,local-authority:KHL,Hull City Council,authoritative,498
+listed-building-outline,local-authority:KIN,Borough Council of King's Lynn and West Norfolk,authoritative,1988
+listed-building-outline,local-authority:LBH,London Borough of Lambeth,authoritative,949
+listed-building-outline,local-authority:LCE,Leicester City Council,authoritative,396
+listed-building-outline,local-authority:LDS,Leeds City Council,authoritative,2368
+listed-building-outline,local-authority:LEW,London Borough of Lewisham,authoritative,364
+listed-building-outline,local-authority:LIV,Liverpool City Council,authoritative,1538
+listed-building-outline,local-authority:LND,City of London Corporation,authoritative,636
+listed-building-outline,local-authority:MAI,Maidstone Borough Council,authoritative,2044
+listed-building-outline,local-authority:MDW,Medway Council,authoritative,653
+listed-building-outline,local-authority:MIK,Milton Keynes City Council,authoritative,1001
+listed-building-outline,local-authority:NBL,Northumberland County Council,authoritative,5397
+listed-building-outline,local-authority:NET,Newcastle City Council,authoritative,770
+listed-building-outline,local-authority:NEW,New Forest District Council,authoritative,907
+listed-building-outline,local-authority:NLN,North Lincolnshire Council,authoritative,916
+listed-building-outline,local-authority:NNO,North Norfolk District Council,authoritative,2688
+listed-building-outline,local-authority:NSM,North Somerset Council,authoritative,1084
+listed-building-outline,local-authority:NTY,North Tyneside Council,authoritative,221
+listed-building-outline,local-authority:OLD,Oldham Metropolitan Borough Council,authoritative,549
+listed-building-outline,local-authority:OXO,Oxford City Council,authoritative,1590
+listed-building-outline,local-authority:PLY,Plymouth City Council,authoritative,756
+listed-building-outline,local-authority:PTE,Peterborough City Council,authoritative,927
+listed-building-outline,local-authority:RCH,Rochdale Metropolitan Borough Council,authoritative,377
+listed-building-outline,local-authority:ROS,Rossendale Borough Council,authoritative,278
+listed-building-outline,local-authority:SAL,St Albans City and District Council,authoritative,840
+listed-building-outline,local-authority:SAW,Sandwell Metropolitan Borough Council,authoritative,214
+listed-building-outline,local-authority:SCA,South Cambridgeshire District Council,authoritative,2697
+listed-building-outline,local-authority:SFT,Sefton Metropolitan Borough Council,authoritative,569
+listed-building-outline,local-authority:SGC,South Gloucestershire Council,authoritative,2084
+listed-building-outline,local-authority:SKP,Stockport Metropolitan Borough Council,authoritative,395
+listed-building-outline,local-authority:SLF,Salford City Council,authoritative,240
+listed-building-outline,local-authority:SPE,Spelthorne Borough Council,authoritative,198
+listed-building-outline,local-authority:SST,South Staffordshire Council,authoritative,662
+listed-building-outline,local-authority:STE,Stoke-on-Trent City Council,authoritative,212
+listed-building-outline,local-authority:SUR,Surrey Heath Borough Council,authoritative,191
+listed-building-outline,local-authority:SWK,London Borough of Southwark,authoritative,913
+listed-building-outline,local-authority:SWL,Swale Borough Council,authoritative,1443
+listed-building-outline,local-authority:TAN,Tandridge District Council,authoritative,608
+listed-building-outline,local-authority:TEW,Tewkesbury Borough Council,authoritative,1684
+listed-building-outline,local-authority:THA,Thanet District Council,authoritative,1032
+listed-building-outline,local-authority:TOB,Torbay Council,authoritative,919
+listed-building-outline,local-authority:TWH,London Borough of Tower Hamlets,authoritative,904
+listed-building-outline,local-authority:UTT,Uttlesford District Council,authoritative,4090
+listed-building-outline,local-authority:WBK,West Berkshire Council,authoritative,1893
+listed-building-outline,local-authority:WFT,London Borough of Waltham Forest,authoritative,161
+listed-building-outline,local-authority:WOT,Worthing Borough Council,authoritative,217
+listed-building-outline,local-authority:WRL,Wirral Borough Council,authoritative,1849
+listed-building-outline,local-authority:WSM,City of Westminster,authoritative,3455
+listed-building-outline,national-park-authority:Q27159704,Lake District National Park Authority,authoritative,1814
+listed-building-outline,national-park-authority:Q72617158,New Forest National Park Authority,authoritative,628
+local-authority-district,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",some,48
+local-authority-district,government-organisation:D303,Office for National Statistics,some,296
+local-authority-type,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",some,8
+local-nature-reserve,government-organisation:PB202,Natural England,authoritative,1727
+local-plan,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",some,925
+local-plan,local-authority:CBF,Central Bedfordshire Council,authoritative,5
+local-plan,local-authority:CHE,Cheshire East Council,authoritative,5
+local-plan,local-authority:CHI,Chichester District Council,authoritative,5
+local-plan,local-authority:CHW,Cheshire West and Chester Council,authoritative,5
+local-plan,local-authority:DUR,Durham County Council,authoritative,4
+local-plan,local-authority:EAT,Eastleigh Borough Council,authoritative,3
+local-plan,local-authority:EHE,East Hertfordshire District Council,authoritative,5
+local-plan,local-authority:ESK,East Suffolk Council,authoritative,7
+local-plan,local-authority:GRT,Guildford Borough Council,authoritative,4
+local-plan,local-authority:HAT,Hart District Council,authoritative,5
+local-plan,local-authority:HNS,London Borough of Hounslow,authoritative,4
+local-plan,local-authority:HOR,Horsham District Council,authoritative,5
+local-plan,local-authority:IOS,Council of the Isles of Scilly,authoritative,3
+local-plan,local-authority:IOW,Isle of Wight Council,authoritative,5
+local-plan,local-authority:IPS,Ipswich Borough Council,authoritative,4
+local-plan,local-authority:LAC,Lancaster City Council,authoritative,3
+local-plan,local-authority:LUT,Luton Borough Council,authoritative,3
+local-plan,local-authority:MDE,Mid Devon District Council,authoritative,4
+local-plan,local-authority:PLY,Plymouth City Council,authoritative,3
+local-plan,local-authority:ROS,Rossendale Borough Council,authoritative,3
+local-plan,local-authority:RUH,Rushmoor Borough Council,authoritative,4
+local-plan,local-authority:SAL,St Albans City and District Council,authoritative,3
+local-plan,local-authority:SFT,Sefton Metropolitan Borough Council,authoritative,5
+local-plan,local-authority:SHE,Folkestone and Hythe Council,authoritative,5
+local-plan,local-authority:SHR,Shropshire Council,authoritative,4
+local-plan,local-authority:SOX,South Oxfordshire District Council,authoritative,3
+local-plan,local-authority:SST,South Staffordshire Council,authoritative,5
+local-plan,local-authority:SUA,Somerset Council,authoritative,16
+local-plan,local-authority:VAL,Vale of White Horse District Council,authoritative,3
+local-plan,local-authority:WBK,West Berkshire Council,authoritative,4
+local-plan,local-authority:WOI,Woking Borough Council,authoritative,4
+local-plan-boundary,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",authoritative,364
+local-plan-housing,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",some,315
+local-planning-authority,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",some,33
+local-planning-authority,government-organisation:D303,Office for National Statistics,some,304
+local-resilience-forum,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",some,38
+local-resilience-forum-boundary,government-organisation:D303,Office for National Statistics,some,38
+locally-listed-building,local-authority:CAT,Canterbury City Council,authoritative,448
+minerals-plan,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",some,65
+minerals-plan,local-authority:DUR,Durham County Council,authoritative,2
+minerals-plan,local-authority:IOS,Council of the Isles of Scilly,authoritative,1
+minerals-plan,local-authority:SHR,Shropshire Council,authoritative,3
+minerals-plan-boundary,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",authoritative,44
+national-nature-reserve,government-organisation:PB202,Natural England,authoritative,224
+national-park,government-organisation:D303,Office for National Statistics,some,10
+nature-improvement-area,government-organisation:PB202,Natural England,authoritative,12
+nutrient-neutrality-catchment,government-organisation:PB202,Natural England,authoritative,39
+ownership-status,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",authoritative,4
+parish,government-organisation:D303,Office for National Statistics,authoritative,10907
+park-and-garden,government-organisation:PB1164,Historic England,authoritative,1723
+park-and-garden-grade,government-organisation:PB1164,Historic England,authoritative,3
+permitted-development-right,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",authoritative,236
+permitted-development-right-part,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",authoritative,21
+plan-event,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",authoritative,47
+plan-timetable,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",authoritative,120
+plan-timetable,local-authority:BRT,Broxtowe Borough Council,authoritative,16
+plan-timetable,local-authority:CBF,Central Bedfordshire Council,authoritative,36
+plan-timetable,local-authority:CHE,Cheshire East Council,authoritative,17
+plan-timetable,local-authority:CHI,Chichester District Council,authoritative,32
+plan-timetable,local-authority:CHW,Cheshire West and Chester Council,authoritative,17
+plan-timetable,local-authority:CON,Cornwall Council,authoritative,51
+plan-timetable,local-authority:DUR,Durham County Council,authoritative,25
+plan-timetable,local-authority:EAT,Eastleigh Borough Council,authoritative,20
+plan-timetable,local-authority:EHE,East Hertfordshire District Council,authoritative,31
+plan-timetable,local-authority:ESK,East Suffolk Council,authoritative,16
+plan-timetable,local-authority:GRT,Guildford Borough Council,authoritative,19
+plan-timetable,local-authority:HAT,Hart District Council,authoritative,24
+plan-timetable,local-authority:HIL,London Borough of Hillingdon,authoritative,16
+plan-timetable,local-authority:HOR,Horsham District Council,authoritative,22
+plan-timetable,local-authority:IOS,Council of the Isles of Scilly,authoritative,21
+plan-timetable,local-authority:IPS,Ipswich Borough Council,authoritative,19
+plan-timetable,local-authority:LAC,Lancaster City Council,authoritative,19
+plan-timetable,local-authority:LUT,Luton Borough Council,authoritative,29
+plan-timetable,local-authority:MDE,Mid Devon District Council,authoritative,16
+plan-timetable,local-authority:NUN,Nuneaton and Bedworth Borough Council,authoritative,18
+plan-timetable,local-authority:RIB,Ribble Valley Borough Council,authoritative,30
+plan-timetable,local-authority:ROS,Rossendale Borough Council,authoritative,33
+plan-timetable,local-authority:RUH,Rushmoor Borough Council,authoritative,19
+plan-timetable,local-authority:SAL,St Albans City and District Council,authoritative,14
+plan-timetable,local-authority:SFT,Sefton Metropolitan Borough Council,authoritative,17
+plan-timetable,local-authority:SHE,Folkestone and Hythe Council,authoritative,22
+plan-timetable,local-authority:SHR,Shropshire Council,authoritative,20
+plan-timetable,local-authority:SST,South Staffordshire Council,authoritative,43
+plan-timetable,local-authority:STH,Southampton City Council,authoritative,19
+plan-timetable,local-authority:STY,South Tyneside Council,authoritative,20
+plan-timetable,local-authority:SUA,Somerset Council,authoritative,35
+plan-timetable,local-authority:SUR,Surrey Heath Borough Council,authoritative,18
+plan-timetable,local-authority:TUN,Tunbridge Wells Borough Council,authoritative,7
+plan-timetable,local-authority:WAE,Waverley Borough Council,authoritative,31
+plan-timetable,local-authority:WBK,West Berkshire Council,authoritative,28
+plan-timetable,local-authority:WOI,Woking Borough Council,authoritative,20
+plan-timetable,local-authority:WRT,Warrington Borough Council,authoritative,27
+plan-timetable,national-park-authority:Q72617669,North York Moors National Park Authority,authoritative,19
+planning-application-condition,local-authority:DNC,Doncaster Metropolitan Borough Council,authoritative,5305
+planning-condition,local-authority:DNC,Doncaster Metropolitan Borough Council,authoritative,5605
+planning-permission-status,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",some,3
+protected-wreck-site,government-organisation:PB1164,Historic England,authoritative,58
+ramsar,government-organisation:PB202,Natural England,authoritative,73
+region,government-organisation:D303,Office for National Statistics,authoritative,9
+scheduled-monument,government-organisation:PB1164,Historic England,authoritative,20149
+site-category,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",some,2
+site-of-special-scientific-interest,government-organisation:PB202,Natural England,authoritative,4128
+special-area-of-conservation,government-organisation:PB202,Natural England,authoritative,260
+special-protection-area,government-organisation:PB202,Natural England,authoritative,88
+supplementary-plan,local-authority:IOS,Council of the Isles of Scilly,authoritative,4
+tree,local-authority:ADU,Adur District Council,authoritative,1121
+tree,local-authority:ASF,Ashford Borough Council,authoritative,1224
+tree,local-authority:BAI,Basildon Borough Council,authoritative,549
+tree,local-authority:BEN,London Borough of Brent,authoritative,1231
+tree,local-authority:BNE,London Borough of Barnet,authoritative,6198
+tree,local-authority:BST,Bristol City Council,authoritative,4970
+tree,local-authority:BUC,Buckinghamshire Council,authoritative,7591
+tree,local-authority:CAS,Castle Point Borough Council,authoritative,1714
+tree,local-authority:CLD,Calderdale Metropolitan Borough Council,authoritative,7197
+tree,local-authority:COL,Colchester City Council,authoritative,2543
+tree,local-authority:COT,Cotswold District Council,authoritative,2862
+tree,local-authority:COV,Coventry City Council,authoritative,2232
+tree,local-authority:DAR,Dartford Borough Council,authoritative,1223
+tree,local-authority:DNC,Doncaster Metropolitan Borough Council,authoritative,2857
+tree,local-authority:DOV,Dover District Council,authoritative,1365
+tree,local-authority:ECA,East Cambridgeshire District Council,authoritative,2562
+tree,local-authority:EHA,East Hampshire District Council,authoritative,2672
+tree,local-authority:EPS,Epsom and Ewell Borough Council,authoritative,4345
+tree,local-authority:ERY,East Riding of Yorkshire Council,authoritative,6953
+tree,local-authority:GAT,Gateshead Metropolitan Borough Council,authoritative,2154
+tree,local-authority:GLO,Gloucester City Council,authoritative,1358
+tree,local-authority:HAA,Havant Borough Council,authoritative,3119
+tree,local-authority:HAL,Halton Borough Council,authoritative,449
+tree,local-authority:HAR,Harlow District Council,authoritative,1467
+tree,local-authority:HOR,Horsham District Council,authoritative,7996
+tree,local-authority:HUN,Huntingdonshire District Council,authoritative,3796
+tree,local-authority:KEC,Royal Borough of Kensington and Chelsea,authoritative,4560
+tree,local-authority:KIN,Borough Council of King's Lynn and West Norfolk,authoritative,2476
+tree,local-authority:LBH,London Borough of Lambeth,authoritative,2551
+tree,local-authority:LCE,Leicester City Council,authoritative,5005
+tree,local-authority:LDS,Leeds City Council,authoritative,6615
+tree,local-authority:LIV,Liverpool City Council,authoritative,1571
+tree,local-authority:MAI,Maidstone Borough Council,authoritative,10126
+tree,local-authority:MIK,Milton Keynes City Council,authoritative,2044
+tree,local-authority:NBL,Northumberland County Council,authoritative,3614
+tree,local-authority:NET,Newcastle City Council,authoritative,7336
+tree,local-authority:NEW,New Forest District Council,authoritative,6702
+tree,local-authority:NLN,North Lincolnshire Council,authoritative,6989
+tree,local-authority:NNO,North Norfolk District Council,authoritative,1535
+tree,local-authority:NSM,North Somerset Council,authoritative,4133
+tree,local-authority:OXO,Oxford City Council,authoritative,1350
+tree,local-authority:PLY,Plymouth City Council,authoritative,1252
+tree,local-authority:PTE,Peterborough City Council,authoritative,2379
+tree,local-authority:ROH,Rother District Council,authoritative,1922
+tree,local-authority:ROS,Rossendale Borough Council,authoritative,1729
+tree,local-authority:SAL,St Albans City and District Council,authoritative,3478
+tree,local-authority:SAW,Sandwell Metropolitan Borough Council,authoritative,659
+tree,local-authority:SCA,South Cambridgeshire District Council,authoritative,2493
+tree,local-authority:SFT,Sefton Metropolitan Borough Council,authoritative,4794
+tree,local-authority:SGC,South Gloucestershire Council,authoritative,6086
+tree,local-authority:SKP,Stockport Metropolitan Borough Council,authoritative,8192
+tree,local-authority:SLF,Salford City Council,authoritative,1296
+tree,local-authority:SPE,Spelthorne Borough Council,authoritative,300
+tree,local-authority:SST,South Staffordshire Council,authoritative,10628
+tree,local-authority:STE,Stoke-on-Trent City Council,authoritative,1502
+tree,local-authority:SWK,London Borough of Southwark,authoritative,3035
+tree,local-authority:SWL,Swale Borough Council,authoritative,1596
+tree,local-authority:TAN,Tandridge District Council,authoritative,1678
+tree,local-authority:TEW,Tewkesbury Borough Council,authoritative,2032
+tree,local-authority:THA,Thanet District Council,authoritative,1895
+tree,local-authority:TOB,Torbay Council,authoritative,2080
+tree,local-authority:TWH,London Borough of Tower Hamlets,authoritative,1778
+tree,local-authority:UTT,Uttlesford District Council,authoritative,5271
+tree,local-authority:WBK,West Berkshire Council,authoritative,6572
+tree,local-authority:WFT,London Borough of Waltham Forest,authoritative,2043
+tree,local-authority:WOT,Worthing Borough Council,authoritative,4082
+tree,local-authority:WRL,Wirral Borough Council,authoritative,4439
+tree,local-authority:WSM,City of Westminster,authoritative,4286
+tree,national-park-authority:Q27159704,Lake District National Park Authority,authoritative,2093
+tree,national-park-authority:Q72617158,New Forest National Park Authority,authoritative,2574
+tree-preservation-order,local-authority:ADU,Adur District Council,authoritative,189
+tree-preservation-order,local-authority:ASF,Ashford Borough Council,authoritative,1224
+tree-preservation-order,local-authority:BEN,London Borough of Brent,authoritative,1229
+tree-preservation-order,local-authority:BNE,London Borough of Barnet,authoritative,716
+tree-preservation-order,local-authority:BRO,Broadland District Council,authoritative,4930
+tree-preservation-order,local-authority:BST,Bristol City Council,authoritative,4970
+tree-preservation-order,local-authority:CAB,Cambridge City Council,authoritative,988
+tree-preservation-order,local-authority:CAS,Castle Point Borough Council,authoritative,420
+tree-preservation-order,local-authority:CAT,Canterbury City Council,authoritative,304
+tree-preservation-order,local-authority:CBF,Central Bedfordshire Council,authoritative,757
+tree-preservation-order,local-authority:CLD,Calderdale Metropolitan Borough Council,authoritative,550
+tree-preservation-order,local-authority:COT,Cotswold District Council,authoritative,571
+tree-preservation-order,local-authority:COV,Coventry City Council,authoritative,433
+tree-preservation-order,local-authority:DAR,Dartford Borough Council,authoritative,343
+tree-preservation-order,local-authority:DOV,Dover District Council,authoritative,434
+tree-preservation-order,local-authority:ECA,East Cambridgeshire District Council,authoritative,542
+tree-preservation-order,local-authority:EHA,East Hampshire District Council,authoritative,4002
+tree-preservation-order,local-authority:EPS,Epsom and Ewell Borough Council,authoritative,415
+tree-preservation-order,local-authority:GAT,Gateshead Metropolitan Borough Council,authoritative,209
+tree-preservation-order,local-authority:GRY,Great Yarmouth Borough Council,authoritative,1096
+tree-preservation-order,local-authority:HAA,Havant Borough Council,authoritative,3719
+tree-preservation-order,local-authority:HAL,Halton Borough Council,authoritative,114
+tree-preservation-order,local-authority:HAR,Harlow District Council,authoritative,218
+tree-preservation-order,local-authority:HIL,London Borough of Hillingdon,authoritative,731
+tree-preservation-order,local-authority:HOR,Horsham District Council,authoritative,1306
+tree-preservation-order,local-authority:HUN,Huntingdonshire District Council,authoritative,959
+tree-preservation-order,local-authority:IOS,Council of the Isles of Scilly,authoritative,1
+tree-preservation-order,local-authority:KEC,Royal Borough of Kensington and Chelsea,authoritative,4560
+tree-preservation-order,local-authority:LBH,London Borough of Lambeth,authoritative,339
+tree-preservation-order,local-authority:LCE,Leicester City Council,authoritative,510
+tree-preservation-order,local-authority:LDS,Leeds City Council,authoritative,2448
+tree-preservation-order,local-authority:LIV,Liverpool City Council,authoritative,1571
+tree-preservation-order,local-authority:MAI,Maidstone Borough Council,authoritative,13915
+tree-preservation-order,local-authority:MDW,Medway Council,authoritative,553
+tree-preservation-order,local-authority:MIK,Milton Keynes City Council,authoritative,77
+tree-preservation-order,local-authority:NBL,Northumberland County Council,authoritative,458
+tree-preservation-order,local-authority:NET,Newcastle City Council,authoritative,188
+tree-preservation-order,local-authority:NEW,New Forest District Council,authoritative,1933
+tree-preservation-order,local-authority:NLN,North Lincolnshire Council,authoritative,7365
+tree-preservation-order,local-authority:NNO,North Norfolk District Council,authoritative,603
+tree-preservation-order,local-authority:NSM,North Somerset Council,authoritative,5720
+tree-preservation-order,local-authority:OXO,Oxford City Council,authoritative,1515
+tree-preservation-order,local-authority:PLY,Plymouth City Council,authoritative,332
+tree-preservation-order,local-authority:PTE,Peterborough City Council,authoritative,452
+tree-preservation-order,local-authority:ROH,Rother District Council,authoritative,427
+tree-preservation-order,local-authority:ROS,Rossendale Borough Council,authoritative,182
+tree-preservation-order,local-authority:SAL,St Albans City and District Council,authoritative,670
+tree-preservation-order,local-authority:SAW,Sandwell Metropolitan Borough Council,authoritative,108
+tree-preservation-order,local-authority:SCA,South Cambridgeshire District Council,authoritative,704
+tree-preservation-order,local-authority:SFT,Sefton Metropolitan Borough Council,authoritative,275
+tree-preservation-order,local-authority:SGC,South Gloucestershire Council,authoritative,1009
+tree-preservation-order,local-authority:SKP,Stockport Metropolitan Borough Council,authoritative,874
+tree-preservation-order,local-authority:SLF,Salford City Council,authoritative,523
+tree-preservation-order,local-authority:SNO,South Norfolk District Council,authoritative,2283
+tree-preservation-order,local-authority:SPE,Spelthorne Borough Council,authoritative,283
+tree-preservation-order,local-authority:SST,South Staffordshire Council,authoritative,331
+tree-preservation-order,local-authority:STE,Stoke-on-Trent City Council,authoritative,136
+tree-preservation-order,local-authority:SWL,Swale Borough Council,authoritative,1986
+tree-preservation-order,local-authority:TAN,Tandridge District Council,authoritative,792
+tree-preservation-order,local-authority:THA,Thanet District Council,authoritative,774
+tree-preservation-order,local-authority:TOB,Torbay Council,authoritative,718
+tree-preservation-order,local-authority:TWH,London Borough of Tower Hamlets,authoritative,72
+tree-preservation-order,local-authority:WFT,London Borough of Waltham Forest,authoritative,230
+tree-preservation-order,local-authority:WOT,Worthing Borough Council,authoritative,1034
+tree-preservation-order,local-authority:WRL,Wirral Borough Council,authoritative,727
+tree-preservation-order,local-authority:WSM,City of Westminster,authoritative,685
+tree-preservation-order,national-park-authority:Q27159704,Lake District National Park Authority,authoritative,407
+tree-preservation-order,national-park-authority:Q72617158,New Forest National Park Authority,authoritative,742
+tree-preservation-zone,local-authority:ADU,Adur District Council,authoritative,94
+tree-preservation-zone,local-authority:ASF,Ashford Borough Council,authoritative,319
+tree-preservation-zone,local-authority:BEN,London Borough of Brent,authoritative,301
+tree-preservation-zone,local-authority:BIR,Birmingham City Council,authoritative,1435
+tree-preservation-zone,local-authority:BNE,London Borough of Barnet,authoritative,3218
+tree-preservation-zone,local-authority:BRO,Broadland District Council,authoritative,4930
+tree-preservation-zone,local-authority:BST,Bristol City Council,authoritative,369
+tree-preservation-zone,local-authority:BUC,Buckinghamshire Council,authoritative,8418
+tree-preservation-zone,local-authority:CAS,Castle Point Borough Council,authoritative,194
+tree-preservation-zone,local-authority:CAT,Canterbury City Council,authoritative,1573
+tree-preservation-zone,local-authority:CLD,Calderdale Metropolitan Borough Council,authoritative,1641
+tree-preservation-zone,local-authority:COT,Cotswold District Council,authoritative,650
+tree-preservation-zone,local-authority:COV,Coventry City Council,authoritative,508
+tree-preservation-zone,local-authority:DAR,Dartford Borough Council,authoritative,267
+tree-preservation-zone,local-authority:DNC,Doncaster Metropolitan Borough Council,authoritative,1330
+tree-preservation-zone,local-authority:DOV,Dover District Council,authoritative,556
+tree-preservation-zone,local-authority:ECA,East Cambridgeshire District Council,authoritative,565
+tree-preservation-zone,local-authority:EHA,East Hampshire District Council,authoritative,1325
+tree-preservation-zone,local-authority:EPS,Epsom and Ewell Borough Council,authoritative,942
+tree-preservation-zone,local-authority:ERY,East Riding of Yorkshire Council,authoritative,1328
+tree-preservation-zone,local-authority:GAT,Gateshead Metropolitan Borough Council,authoritative,682
+tree-preservation-zone,local-authority:GLO,Gloucester City Council,authoritative,165
+tree-preservation-zone,local-authority:GRY,Great Yarmouth Borough Council,authoritative,319
+tree-preservation-zone,local-authority:HAA,Havant Borough Council,authoritative,600
+tree-preservation-zone,local-authority:HAL,Halton Borough Council,authoritative,268
+tree-preservation-zone,local-authority:HAR,Harlow District Council,authoritative,127
+tree-preservation-zone,local-authority:HOR,Horsham District Council,authoritative,661
+tree-preservation-zone,local-authority:HUN,Huntingdonshire District Council,authoritative,821
+tree-preservation-zone,local-authority:KEC,Royal Borough of Kensington and Chelsea,authoritative,41
+tree-preservation-zone,local-authority:KIN,Borough Council of King's Lynn and West Norfolk,authoritative,626
+tree-preservation-zone,local-authority:LBH,London Borough of Lambeth,authoritative,226
+tree-preservation-zone,local-authority:LCE,Leicester City Council,authoritative,146
+tree-preservation-zone,local-authority:LDS,Leeds City Council,authoritative,3710
+tree-preservation-zone,local-authority:LIV,Liverpool City Council,authoritative,713
+tree-preservation-zone,local-authority:MAI,Maidstone Borough Council,authoritative,3789
+tree-preservation-zone,local-authority:MDW,Medway Council,authoritative,554
+tree-preservation-zone,local-authority:MIK,Milton Keynes City Council,authoritative,322
+tree-preservation-zone,local-authority:NBL,Northumberland County Council,authoritative,632
+tree-preservation-zone,local-authority:NET,Newcastle City Council,authoritative,757
+tree-preservation-zone,local-authority:NEW,New Forest District Council,authoritative,1610
+tree-preservation-zone,local-authority:NLN,North Lincolnshire Council,authoritative,381
+tree-preservation-zone,local-authority:NNO,North Norfolk District Council,authoritative,550
+tree-preservation-zone,local-authority:NSM,North Somerset Council,authoritative,1484
+tree-preservation-zone,local-authority:OXO,Oxford City Council,authoritative,283
+tree-preservation-zone,local-authority:PLY,Plymouth City Council,authoritative,487
+tree-preservation-zone,local-authority:PTE,Peterborough City Council,authoritative,417
+tree-preservation-zone,local-authority:ROH,Rother District Council,authoritative,413
+tree-preservation-zone,local-authority:ROS,Rossendale Borough Council,authoritative,497
+tree-preservation-zone,local-authority:SAL,St Albans City and District Council,authoritative,544
+tree-preservation-zone,local-authority:SAW,Sandwell Metropolitan Borough Council,authoritative,52
+tree-preservation-zone,local-authority:SCA,South Cambridgeshire District Council,authoritative,2316
+tree-preservation-zone,local-authority:SFT,Sefton Metropolitan Borough Council,authoritative,478
+tree-preservation-zone,local-authority:SGC,South Gloucestershire Council,authoritative,1085
+tree-preservation-zone,local-authority:SKP,Stockport Metropolitan Borough Council,authoritative,1360
+tree-preservation-zone,local-authority:SLF,Salford City Council,authoritative,1671
+tree-preservation-zone,local-authority:SNO,South Norfolk District Council,authoritative,2283
+tree-preservation-zone,local-authority:SPE,Spelthorne Borough Council,authoritative,2656
+tree-preservation-zone,local-authority:SST,South Staffordshire Council,authoritative,2623
+tree-preservation-zone,local-authority:STE,Stoke-on-Trent City Council,authoritative,103
+tree-preservation-zone,local-authority:SWK,London Borough of Southwark,authoritative,724
+tree-preservation-zone,local-authority:SWL,Swale Borough Council,authoritative,390
+tree-preservation-zone,local-authority:TAN,Tandridge District Council,authoritative,885
+tree-preservation-zone,local-authority:TEW,Tewkesbury Borough Council,authoritative,556
+tree-preservation-zone,local-authority:THA,Thanet District Council,authoritative,677
+tree-preservation-zone,local-authority:TOB,Torbay Council,authoritative,836
+tree-preservation-zone,local-authority:TWH,London Borough of Tower Hamlets,authoritative,1
+tree-preservation-zone,local-authority:UTT,Uttlesford District Council,authoritative,5278
+tree-preservation-zone,local-authority:WBK,West Berkshire Council,authoritative,1115
+tree-preservation-zone,local-authority:WFT,London Borough of Waltham Forest,authoritative,218
+tree-preservation-zone,local-authority:WOT,Worthing Borough Council,authoritative,1287
+tree-preservation-zone,local-authority:WRL,Wirral Borough Council,authoritative,2499
+tree-preservation-zone,local-authority:WSM,City of Westminster,authoritative,263
+tree-preservation-zone,national-park-authority:Q27159704,Lake District National Park Authority,authoritative,900
+tree-preservation-zone,national-park-authority:Q72617158,New Forest National Park Authority,authoritative,976
+tree-preservation-zone-type,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",authoritative,3
+ward,government-organisation:D303,Office for National Statistics,authoritative,6817
+waste-plan,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",some,71
+waste-plan,local-authority:DUR,Durham County Council,authoritative,2
+waste-plan,local-authority:IOS,Council of the Isles of Scilly,authoritative,1
+waste-plan,local-authority:SHR,Shropshire Council,authoritative,3
+waste-plan-boundary,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",authoritative,48
+world-heritage-site,government-organisation:D1342,"Ministry of Housing, Communities & Local Government",authoritative,20
+world-heritage-site,government-organisation:PB1164,Historic England,authoritative,20
+world-heritage-site-buffer-zone,government-organisation:PB1164,Historic England,authoritative,9
