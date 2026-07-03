@@ -1,8 +1,11 @@
 # Quality "some" entities misattributed to the wrong non-government organisation
 
 **Author**: Sian Teesdale
+
 **Date created**: 2nd July 2026
+
 **Dataset Scope**: all datasets with a `quality=some` entity owned by a `local-authority:`, `national-park-authority:`, or `development-corporation:`
+
 **Purpose**: Follows on from [digital-land/config#2651](https://github.com/digital-land/config/issues/2651), which found `brownfield-land` entity ranges misattributed to the wrong council (Wokingham instead of Woking; Cheshire West and Chester instead of Cheshire East). This finds every other entity across the platform showing the same bug pattern: `quality=some`, attributed to one local body, but whose data actually traces back to a *different* local body's own submission.
 
 ## The analysis: `4_full_population_provenance_trace.ipynb`
