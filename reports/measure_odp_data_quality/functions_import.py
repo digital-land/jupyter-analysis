@@ -70,6 +70,19 @@ def get_organisation_lookup():
     return df
 
 
+def get_provision_rule_lookup():
+    # defines, per dataset, whether it's ODP-scoped (project) and/or "mandated"
+    # (provision_reason) - used to work out which datasets are mandated
+    q = """
+    SELECT dataset, project, provision_reason, role
+    FROM provision_rule
+    """
+
+    df = datasette_query("digital-land", q)
+
+    return df
+
+
 def get_quality_priority_lookup():
     # the platform's own quality ladder (none < some < indicative < authoritative < usable < trustworthy)
     q = """

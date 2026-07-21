@@ -60,6 +60,17 @@ def make_authoritative_lookup(entity_quality_raw, quality_priority_map, org_look
     return summary[["pipeline", "organisation", "organisation_name", "is_authoritative", "authoritative_check_available"]]
 
 
+def get_mandated_pipelines(provision_rule_df):
+    # "mandated" datasets: statutory, or specifically "encouraged" for local planning authorities
+    mandated_datasets = set(provision_rule_df.loc[
+        (provision_rule_df["provision_reason"] == "statutory")
+        | ((provision_rule_df["provision_reason"] == "encouraged") & (provision_rule_df["role"] == "local-planning-authority")),
+        "dataset"
+    ])
+
+    return sorted(mandated_datasets)
+
+
 def make_ca_count_match_issues_table(base_table):
 
     q = """
