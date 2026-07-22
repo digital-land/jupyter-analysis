@@ -192,3 +192,26 @@ def apply_zero_entity_override(qual_summary, entity_quality_raw, org_lookup, lev
     df.loc[zero_entity_mask, "quality_level_label"] = level_map[0]
 
     return df.drop(columns=["has_entities"])
+
+
+def add_zero_entity_detail(detail_df, entity_quality_raw, org_lookup):
+    # flags provisions with an active endpoint but zero entities in the dataset's entity
+    # table - same check apply_zero_entity_override uses to force quality_level to 0, but
+    # surfaced as its own column here so it's visible on the detail table directly, rather
+    # than only being inferable from the score being "0. no data".
+
+    queryable_pipelines = entity_quality_raw["pipeline"].unique()
+
+    has_entities = entity_quality_raw[["pipeline", "organisation_entity"]].drop_duplicates().copy()
+    has_entities["organisation_entity"] = has_entities["organisation_entity"].astype(int)
+    has_entities = has_entities.merge(
+        org_lookup[["organisation_entity", "organisation"]],
+        how = "left",
+        on = "organisation_entity"
+    )[["pipeline", "organisation"]].drop_duplicates()
+    has_entities["has_entities"] = True
+
+    df = detail_df.merge(has_entities, how = "left", on = ["pipeline", "organisation"])
+    df["has_zero_entities"] = df["pipeline"].isin(queryable_pipelines) & df["has_entities"].isna()
+
+    return df.drop(columns = ["has_entities"])

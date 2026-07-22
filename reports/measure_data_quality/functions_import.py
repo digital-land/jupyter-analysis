@@ -78,10 +78,17 @@ def get_issue_quality_lookup():
     return df
 
 
-def get_endpoint_res_issues():
+def get_endpoint_res_issues(pipelines=None):
 
     # get table of active endpoints and resources, with issue summaries per resource joined on
-    # queried over HTTP (not the downloaded .db) since direct .db downloads are now blocked (403)
+    # queried over HTTP (not the downloaded .db) since direct .db downloads are now blocked (403).
+    # Pass `pipelines` to restrict the query itself to a known set of datasets (e.g. single-source
+    # only), rather than fetching every active pipeline and filtering afterwards.
+    pipeline_filter = ""
+    if pipelines is not None:
+        quoted = ", ".join(f'"{p}"' for p in pipelines)
+        pipeline_filter = f"AND rhe.pipeline IN ({quoted})"
+
     q = f"""
         SELECT
             rhe.organisation, rhe.name as organisation_name,
@@ -94,6 +101,7 @@ def get_endpoint_res_issues():
             AND rhe.endpoint_end_date = ""
             AND rhe.resource_end_date = ""
             AND rhe.latest_status = 200
+            {pipeline_filter}
     """
 
     df = datasette_query_paginated("performance", q)
