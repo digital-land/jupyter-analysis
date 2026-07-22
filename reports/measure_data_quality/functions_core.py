@@ -65,3 +65,26 @@ def datasette_query(db, sql_string):
     url = f"https://datasette.planning.data.gov.uk/{db}.csv?{params}"
     df = pd.read_csv(url)
     return df
+
+
+def datasette_query_paginated(db, sql_string, page_size=1000):
+    # datasette's `_size=max` still caps a single response, so large tables
+    # need LIMIT/OFFSET paging to avoid being silently truncated
+    frames = []
+    offset = 0
+
+    while True:
+        page_sql = f"{sql_string}\nLIMIT {page_size} OFFSET {offset}"
+        page_df = datasette_query(db, page_sql)
+        if page_df.empty:
+            break
+
+        frames.append(page_df)
+
+        if len(page_df) < page_size:
+            break
+        offset += page_size
+
+    if not frames:
+        return pd.DataFrame()
+    return pd.concat(frames, ignore_index=True)
