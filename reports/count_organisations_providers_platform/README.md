@@ -5,6 +5,16 @@ This report counts how many organisations and providers are contributing data to
 **Author**: Sian Teesdale
 **Date created**: 30th June 2026
 
+## Related: live platform data
+
+This analysis fed into [digital-land/config#2771](https://github.com/digital-land/config/issues/2771), which productionised the same classification logic as a nightly pipeline job. If you just need the numbers rather than the ability to re-run or adapt the classification logic, the equivalent data is available live and pre-computed, without running this script:
+
+- [`provision-quality.csv`](https://files.planning.data.gov.uk/dataset/provision-quality.csv) — one row per (dataset, organisation)
+- [`dataset-quality.csv`](https://files.planning.data.gov.uk/dataset/dataset-quality.csv) — rolled up per dataset
+- [`organisation-quality.csv`](https://files.planning.data.gov.uk/dataset/organisation-quality.csv) — rolled up per organisation
+
+The shape differs slightly from this script's output (e.g. combined `has_active_endpoint`/`owns_entities` flags rather than separate provider/organisation files) — see the issue for the full schema. This script remains useful for reproducing or adapting the underlying classification logic itself.
+
 ## What the script does
 
 `run_analysis.py` runs against live data and produces four CSVs in `outputs/`:
