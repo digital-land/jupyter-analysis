@@ -60,3 +60,38 @@ The suggestions above come from pattern-matching the config CSV text (prefix swa
 **Next step**: this reframes the ticket's second aim from "is this worth fixing" to "here are the exact fixes needed" — 17 of 18 are precise, low-risk, and now independently corroborated corrections to `entity-organisation.csv` (2 PRs: one prefix fix for `central-activities-zone`, one duplicate-row removal for `brownfield-land`); the 1 remaining case needs its `lookup.csv` row reconciled against canonical entity 1700711 rather than a config fix. Take `data/missing_organisation_entity.csv` to Swati as the concrete list, plus the broader duplicate-entity mechanism (1,929 historical occurrences in `listed-building` alone, Section 10) as a separate, worth-understanding observation.
 
 **Output** (gitignored, not committed — see repo root README on data handling): `data/missing_organisation_entity.csv` — one row per affected entity in the two live, current datasets (18 rows: `central-activities-zone`, `brownfield-land`). `local-plan-document`/`local-plan-timetable` excluded entirely — confirmed stale, not real current issues (see above). Columns: `dataset`, `entity`, `name`, `reference`, `quality`, `entity_url`, `classification` (`broken_mapping` / `likely_duplicate_entity`), `config_assigned_curies`, `suggested_fix`, `suggested_curie`, `confidence`, `endpoint_trace_organisation`, `endpoint_url_traced`, `trace_agreement`. The platform-wide prevalence table above and the config-repo sweep (55 `entity-organisation.csv` + 55 `lookup.csv` files, 12 issues found, confirming no other dataset has this problem) are both visible as printed output in the notebook itself, rather than needing their own export.
+
+## C-02 — Entity facts shouldn't be from conflicting organisations
+
+**Date created**: 24th November 2026
+
+**Notebook**: [C-02_conflicting_organisations.ipynb](C-02_conflicting_organisations.ipynb)
+
+**Ticket**: [digital-land/config#2992](https://github.com/digital-land/config/issues/2992)
+
+**Test definition**: entities with facts from two or more *active* organisations of the same kind, e.g. two LPAs. Facts from organisations with an `end_date` (such as councils merged by local government reorganisation) are ignored.
+
+**Method**: facts are traced to organisations through `fact_resource` → `resource_organisation`, across every published dataset with at least two active local authorities or LPAs supplying it (22 of 123). `fact_resource` already has redirects applied, so entities redirected into one another are included. Files registered to several active organisations are left out, as they can't show who supplied a fact. Government bodies (e.g. Historic England, MHCLG) are out of scope, as their national compilations are expected to overlap with LPA data. This replaces the 2024 notebook [`2024-08_incorrect_ca_merges`](../2024-08_incorrect_ca_merges/), whose `.db` download now returns 403.
+
+**Result**: **119 of 816,287 entities** have facts from two active LPAs.
+
+| Cause | Dataset | Organisations | Entities | When |
+| --- | --- | --- | --- | --- |
+| File registered to the wrong council | `brownfield-land` | Mid Sussex file registered to Mid Suffolk | 64 | Since December 2020 |
+| | `brownfield-land` | Broads Authority file registered to Broadland | 48 | Since January 2025 |
+| Redirect between two LPAs' entities | `conservation-area` | New Forest District / New Forest National Park, Buckinghamshire / South Oxfordshire, Bradford / Leeds, Huntingdonshire / Peterborough | 7 | November 2025 to October 2026 |
+
+A further 382 entities are shared between an LPA and the GLA or Liverpool City Region. These come from old regional registers, none still current.
+
+**Conclusion**: both causes are in our own config (source registrations and `old-entity.csv` redirects), so this isn't an issue for LPAs to fix. The redirect cases are recent, so it is still happening.
+
+**Next steps**:
+
+1. Correct the two source registrations.
+2. Review the 7 redirects, starting with Thame and Henley (44010474, 44010475). They are assigned to Buckinghamshire, but their old entities were mapped to South Oxfordshire.
+3. Flag any redirect that joins two active LPAs' entities at the point the redirect is made.
+4. Monitor this as an internal data-quality check, with a way to mark accepted cases (e.g. conservation areas both New Forest councils publish).
+
+**Limitations**: a wrongly registered file is only caught if its facts land on another organisation's entities. Files shared between councils aren't checked; one `brownfield-land` file is registered to both Wyre and Wyre Forest, which looks like another mix-up. `title-boundary` has no `fact_resource` table.
+
+**Output** (gitignored, not committed): `data/C-02_conflicting_organisations.csv` — one row per affected entity, with the organisations involved, the current organisation, any redirected entities and the entity URL.
